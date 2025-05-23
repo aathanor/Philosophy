@@ -1,0 +1,33 @@
+---
+title: "Academic Papers"
+listing:
+ - id: papers
+   contents: "papers"
+   type: default
+   sort: "date desc"
+ - id: essays
+   contents: "essays"
+   type: default
+   sort: "date desc"
+ - id: presentations
+   contents: "presentations"
+   type: default
+   sort: "date desc"
+---
+
+# Welcome
+
+This is my collection of academic papers and essays.
+
+# Papers
+::: {#papers}
+:::
+
+# Essays
+::: {#essays}
+:::
+
+# Presentations
+::: {#presentations}
+:::
+
