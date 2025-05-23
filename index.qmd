@@ -15,19 +15,19 @@ listing:
    sort: "date desc"
 ---
 
-# Welcome
+### Welcome
 
 This is my collection of academic papers and essays.
 
-# Papers
+## Papers
 ::: {#papers}
 :::
 
-# Essays
+## Essays
 ::: {#essays}
 :::
 
-# Presentations
+## Presentations
 ::: {#presentations}
 :::
 
