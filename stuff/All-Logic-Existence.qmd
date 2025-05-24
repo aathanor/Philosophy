@@ -1,7 +1,7 @@
 ---
 author: Florin Cojocariu
 date: 04.04.2024
-title: "Patterns, Pragmatism, and Mild Realism: An Empirical Probe"
+title: "Why 'All Logic' can't be"
 ---
 
 ::: epigraph
