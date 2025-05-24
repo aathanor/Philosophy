@@ -10,7 +10,7 @@ website:
         text: Home
   comments:
     giscus:
-      repo: your-username/your-repo-name
+      repo: aathanor/Philosophy
       repo-id: "R_kgDOOvbpNQ"
       category: "General"
       category-id: "DIC_kwDOOvbpNc4CqifF"
