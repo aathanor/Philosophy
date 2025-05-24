@@ -1,9 +1,5 @@
 ---
 author: Florin Cojocariu
-bibliography:
-- /Users/florin/Library/Mobile Documents/com\~apple\~CloudDocs/\--NOTE\--/assets/storages/logseq-citation-manager/citationDB.bib
-created: 10.11.2022
-csl: /Users/florin/Library/Mobile Documents/com\~apple\~CloudDocs/\--ȘCOALA ESEURI/chicago-author-date-16th-edition.csl
 date: 10.20.2024
 title: Geneza - un comentariu al primei zile
 ---
