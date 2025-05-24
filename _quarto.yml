@@ -10,7 +10,6 @@ website:
   sidebar:                          # ← Add this website-level sidebar
     style: "floating"
     search: false
-    contents: auto                  # ← This will auto-generate from your content
   comments:
     giscus:
       repo: aathanor/Philosophy
