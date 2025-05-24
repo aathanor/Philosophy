@@ -1,6 +1,5 @@
 ---
 author: Florin Cojocariu
-
 date: 04.05.2025
 On Dennett’s pragmatic criterion, a pattern is _real for us_ if tracking it yields compression and predictive power. Semantic attractors therefore occupy a middle ground: unlike Fodorian atoms they are not posited as metaphysically primitive, yet---contra Churchland---they are not dispensable fictions but empirically discoverable structures that continue to earn their keep. But these attractors are points in a sentence space, labeled as "object-words"; a better, more rigourous definition of "semantic attractor" mat me needed.
 title: "Patterns, Pragmatism, and Mild Realism: An Empirical Probe"
