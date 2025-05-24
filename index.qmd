@@ -9,6 +9,10 @@ listing:
    contents: "presentations"
    type: default
    sort: "date desc"
+ - id: stuff
+   contents: "stuff"
+   type: default
+   sort: "date desc"
 ---
 
 ### Welcome
@@ -21,6 +25,10 @@ This collection of writings primarily focuses on my school projects.
 
 ## Presentations
 ::: {#presentations}
+:::
+
+## Stuff
+::: {#stuff}
 :::
 
 ### About me
