@@ -29,10 +29,10 @@ jobs:
 
       - name: Clean YAML headers
         run: |
-    find . -name "*.qmd" -exec sed -i '/^bibliography:/d; /^csl:/d' {} \;
+          find . -name "*.qmd" -exec sed -i '/^bibliography:/d; /^csl:/d' {} \;
 
-- name: Debug - List files
-  run: |
+      - name: Debug - List files
+        run: |
     echo "Root directory:"
     ls -la
     echo "_site directory:"
