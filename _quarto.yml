@@ -15,12 +15,12 @@ website:
         text: Home
 
 format:
+  format:
   html:
-    theme: 
-      - cosmo
-      - custom.scss
-    toc: true
+    theme: cosmo
+    css: ["custom.css"]
     toc-location: left
     reference-location: margin
+    cap-location: margin
   pdf:
     documentclass: article
