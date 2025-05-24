@@ -1,0 +1,252 @@
+---
+title: "James's Pragmatic Theory of Truth"
+format: revealjs
+---
+
+# James's Pragmatic Theory of Truth
+
+# 1. The Agreement Problem
+
+## What Does "Agreement with Reality" Mean(1)?
+
+• **Traditional definition**: Truth means ideas "agree" with reality, falsity means "disagreement"
+
+* Both pragmatists and intellectualists accept this starting point
+
+## What Does "Agreement with Reality" Mean(2)?
+
+• **The copying model fails**:
+
+* Works for simple sensible things: "Shut your eyes and think of yonder clock on the wall, and you get just such a true picture or copy of its dial"
+* Breaks down for abstract concepts: "Your idea of its 'works'... is much less of a copy, yet it passes muster"
+
+## What Does "Agreement with Reality" Mean(3)?
+
+• **Abstract realities resist copying**:
+
+* "Past time," "power," "spontaneity" - "how can our mind copy such realities?"
+* Even "time-keeping function" or "spring's elasticity" - "hard to see exactly what your ideas can copy"
+
+• **The core question**: "Where our ideas cannot copy definitely their object, what does agreement with that object mean?"
+
+# 2: Truth as Dynamic Process
+**"Truth Happens to an Idea"**
+
+• **Against static conception**:
+
+* Intellectualists: "truth means essentially an inert static relation"
+* "When you've got your true idea of anything, there's an end of the matter"
+
+• **James's alternative**: Truth is dynamic and active
+
+* "The truth of an idea is not a stagnant property inherent in it"
+* "Truth happens to an idea. It becomes true, is made true by events"
+
+• **Process terminology**:
+
+* "Its verity is in fact an event, a process... of its verifying itself"
+* "Its validity is the process of its valid-ation"
+
+• **Pragmatic question**: "What concrete difference will its being true make in anyone's actual life?"
+
+# 3: Direct vs Indirect Verification
+**The Credit System of Truth**
+
+• **Direct verification**:
+
+* Lost in woods example: "If I am lost in the woods and starved, and find what looks like a cow-path"
+* Success criterion: "if I do so and follow it, I save myself"
+
+• **Indirect verification dominates**:
+
+* Clock example: "no one of us has seen the hidden works that make it one"
+* "We let our notion pass for true without attempting to verify"
+
+• **The credit system**:
+
+* "Truth lives, in fact, for the most part on a credit system"
+* "Our thoughts and beliefs 'pass' so long as nothing challenges them, just as bank notes pass"
+* "You accept my verification of one thing, I yours of another"
+
+• **Foundation needed**: "All this points to direct face-to-face verifications somewhere, without which the fabric of truth collapses"
+
+# 4: Truth's Practical Value
+
+**"What Is Truth's Cash Value?"**
+
+• **Instrumental nature**: "The possession of truth... is only a preliminary means towards other vital satisfactions"
+
+• **Practical importance**:
+
+* "We live in a world of realities that can be infinitely useful or infinitely harmful"
+* "Ideas that tell us which of them to expect count as the true ideas"
+
+• **Value equation**:
+
+* "You can say of it then either that 'it is useful because it is true' or that 'it is true because it is useful'"
+* "Both these phrases mean exactly the same thing"
+
+• **Truth storage**: "We store such extra truths away in our memories, and with the overflow we fill our books of reference"
+
+* Ready for when they become "practically relevant to one of our emergencies"
+
+
+# 5: Social Nature of Truth
+**"All Human Thinking Gets Discursified"**
+
+• **Social construction**: "We exchange ideas; we lend and borrow verifications, get them from one another by means of social intercourse"
+
+• **Verbal truth building**: "All truth thus gets verbally built out, stored up, and made available for everyone"
+
+• **Consistency requirements**:
+
+* "We must talk consistently just as we must think consistently"
+* "We mustn't now call Abel 'Cain' or Cain 'Abel'"
+
+• **Systematic consequences**:
+
+* "We ungear ourselves from the book of Genesis, and from all its connections with the universe of speech and fact"
+* "We throw ourselves out of whatever truth that whole system may embody"
+
+• **Historical truth**: Past events verified "indirectly by the present prolongations or effects of what the past harbored"
+
+# 6: Reality as Collective Construct
+**From Individual Experience to Shared Reality**
+
+• **Direct vs indirect evidence**:
+
+* Twin Towers example: "We all know they were real... but how do we know it?"
+* "We saw images, but the key point here is that we chose to trust"
+
+• **Verification delegation**:
+
+* "Different sources send different images showing the same event from different angles"
+* "Strictly speaking, it's a delegation of verification. I do not verify anything"
+
+• **The asymmetry**:
+
+* First: "Reality is built by the sum of subjective truths"
+* Then: "When some truth is validated... we compare it... with this collective reality"
+
+• **Collective archetype**: Reality as "conscious, collective archetype... everywhere, in everything, but you can't really see it"
+
+
+# 7: Pragmatist vs Rationalist Debate
+**Static vs Dynamic Conceptions**
+
+• **Rationalist position**:
+
+* Truth "absolutely obtains, being a unique relation that does not wait upon any process"
+* "Shoots straight over the head of experience, and hits its reality every time"
+* Quality is "timeless, like all essences and natures"
+
+• **James's critique**: "You pragmatists put the cart before the horse"
+
+* Rationalists treat verification as mere "signs of its being"
+* "Merely our lame ways of ascertaining, after the fact"
+
+• **Pragmatist response**:
+
+* "Truth is made... in the course of experience"
+* Experience and truth are "everlastingly in process of mutation"
+* "Truths emerge from facts; but they dip forward into facts again"
+
+• **Fundamental difference**: "Pragmatism faces forward to the future, so does rationalism... face backward to a past eternity"
+
+# 8: Two Types of Truth
+**Matters of Fact vs. Relations Among Ideas**
+
+• **Empirical truths**: Require sense-verification, can change
+
+* "If I am lost in the woods... it is of utmost importance that I should think of a human habitation"
+* Objects: concrete things, dates, places, distances
+
+• **Logical/Mathematical truths**: "Eternal character" - once true, always true
+
+* "1 and 1 make 2... white differs less from gray than from black"
+* Objects: mental concepts, abstract relations
+
+• **Key insight**: Both involve "leading" but different verification processes
+
+* Empirical: lead to sensible experiences
+* Logical: lead through abstract idea systems
+
+# 9: Truth as "Leading"
+**The Guidance Metaphor**
+
+• **Core concept**: "True ideas are those that we can validate, corroborate and verify"
+
+• **Leading that pays**: Truth guides us toward valuable experiences
+
+* "Any idea that helps us deal with either the reality or its belongings... will agree sufficiently"
+* "Leading that is useful because it is into quarters that contain objects that are important"
+
+• **Multiple forms of leading**:
+
+* Direct: toward sensible objects themselves
+* Indirect: toward "useful verbal and conceptual quarters"
+* Social: toward "consistency, stability and flowing human intercourse"
+
+• **Bottom line**: "Agreement turns out to be essentially an affair of leading"
+
+# 10: The "Ante Rem" Fallacy
+**Truth Exists in Processes, Not as Pre-existing Essence**
+
+• **Rationalist error**: Treating truth as existing "before the thing" (ante rem)
+
+* Like saying rich people are rich because they possess "wealth essence"
+
+• **James's analogies**:
+
+* **Wealth**: "name for concrete processes that certain men's lives play a part in"
+* **Health**: "name for processes, as digestion, circulation, sleep"
+* **Truth**: exists only in verification activities, not as separate quality
+
+• **Habit vs. Act distinction**:
+
+* Truth "becomes a habit of certain of our ideas... in their intervals of rest"
+* "But that \[verification] activity is the root of the whole matter"
+
+• **Key quote**: "Truth exists ante rem just as much and as little as the other things do"
+
+# 11: "Absolutely True" as Ideal
+**The Regulative Function of Perfect Truth**
+
+• **Definition**: "What no further experience will ever alter"
+
+• **Status**: "Ideal vanishing-point towards which we imagine all our temporary truths will some day converge"
+
+* Like "perfectly wise man" or "absolutely complete experience"
+* "May never fully eventuate or materialize"
+
+• **Practical consequence**: "We have to live today by what truth we can get today, and be ready tomorrow to call it falsehood"
+
+• **Historical examples**:
+
+* "Ptolemaic astronomy, Euclidean space, Aristotelian logic... were expedient for centuries"
+* Now "only relatively true, or true within those borders of experience"
+
+• **Retrospective judgment**: "We live forwards... but we understand backwards"
+
+# 12: Defense Against Subjectivism**
+**Pragmatism is Not "Anything Goes"**
+
+• **The accusation**: Critics say pragmatists "put foolishness and wisdom on one level"
+
+* "Think that by saying whatever you find it pleasant to say and calling it truth you fulfill every pragmatistic requirement"
+
+• **James's response**: "An impudent slander"
+
+• **Objective constraints on pragmatists**:
+
+* "Pent in... between the whole body of funded truths squeezed from the past"
+* "And the coercions of the world of sense about him"
+* "Who so well as he feels the immense pressure of objective control?"
+
+• **Expedient ≠ Pleasant**:
+
+* "Expedient in the long run and on the whole"
+* Must "mediate between all previous truths and certain new experiences"
+* "Must lead to some sensible terminus or other that can be verified exactly"
+
+• **Final point**: "In this field of truth it is the pragmatists... who are the more genuine defenders of the universe's rationality"
