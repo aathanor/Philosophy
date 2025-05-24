@@ -1,7 +1,6 @@
 project:
   type: website
   output-dir: _site
-
 website:
   title: "Florin Cojocariu"
   navbar:
@@ -19,12 +18,13 @@ website:
       input-position: "bottom"
       theme: "light"
       language: "en"
-
 format:
   html:
     theme: cosmo
     css: ["custom.css"]
     reference-location: margin
     cap-location: margin
+    toc: true                    # ← New
+    toc-location: left          # ← New
   pdf:
     documentclass: article
