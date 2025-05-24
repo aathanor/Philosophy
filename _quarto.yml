@@ -14,7 +14,6 @@ format:
   html:
     theme: cosmo
     css: ["custom.css"]
-    toc-location: left
     reference-location: margin
     cap-location: margin
   pdf:
