@@ -2,7 +2,7 @@
 title: "James's Pragmatic Theory of Truth"
 format: 
   revealjs:
-    theme: clean  # or white, league, sky, etc.
+    theme: default  # or white, league, sky, etc.
     transition: slide
     incremental: true  # bullet points appear one by one
     slide-number: true
