@@ -2,6 +2,15 @@ name: Render and Deploy
 on:
   push:
     branches: [main]
+    paths:
+      - '**.qmd'
+      - '**.md' 
+      - 'essays/**'
+      - 'papers/**'
+      - 'presentations/**'
+      - 'index.qmd'
+      - '_quarto.yml'
+      - 'custom.css'
 
 jobs:
   build-deploy:
