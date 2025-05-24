@@ -1,12 +1,7 @@
 ---
 author: Florin Cojocariu
-date-created: 16/01/2025
-date-updated: 16/01/2025
-project: Immediate and Mediated Existence
-reference-section-title: References
-status: draft
-title: Immediate_and_Mediated_Existence
-version: 0.1
+date: 16/01/2025
+title: Immediate and Mediated Existence
 ---
 
 \def\beforebib{\vspace{2cm}\noindent\rule{\textwidth}{0.4pt}\\[1cm]\noindent\textbf{Bibliography}\vspace{0.5cm}}
