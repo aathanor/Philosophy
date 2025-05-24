@@ -6,11 +6,6 @@ format:
   pdf: default
 ---
 
-# Immediate_and_Mediated_Existence
-Florin Cojocariu
-
-
-
 
 ## Preliminary Considerations
 
