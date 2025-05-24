@@ -118,10 +118,11 @@ p {
   display: none !important;
 }
 
-/* Adjust main content positioning and spacing */
+/* Adjust main content positioning and spacing - CORRECTED */
 main.content.page-columns.page-full {
-  margin-left: -50px;  /* Move content closer to left sidebar */
-  padding-right: 50px; /* Add more space for right margin content */
+  margin-left: 50px;   /* Move content AWAY from right, closer to left */
+  padding-left: -20px; /* Reduce left padding */
+  max-width: 800px;    /* Constrain content width */
 }
 
 /* Adjust body margin to make room for left sidebar */
