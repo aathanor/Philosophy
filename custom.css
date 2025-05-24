@@ -137,3 +137,33 @@ p {
   padding-right: 0;
   vertical-align: baseline;
 }
+
+/* Giscus comments styling to match Tufte design */
+.giscus {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #ccc;
+}
+
+.giscus-frame {
+  border: none;
+  width: 100%;
+  background: transparent;
+}
+
+/* Ensure comments don't interfere with sidenotes */
+@media (min-width: 760px) {
+  .giscus {
+    padding-right: 12.5%; /* Same as your sidenote space */
+  }
+}
+
+/* Mobile responsive for comments */
+@media (max-width: 760px) {
+  .giscus {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
