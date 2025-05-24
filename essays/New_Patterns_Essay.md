@@ -2,9 +2,7 @@
 author: Florin Cojocariu
 date: 04.05.2025
 title: "Patterns, Pragmatism, and Mild Realism: An Empirical Probe"
-zettlr:
-  strip_links: full
-  strip_tags: false
+
 ---
 
 # Abstract
