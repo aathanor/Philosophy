@@ -13,7 +13,7 @@ website:
       repo: your-username/your-repo-name
       repo-id: "R_kgDOH..."  # From GraphQL query above
       category: "General"
-      category-id: "DIC_kwDOH..."  # From GraphQL query above
+      category-id: "DIC_kwDOOvbpNc4CqifF"
       mapping: "pathname"
       reactions-enabled: true
       input-position: "bottom"
