@@ -28,7 +28,7 @@ jobs:
         uses: quarto-dev/quarto-actions/render@v2
       
       - name: Debug - List files
-      run: |
+        run: |
     echo "Root directory:"
     ls -la
     echo "_site directory:"
