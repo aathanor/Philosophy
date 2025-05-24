@@ -1,0 +1,313 @@
+---
+author: Florin Cojocariu
+date-created: 16/01/2025
+date-updated: 16/01/2025
+project: Immediate and Mediated Existence
+reference-section-title: References
+status: draft
+title: Immediate_and_Mediated_Existence
+version: 0.1
+---
+
+\def\beforebib{\vspace{2cm}\noindent\rule{\textwidth}{0.4pt}\\[1cm]\noindent\textbf{Bibliography}\vspace{0.5cm}}
+
+# Preliminary Considerations
+
+This essay started as a more focused and simple investigation into Donnellan's "Reference and Definite Descriptions" paper. However, as it is often the case, things plugged in quickly into former research, generating a quite different, more complex, and possibly confusing at times, essay.
+
+I was considering whether to submit just a truncated but more polished version for our colloquium, limited to Donnellan's paper, or the entire thing as is right now. I have decided to go on with the entire draft even if it still needs lots of work, mainly because I wanted to have the opportunity for some early feedback.
+
+# 1. Introduction: A Century Old Hidden Tension
+
+Russell's theory of Definite Descriptions (DD) solves several longstanding puzzles about existence claims in language. When we say "The mountain in front of me is hard to climb," this can be analyzed as: "There exists an x such that x is a mountain and x is in front of me, and for all y, if y is a mountain and y is in front of me then y is identical to x, and x is hard to climb." This logical analysis explains how we can meaningfully talk about non-existent things or deny existence without contradiction.
+
+Although in "On Denoting" (Russell 1905), Russell distinguishes between direct awareness ("acquaintance") and knowledge through descriptions, he largely sets aside this distinction in developing his theory of DD. Yet this distinction suggests two fundamentally different ways language might connect to reality: through logical form and through direct acquaintance. This duality reveals a tension in DD theory that manifests most clearly in its treatment of proper names - a problem that would remain unresolved for over sixty years until Donnellan's work.
+
+Quine's "On What There Is" (Quine 1948) attempts to resolve this tension by showing how any name can be converted into a description (turning "Pegasus" into "the thing that Pegasizes"). This move proposes all elements of language, including proper names, can be reduced to DD form. From here, Quine advances to his famous claim that "to be is to be the value of a bound variable" --- effectively arguing that all legitimate existence claims must work through logical form alone. But this elegant solution conceals crucial problems.
+
+Donnellan's analysis (Keith S. Donnellan 1966) reveals why this reduction ultimately fails. By showing how the same description can be used either attributively (making claims through logical form) or referentially (pointing to specific entities), he uncovers a fundamental distinction *in use* rather than meaning[^1]. This distinction provides a model for understanding the dual nature of existence claims more generally.
+
+## Thesis
+
+Existence claims in natural language serve two distinct functions that parallel the attributive and referential uses of descriptions identified in Donnellan's paper. When we say something "exists," we are either:
+
+- Asserting that something satisfies a logical description
+- Pointing to something's actual presence in reality
+
+This distinction isn't about different meanings of "exists" but about *how we use* existence claims. While Quine attempted to reduce all existence claims to logical form, examining actual linguistic practice reveals why this reduction fails. Understanding this may help resolve some persistent puzzles about language and reality.
+
+To develop this argument, we'll examine:
+
+1.  How the tension emerges in Russell's work
+2.  Why Quine's attempted reduction proves inadequate
+3.  Drawing on Donnellan's distinction between attributive and referential descriptions to illuminate existence claims[^2]
+4.  How the introduction of a different existence quantifier can clarify some of the problems surrounding the "ontological claims" subject.
+
+# 2. Russell's hidden problem
+
+## 2.1 Starting Point
+
+It is less noted that Russell's paper begins with a fundamental distinction about how language connects to reality. In "On Denoting," he distinguishes between two ways we can know things: through direct acquaintance or through descriptions:
+
+> "For example, we know that the centre of mass of the Solar System at a definite instant is some definite point, and we can affirm a number of propositions about it; but we have no immediate acquaintance with this point, which is only known to us by description. The distinction between acquaintance and knowledge about is the distinction between the things we have presentations of, and the things we only reach by means of denoting phrases." (Russell, 1905, p. 479)
+
+This distinction suggests two modes of existence:
+
+- **Immediate Grounding**: Claims rooted in sensory experience (e.g., "I see a mountain").
+- **Mediated Grounding**: Claims dependent on logical structure (e.g., "The mountain Plato wrote about exists").
+
+Russell's subsequent analysis of definite descriptions (DD) privileges the latter, leaving the former undertheorized---a tension that shapes his entire project.
+
+## 2.2 The Logical Solution
+
+From this point on, Russell develops his logical analysis by favoring description over acquaintance. He shows first how denoting phrases can be analysed into 3 components:
+
+- **Existence**: There is at least one entity satisfying the description.
+- **Uniqueness**: There is at most one entity satisfying the description.
+- **Predication**: The described entity has the property attributed to it.
+
+Russell's key move is to *eliminate reference* from descriptions by reducing them to logical quantifiers; he then analyzes a sentence like "the father of Charles II was executed" as: "There is exactly one person who fathered Charles II, and that person was executed."
+
+This analysis later evolved into formal notation in Principia Mathematica and subsequent works: ∃x(Fx & ∀y(Fy → y=x) & Ex)[^3] **What This Achieves**: \* *No Direct Ontological Commitment*: The description doesn't refer to an entity but asserts a *logical structure*. \* *Avoids Meinongianism*: If no entity satisfies the description, the proposition is false, not paradoxical.
+
+**What It Neglects**: \* *Acquaintance as Grounding*: While Russell acknowledges acquaintance as the basis for knowledge, his DD analysis operates independently of it. Descriptions become "symbols" with no connection to perceptual experience.
+
+## 2.3 The Hidden Tension
+
+Russell's method consists mainly in showing how a Definite Description (DD) functions differently than a name, i.e., it does not simply "refer". For example, "the mountain in front of me" it is not simply referring to something in front of me, but has a truth value in itself when we read it as "There exists an x such that x is a mountain and x is in front of me". This truth value is always the truth value of a logical existence claim of the form ""∃x such as..." Doing this allows him to solve the problem of non-existents because if there is no mountain in front of me, the DD is simply false and there is no ontological paradox at hand; i.e. we can speak of non existents (like "The actual King of France") without assuming their existence.
+
+Russell's formalism implicitly separates **existence-as-truth** (mediated by logic) from **existence-as-presence** (grounded in perception), but he never reconciles these.
+
+His approach seems to be to hide the problem of ontological commitments under the problem of logical truth of propositions. But this created a specific difficulty with proper names, something which led future philosophers like Quine to reformulate DD to account for it[^4].
+
+In order to show why this happens, we start by noting that both the "exists" in "There exists an x such that x is a mountain and x is in front of me" and the "is" in the original sentence: "There is a mountain in front of me" are existence claims. This raises the non-trivial observation that one existence claim was simply replaced with another, but Russell's insists (in "[Principia Mathematica](https://en.wikipedia.org/wiki/Principia_Mathematica)") that the logical quantifier is part of the logical form, and not a proper existence claim. What he means is that in the DD its truth value is of importance, not the existence claim in it; even if the existence claim is false, DD still exists and can be the object of predication.
+
+However, the perceived existence and the logical existence quantifier seem to be completely disjointed in Russell's analysis while they still seem similar to our intuition; this goes back precisely to the distinction between knowing by acquaintance or knowing by description. Even Russell seems to need some sort of explanation in "On Denoting" about why "acquaintance" is of lesser importance:
+
+> "All thinking has to start from acquaintance; but it succeeds in thinking about many things with which we have no acquaintance."
+
+"Acquaintance" is used here to designate objects of reality directly available to our perception, that is objects we say of "they exist" by using direct reference in natural language. The suggestion seems to be that description-based thought (one capable of thinking about objects I have no acquaintance with) is some sort of evolution beyond direct reference (which can be seen as, and may very well be, a more primitive artifact). This may explain why Russel will speak only about the logical formalism of DD and thoroughly ignores what role "acquaintance" plays in our thinking.
+
+Some indirect evidence of his position can be found in the section where he mentions Meinong and one of the insolvable paradoxes of referring to non existents:
+
+> "Consider the proposition" A differs from B ". If this is true,there is a difference between A and B, which fact may be expressed in the form" the difference beetween A and B subsists". But if it is false that A differs from B, then there is no difference between A and B, which fact may be expressed in the form" the difference beetween A and B does not subsist". But how can a non-entity be the subject of a proposition? "I think, therefore I am" is no more evident than "I am the subject of a proposition,therefore I am," provided "I am" is taken to assert subsistence or being,\^ not existence. Hence, it would appear, it must always be self-contradictory to deny the being of anything; but we have seen, in connexion with Meinong, that to admit being also sometimes leads to contradictions. Thus if A and B do not differ to suppose either that there is, or that there is not, such an object as "the difference between A and B" seems equally impossible." (Russell 1905, 485) (the footnote \^ reads: "I use these as synonyms.")
+
+Two things are important here: first, his initial assumption contradicts Meinong (for whom "subsistence" and "being" are different) then he notes that Meinong's view leads to the same sort of problem, and, in conclusion the ontological claim made about "the difference between A and B" in itself seems impossible. Somehow, the solution seems to be that there is no point in talking about said difference.
+
+Second, when solving the paradox using DD, he simply says that an non-existent is simply a DD which does not denote anything.
+
+> "The whole realm of non-entities,such as" the round square," "the even prime other than 2," " Apollo," " Hamlet," etc.,can now be satisfactorily dealt with. All these are denoting phrases which do not denote anything. A proposition about Apollo means what we get by substituting what the classical dictionary tells us is meant by Apollo, say " the sun-god". All propositions in which Apollo occurs are to be interpreted by the above rules for denoting phrases." (Russell 1905, 491)
+
+However, this amounts simply to replacing ontological commitment (x exists) with truth values of propositions on ontological commitment (there is x such as...). But as many have noticed, the meaning of a phrase formulated explicitly as a DD may be very different from the meaning of the original phrase; the question "Does Apollo exists?" still has a meaning and deserves an answer, and its meaning is quite different from what we get when we ask "Does the sun-god exists?".
+
+To put it simply, the truth value of propositions using DD to avoid ontological commitment is not the same as the meaning of an ontological commitment. In his later work, he seems to acknowledge the problem and offer a solution in the way of considering existence quantifiers as part of the logical form and not as symbolization for ontological commitment of any sort. But the tension stands, in which way the truth values of propositions about ontological commitment differs from ontological commitments themselves?
+
+This unresolved tension in Russell's work helps explain why Donnellan's distinction made later on proved so illuminating: it explicitly articulates a difference that Russell's own analysis simultaneously revealed and obscured. But first, is up to Quine to bring "existence" all the way up into the territory of logic and declare "To exist is to be the value of a bond variable"
+
+# 3. Quine's Attempted Resolution
+
+## 3.1 The Initial Problem
+
+Quine begins "On What There Is"[^5] with the main puzzle of the non-existents that drived Russell's paper, but using a different angle: how can we meaningfully deny that things exist? If we say "Pegasus does not exist," we face a paradox:
+
+> "If Pegasus were not, McX argues, we should not be talking about anything when we use the word; therefore it would be nonsense to say even that Pegasus is not" (Quine, 1948)
+
+This leads Quine to examine two failed solutions. McX argues that if we can talk about something, it must somehow exist. Yet as Quine notes, McX himself:
+
+> "cannot, indeed, quite persuade himself that any region of space-time, near or remote, contains a flying horse of flesh and blood."
+
+He then proceeds to dismiss Wyman's solution of "subsistence[^6] vs existence" on obvious grounds.
+
+## 3.2 The Logical Solution
+
+Quine resolves this conundrum by extending Russell's theory of descriptions in a crucial way. While Russell had shown how definite descriptions could be analyzed without assuming existence, Quine goes further by showing how any name can be systematically converted into a description through a corresponding predicate - "Pegasus" becomes "the thing that Pegasizes." 
+
+This is significant because:  1. It generalizes Russell's solution beyond explicit descriptions to all names  2. It preserves the logical structure of Russell's analysis while expanding its scope  3. It provides a uniform treatment of existence claims, whether they involve descriptions or names For example, "Pegasus does not exist" becomes "It is not the case that there exists an x such that x Pegasizes" - formally: \~∃x(Px). This eliminates the apparent paradox of referring to something while denying its existence.
+
+## 3.3 The Ontological Commitment
+
+This conversion of names to descriptions fundamentally changes how we handle existence claims. By transforming proper names into predicates that can be quantified over, Quine shifts the question from whether individual named entities exist to what kinds of things our statements commit us to accepting as existent. If 'Pegasus' becomes 'the thing that Pegasizes,' we can analyze the ontological implications of our statements about Pegasus without assuming its existence. Building on this logical foundation, Quine establishes a broader criterion for determining what entities we are committed to including in our ontology:
+
+> "We commit ourselves to an ontology containing centaurs when we say there are centaurs... But we do not commit ourselves to an ontology containing Pegasus or the author of Waverly or the round square cupola on Berkeley College when we say that Pegasus or the author of Waverly or the cupola in question is not."
+
+## 3.4 The Hidden Problem of the bounded variable
+
+However, this elegant solution, which gave rise to the influential concept of "ontological commitment," contains a crucial limitation. When Quine states:
+
+> "If Pegasus existed he would indeed be in space and time, but only because the word 'Pegasus' has spatio-temporal connotations, and not because 'exists' has spatio-temporal connotations"
+
+he is making an implicit move: reducing all ontological commitment to logical commitment. In doing this, Quine's restricting existence to its logical sense: something exists if it's the value of a bound variable.
+
+But "existence" in day by day language use is more than that. The problem in the paragraph quoted above becomes clear when we speak about objects that ceased to exist in our own perceptual experience. This becomes clear when we consider three examples:
+
+### a) The Parthenon "Cloaking" Problem
+
+Imagine technology could make the Parthenon completely invisible: The physical object continues to exist, yet our perceptual commitment is disrupted while our theoretical commitment through descriptions remains unchanged. If not aware of the cloaking, we say "Parthenon disappeared", which is all but identical to "Parthenon does not exist anymore". If we learn about the cloaking device, we come back to "Parthenon exists, but we can't see it" It's hard to see here how exactly "'exists' has not spatio-temporal connotations".
+
+This reveals two distinct mechanisms for ontological commitment:
+
+1.  Commitment through quantified theories, named hereafter "theoretical commitment" (Quine's focus)
+2.  Commitment through direct perception, named hereafter "perceptual commitment" (unaddressed by Quine)
+
+These operate independently: we can lose perceptual commitment while maintaining theoretical commitment[^7], challenging Quine's reduction to quantification alone because incomplete (it fails to account for the change).
+
+### b) The Twin Towers Case
+
+One temporal example also demonstrates how ontological commitments can separate: For pre-2001 New-Yorkers there was both a perceptual commitment through perception and interaction and a theoretical commitment through descriptions, while for post-2001 New-Yorkers theoretical commitment is unchanged and perceptual commitment transformed into memory; in natural language they say "The Twin Towers *do not exist anymore*"
+
+This separation challenges Quine's unification of ontological commitment under quantification by showing:
+
+- Different types of commitment can exist simultaneously (and one is unaccounted by Quine's approach)
+- These types can come apart temporally
+- Memory of direct experience creates a distinct form of commitment (and it may be that memory is a third, special case, of ontological commitment).
+
+### c) The Case of Optical Illusions
+
+This reveals ontological commitment operating at a more fundamental level than Quine's analysis allows: perceptual commitment occurs before theoretical framework, and it may persist despite theoretical correction (we know it is an illusion, but we still perceive it as real) It is hard to see how his type of ontological commitment can be reduced to some quantificational form, as, basically, we say "*I see something which does not exist*"
+
+All these examples point to the fact that Quine's description of DD is incomplete. It will be Donnalldson who will observe that, in fact, contrary to what Russell (and Quine) thought, DDs can actually refer.
+
+# 4. Donnellan's Attributive and Refferential DD
+
+## 1. The distinction
+
+Donnellan goes in detail in his paper over both "On Denoting" of Russell's and "On Refering" of Strawson to argue that both actually missed the referring function of DDs, and ends up by identifying two uses of definite descriptions:
+
+> "I will call the two uses of definite descriptions I have in mind the attributive use and the referential use. A speaker who uses a definite description attributively in an assertion states something about whoever or whatever is the so-and-so. A speaker who uses a definite description referentially in an assertion, on the other hand, uses the description to enable his audience to pick out whom or what he is talking about and states something about that person or thing." (Keith S. Donnellan, 1966, p. 285)
+
+This is the key phrase. One thing to be noted is the referential use, when employed to objects in direct proximity, can be substituted entirely by pointing out, without any uttering, while the attributive use is relying entirely on language. This points (no pun intended) to some way we use existence claims in some sort of pre-verbal manner, one that is not accounted for by Russell's DDs but can be included in what Donnellan calls "referential use". Pointing is actually a referring gesture.
+
+## 2. Smith's murderer
+
+To make the idea clearer, let's take Donellan example: "Smith's murderer is insane". When we know nothing about the murderer, only that Smith was fouly murdered, we infer his the existence using a tipical DD, Donaldson calls "attributive". But when we know him (it's Jones), we use the DD "Smith's Murderer" to refer to Jones, not to an abstract concept.
+
+If I try to keep silent and still transmit "Smith's murderer is insane", I can't manage to do it in the first case mainly because I need to translate concepts into gestures, something hardly possible without loosing all details; in the second case, however, it is enough that I discretely point with my head and eyes to Jones on the trial stand and make a significant gesture with my hand at my temple.
+
+This difference maps precisely onto Russell's notion of acquaintance: referential use requires what Russell called "acquaintance" --- direct perceptual access to what we're talking about. When we can use a description referentially, we are in a position of acquaintance with its object. When we can only use it attributively, we lack this direct access and must rely on pure description.
+
+## 3. How this is solving Russell's hidden tension
+
+We pointed out that in the original "On Denoting" a hidden tension related to existence claims in DDs exists: in which way the truth values of propositions about ontological commitment differ from ontological commitments themselves? ("Does Apollo exists?" vs "Does the sun-god exists?"). We also pointed out to some examples proving that Quine's solution seems incomplete.
+
+Now, things are more clear:
+
+- in the attributive use of DD, Smith's murderer existence *is infered* and he is, in Quine's terms, "a value of a bound variable"
+- in the referring case, Smith's murderer is (or was[^8]) in front of us, it's existence is neither inferred nor presupposed, it simply is.
+
+If we take the Apollo question, "Does Apollo exists?" we immediately see that this is a pure concept and not something we can be acquainted with. So, in fact, "Does the sun-god exists?" which was Russell's solution, just makes clear that this is a concept we can't really refer, this being a case of a typical DD attributive use. The difficulty in the question is not because of the way we use the DD but the way we use "exists": there is an ambiguity in that we do not specify if we mean logical (conceptual) or actual existence. This insight, together with the conclusions from the previous paragraphs, point us to a specific observation about different ways we use existence claims.
+
+# 5. Immediate(ed) and Mediated Existence
+
+## 1. Hintikka's formalism
+
+Hintikka introduced in "Knowledge and Belief" (Hintikka, Hendricks, and Symons 2005) a couple of logical operators to try to discern among different epistemological operations, Ka → "a knows that", Ba → "a believes that", together with a fundamental principle that knowledge implies truth (Kap → p). This approach is interesting because it shows how the nuances of our relationship to the world can be formalized in logical language. I am mentioning it also because some readers will be inclined to draw an analogy with it.
+
+While our approach draws inspiration from Hintikka's epistemic logic, the quantifiers we will introduce serve a very different purpose because they do not deal with knowledge conditions.They simply mark different grounds for existence claims, acknowledging the different way in which we currently make existence claims, without implying different kinds of knowledge.
+
+## 2. Two new existential quantifiers
+
+Keeping in mind the distinction we draw from the works of Russel, Quine and Donnellan, i.e. that attributive and referential DD point to two separate kinds of ontological claim, we'll define a new kind of existential quantifier, ending up with two existential quantifiers:
+
+- inverted ∃, standing for what we will call "mediated existence" - that which exists through language and concepts
+- simple E, standing for what we'll call "immediate existence" - that which exists in direct, pre-linguistic experience
+
+"Mediated" here points to the crucial role of language in making something accessible to thought. In this sense, all logical existence is mediated through language (thus the inverted ∃ is inevitable in logic), while "real" existence is immediate, prior to and independent of linguistic conceptualization.[^9]
+
+To clarify their relationship, we'll examine the §3 counter-examples to Quine and reveal different patterns of interaction between immediate and mediated existence:
+
+**Cloaked Parthenon (p):**
+
+- before cloaking: `Ep & ∃p` (both immediately experienced and linguistically mediated)
+- after cloaking: `¬Ep & ∃p` (linguistically mediated but not immediately experienced)
+
+**Twin towers(tt):**
+
+- pre 2001: `Ett & ∃tt` (both immediate and mediated existence)
+- post 2001: `¬Ett & ∃tt` (persisting in language while vanishing from immediate experience)
+
+**Optical illusion (for object o):** `Eo & ¬∃o` (immediately experienced but lacking mediated existence - pure phenomenon without conceptual reality)
+
+At the edges of this framework, we find particularly revealing cases:
+
+**Pure concepts (justice j):** `¬Ej & ∃j` (exists only through language, no immediate experience possible)
+
+**Pain (p):**
+
+- Raw experience: `Ep & ¬∃p` (pure immediate existence before conceptualization)
+- Once named: `Ep & ∃p` (both immediate and linguistically mediated)
+
+**Virtual Reality (v):**
+
+- The experience: `Ev & ¬∃v` (immediately experienced but lacking mediated existence when knowing it is virtual?)
+- The technology: `¬Eh & ∃h` (exists conceptually but not immediately experienced)
+
+**Dreams (d):**
+
+- During: `Ed & ¬∃d` (pure immediate experience)
+- After waking: `¬Ed & ∃d` (transformed into linguistic/conceptual existence)
+
+These patterns reveal something fundamental about how experience and language interact in creating our understanding of existence.
+
+## Important note on the two existence quantifiers
+
+While our notation might suggest two types of existence, this would lead us into murky metaphysical waters. Instead, E and inverted ∃ should be understood as operators marking different grounds for using "exists" in language. When we say `Em & ∃m`, we're not claiming the mountain exists in two different ways, but rather noting that our use of "exists" here can be grounded both in immediate experience and in conceptual frameworks. Similarly, when we write `¬Ej & ∃j` for justice, we're marking that our use of "exists" here can only be grounded in conceptual frameworks, not in immediate experience.
+
+It may help to remind that E and inverted ∃ mark different grounds for existence claims without implying different kinds of knowledge. From an epistemic standpoint, whether we assert existence through immediate experience or through conceptual mediation, we are making the same type of claim - that something "is". The distinction lies not in different modes of knowing but in different contexts of usage, somewhat analogous to, though more formally specified than, Wittgenstein's analysis of how words function in different language games.
+
+Maybe the most important difference about the two operators is that immediate existence (E) points to a pre-linguistic modality of understanding existence: being aware of the mountain in front of me (Em) does not need any sort of conceptualization; immediate existence is the 'primitive' ancestor of mediated existence. There is here an interesting connection to Heidegger's Being and Time argument about how our practical engagement with things (what he calls "ready-to-hand") precedes theoretical, predicative understanding.
+
+This clarification maintains the analytical utility of our notation, while avoiding both metaphysical claims about types of existence and epistemological claims about types of knowledge.
+
+# 6. Addressing some possible connections
+
+There are some possible connections one can do on this very early draft.
+
+## 1. Kripke's critique of Donnellan:
+
+A Kripkean critique might argue that the distinction between referential and attributive uses is purely pragmatic, not semantic. When we say 'Smith's murderer is insane' while pointing at Jones in the dock, we're simply using language improperly - the semantic content remains tied to whoever actually murdered Smith, while the speaker's reference happens to pick out Jones. This suggests no deep distinction in types of existence claims, merely different pragmatic uses of the same semantic tools.
+
+However, this critique misses how existence claims operate at a more fundamental level than reference. When we point to Jones in the dock, we're grounding our existence claim in immediate experience (E), while the phrase 'Smith's murderer' operates through mediated existence (∃). Words, by their nature, always function within mediated existence --- they are the mediating device themselves. The confusion Kripke identifies arises precisely because we're attempting to bridge immediate experience with linguistic mediation. This suggests reference problems aren't merely pragmatic issues but reflect a deeper distinction in how we ground existence claims.
+
+## 2. Kit Fine's "wordly" and "unwordly" entities
+
+Fine's 'Problem of Possibilia' (2003) presents a sophisticated modal account distinguishing between 'worldly' things that exist in possible worlds and 'unworldly' entities that exist through conceptual necessity. This distinction resonates with but differs from our framework of immediated and mediated existence. Where Fine requires complex modal logic to handle possibilia, our distinction between E and ∃ quantifiers offers a more direct formalization of how existence claims function in natural language.
+
+For instance, while Fine must construct elaborate modal frameworks to explain how fictional entities like Sherlock Holmes can be said to exist, our framework simply notes that such entities have mediated existence (∃) without immediate existence (E). This parallels everyday linguistic practice where we comfortably say both that 'Sherlock Holmes exists in Conan Doyle's stories' (∃) while acknowledging he doesn't exist in immediate experience (¬E). The framework thus captures intuitive distinctions that Fine approaches through more complex theoretical machinery.
+
+# References {#bibliography .unnumbered}
+
+::::::: {#refs .references .csl-bib-body .hanging-indent entry-spacing="0"}
+::: {#ref-hintikkaKnowledgeBeliefIntroduction2005 .csl-entry}
+Hintikka, Jaakko, Vincent F. Hendricks, and John Symons. 2005. *Knowledge and Belief: An Introduction to the Logic of the Two Notions*. Repr. ed. Texts in Philosophy 1. London: King's College London Publications.
+:::
+
+::: {#ref-keiths.donnellan04ReferenceDefiniteDescriptions1966 .csl-entry}
+Keith S. Donnellan. 1966. "04-Reference and Definite Descriptions." doi:[10.2307/2183143](https://doi.org/10.2307/2183143).
+:::
+
+::: {#ref-quineWhatThere1948 .csl-entry}
+Quine, Willard V. 1948. "On What There Is." *The Review of Metaphysics 2* 5: 1--38.
+:::
+
+::: {#ref-russellDenoting1905 .csl-entry}
+Russell, Bertrand. 1905. "On Denoting." *Mind, New Series* 14 (56): 479--93. <https://www.jstor.org/stable/2248381>.
+:::
+:::::::
+
+[^1]: However, it is an open question if this difference in use does not lead to a difference in meaning; at the first glance, in "There is x such as..." and "there is a tree in front of me", "is" does mean different things. But it's not in the scope of this article to clarify it, we'll explain at the end why.
+
+[^2]: Why Donnellan didn't referd to Quine's paper is puzzling and deserves investigation.
+
+[^3]: The exact formalism evolved after its initial "wordly" formulation in "On Denoting" but its fundamental idea stayed the same.
+
+[^4]: Will see in section 3 how Quine did this, it suffices to say that his solution was to include everything, including proper names, under a DD form, and by that reducing all ontological commitments to some sort of logical truth value.
+
+[^5]: (Quine 1948)
+
+[^6]: It's relevant to mention that the ideea of "subsistence" and "existence" as two different kinds of being, was developed by Meinong in 1904 and this was known to Russell who in "On Denoting", in a footnote to a paragraph mentioning Meinong (Russell 1905, 485), says "*I use these* \[subsistence or being\] *as synonym*" (see quote in §2). Wyman's view, quoted by Quine, is actually Meinong's original view. Moreover, the whole example quine is using is echoing Russell's arguments about Meinong's theory.
+
+[^7]: Actually this is the case when we are deprived of our sensory perception, we know something is there but we can't perceive it.
+
+[^8]: The important thing here is that we were *acquainted* with him!
+
+[^9]: The mediated and immediated existence quantifiers clarify the problem in Quine's assertion that "something exists if it's the value of a bound variable": Quine is clearly taking here only about mediated existence, while all possible coutner-examples are about immediated existence.
