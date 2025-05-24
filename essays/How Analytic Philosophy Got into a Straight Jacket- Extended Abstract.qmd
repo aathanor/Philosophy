@@ -1,8 +1,5 @@
 ---
 author: Florin Cojocariu
-bibliography:
-- /Users/florin/Library/Mobile Documents/com\~apple\~CloudDocs/\--NOTE\--/assets/storages/logseq-citation-manager/citationDB.bib
-csl: /Users/florin/Library/Mobile Documents/com\~apple\~CloudDocs/\--ȘCOALA ESEURI/chicago-author-date-16th-edition.csl
 date-created: 15/12/2024
 date-updated: 18/01/2025
 name: How Analytic Philosophy got into a straight jacket - Extended Abstract
@@ -11,9 +8,6 @@ status: final draft 1
 title: How Analytic Philosophy got into a straight jacket - Extended Abstract
 type: essay - extended abstract
 version: 1.2
-zettlr:
-  strip_links: full
-  strip_tags: false
 ---
 
 
