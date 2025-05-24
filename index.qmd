@@ -17,7 +17,7 @@ listing:
 
 ### Welcome
 
-This collection of writings primarily contains my school projects but also some other things I work on (under "Staff").
+This collection of writings primarily contains my school projects but also some other things I work on (under "Stuff").
 
 ## Essays
 ::: {#essays}
