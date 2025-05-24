@@ -6,9 +6,6 @@ created: 10.11.2022
 csl: /Users/florin/Library/Mobile Documents/com\~apple\~CloudDocs/\--ȘCOALA ESEURI/chicago-author-date-16th-edition.csl
 date: 10.20.2024
 title: Geneza - un comentariu al primei zile
-zettlr:
-  strip_links: full
-  strip_tags: false
 ---
 
 # Geneza - un comentariu al primei zile
