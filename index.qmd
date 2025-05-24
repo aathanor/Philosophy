@@ -1,10 +1,6 @@
 ---
-title: "Academic Papers"
+title: "Florin Cojocariu's things"
 listing:
- - id: papers
-   contents: "papers"
-   type: default
-   sort: "date desc"
  - id: essays
    contents: "essays"
    type: default
@@ -17,11 +13,7 @@ listing:
 
 ### Welcome
 
-This is my collection of academic papers and essays.
-
-## Papers
-::: {#papers}
-:::
+This collection of writings primarily focuses on my school projects.
 
 ## Essays
 ::: {#essays}
