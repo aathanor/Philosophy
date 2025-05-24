@@ -5,7 +5,10 @@ project:
 website:
   title: "Florin Cojocariu"
   site-url: "https://florin.antimaterie.ro"
-  
+  format:
+  html:
+    css: ["styles.css"]
+    self-contained: true
   navbar:
     left:
       - href: index.qmd
