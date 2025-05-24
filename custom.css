@@ -157,6 +157,10 @@ no-row-height column-margin column-container {
   display: none;
 }
 
+.quart-document-content {
+    margin-left: 6em;
+}
+
 /* =============================================================================
    GISCUS COMMENTS STYLING
    ============================================================================= */
