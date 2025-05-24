@@ -28,7 +28,7 @@ jobs:
         uses: quarto-dev/quarto-actions/render@v2
      
       - name: Clean YAML headers
-  run: |
+  	run: |
     find . -name "*.qmd" -exec sed -i '/^bibliography:/d; /^csl:/d' {} \;
       
       - name: Debug - List files
