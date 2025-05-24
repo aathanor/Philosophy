@@ -1,6 +1,5 @@
-/* Position the Quarto sidebar properly (don't hide it!) */
-nav#quarto-sidebar,
-#quarto-sidebar.sidebar {
+/* Position the margin sidebar properly (move "Other Formats" to left) */
+#quarto-margin-sidebar {
   position: fixed !important;
   left: 20px !important; /* Centered in left margin */
   top: 5rem !important; /* Match article titles */
