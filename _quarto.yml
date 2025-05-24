@@ -16,7 +16,6 @@ website:
       category-id: "DIC_kwDOOvbpNc4CqifF"
       mapping: "pathname"
       reactions-enabled: true
-      emit-metadata: false
       input-position: "bottom"
       theme: "light"
       language: "en"
@@ -27,7 +26,5 @@ format:
     css: ["custom.css"]
     reference-location: margin
     cap-location: margin
-    comments:
-      giscus: true
   pdf:
     documentclass: article
