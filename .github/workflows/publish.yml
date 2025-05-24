@@ -27,6 +27,13 @@ jobs:
       - name: Render Quarto Project
         uses: quarto-dev/quarto-actions/render@v2
       
+      - name: Debug - List files
+  run: |
+    echo "Root directory:"
+    ls -la
+    echo "_site directory:"
+    ls -la _site/ || echo "_site does not exist"
+      
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
