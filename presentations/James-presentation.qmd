@@ -1,6 +1,11 @@
 ---
 title: "James's Pragmatic Theory of Truth"
-format: revealjs
+format: revealjs:
+    theme: dark  # or white, league, sky, etc.
+    transition: slide
+    incremental: true  # bullet points appear one by one
+    slide-number: true
+    chalkboard: true   # enables drawing tools
 ---
 
 # James's Pragmatic Theory of Truth
