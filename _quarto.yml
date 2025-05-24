@@ -11,9 +11,9 @@ website:
   comments:
     giscus:
       repo: aathanor/Philosophy
-      repo-id: "R_kgDOOvbpNQ"  # From GraphQL query above
+      repo-id: "R_kgDOOvbpNQ"
       category: "General"
-      category-id: "DIC_kwDOH..."  # From GraphQL query above
+      category-id: "DIC_kwDOOvbpNc4CqifF"
       mapping: "pathname"
       reactions-enabled: true
       input-position: "bottom"
