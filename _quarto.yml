@@ -11,7 +11,7 @@ website:
   comments:
     giscus:
       repo: your-username/your-repo-name
-      repo-id: "R_kgDOH..."  # From GraphQL query above
+      repo-id: "R_kgDOOvbpNQ"
       category: "General"
       category-id: "DIC_kwDOOvbpNc4CqifF"
       mapping: "pathname"
