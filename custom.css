@@ -157,7 +157,7 @@ no-row-height column-margin column-container {
   display: none;
 }
 
-.quarto-document-content {
+#quarto-document-content {
     margin-left: 6em;
 }
 
