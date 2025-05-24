@@ -11,7 +11,7 @@ website:
   comments:
     giscus:
       repo: your-username/your-repo-name
-      repo-id: "YOUR_REPO_ID"
+      repo-id: "R_kgDOOvbpNQ"
       category: "General"
       category-id: "YOUR_CATEGORY_ID"
       mapping: "pathname"
