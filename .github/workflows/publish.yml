@@ -25,10 +25,10 @@ jobs:
         run: quarto install tinytex
       
       - name: Render Quarto Project
-      uses: quarto-dev/quarto-actions/render@v2
+        uses: quarto-dev/quarto-actions/render@v2
 
-- name: Clean YAML headers
-  run: |
+      - name: Clean YAML headers
+        run: |
     find . -name "*.qmd" -exec sed -i '/^bibliography:/d; /^csl:/d' {} \;
 
 - name: Debug - List files
