@@ -1,6 +1,6 @@
 ---
 author: Florin Cojocariu
-date: 16/01/2025
+date: 05.01.2025
 title: Immediate and Mediated Existence
 ---
 
