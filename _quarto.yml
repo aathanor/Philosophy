@@ -15,9 +15,8 @@ website:
         text: Home
 
 format:
-  format:
-     html:
-       theme: cosmo
+  html:
+    theme: cosmo
     css: ["custom.css"]
     toc-location: left
     reference-location: margin
