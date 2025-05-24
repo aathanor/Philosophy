@@ -120,14 +120,15 @@ p {
 
 /* Adjust main content positioning and spacing - CORRECTED */
 main.content.page-columns.page-full {
-  margin-left: 50px;   /* Move content AWAY from right, closer to left */
+  margin-left: 30px;   /* Move content AWAY from right, closer to left */
   padding-left: -20px; /* Reduce left padding */
-  max-width: 800px;    /* Constrain content width */
+  padding-right: 30px;
+  max-width: 900px;    /* Constrain content width */
 }
 
 /* Adjust body margin to make room for left sidebar */
 body {
-  margin-left: 180px;
+  margin-left: 150px;
 }
 
 /* =============================================================================
