@@ -8,8 +8,6 @@ format: revealjs:
     chalkboard: true   # enables drawing tools
 ---
 
-# James's Pragmatic Theory of Truth
-
 # 1. The Agreement Problem
 
 ## What Does "Agreement with Reality" Mean(1)?
@@ -24,6 +22,10 @@ format: revealjs:
 
 * Works for simple sensible things: "Shut your eyes and think of yonder clock on the wall, and you get just such a true picture or copy of its dial"
 * Breaks down for abstract concepts: "Your idea of its 'works'... is much less of a copy, yet it passes muster"
+
+::: {.notes}
+These are my speaker notes. I can write detailed explanations, reminders, or talking points here. The audience won't see this - only I will when I press 'S' during the presentation.
+:::
 
 ## What Does "Agreement with Reality" Mean(3)?
 
