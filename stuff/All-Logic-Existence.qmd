@@ -4,6 +4,8 @@ date: 04.04.2024
 title: "Why 'All Logic' can't be"
 ---
 
+(this was written because I do not think 
+
 ::: epigraph
 *"\"My propositions serve as elucidations in the following way: anyone
 who understands me eventually recognizes them as nonsensical, when he
