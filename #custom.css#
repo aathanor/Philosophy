@@ -1,0 +1,224 @@
+/* =============================================================================
+   TUFTE CSS BASE STYLES
+   ============================================================================= */
+
+html {
+  font-size: 15px;
+}
+
+body {
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 12.5%;
+  font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  background-color: #fffff8;
+  color: #111;
+  max-width: 1400px;
+  counter-reset: sidenote-counter;
+}
+
+/* Headers */
+h1, h2, h3 {
+  font-weight: 400;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+  line-height: 1;
+}
+
+h1 { 
+  margin-top: 5rem; 
+}
+
+/* Main content */
+#quarto-content {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+p {
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+  padding-right: 0;
+  vertical-align: baseline;
+}
+
+/* =============================================================================
+   SIDENOTES AND MARGIN NOTES
+   ============================================================================= */
+
+.sidenote,
+.marginnote,
+.column-margin,
+.no-row-height.column-margin {
+  float: right;
+  clear: right;
+  margin-right: -70%;
+  width: 300px; /* Fixed width of 300px as requested */
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+  font-size: 0.9rem; /* Smaller than main text */
+  line-height: 1.3;
+  vertical-align: baseline;
+  position: relative;
+}
+
+.sidenote-number {
+  counter-increment: sidenote-counter;
+}
+
+.sidenote-number:after,
+.sidenote:before {
+  font-family: et-book-roman-old-style;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.sidenote-number:after {
+  content: counter(sidenote-counter);
+  font-size: 1rem;
+  top: -0.5rem;
+  left: 0.1rem;
+}
+
+.sidenote:before {
+  content: counter(sidenote-counter) " ";
+  font-size: 1rem;
+  top: -0.5rem;
+}
+
+/* Footnotes as sidenotes */
+.footnote-ref {
+  text-decoration: none;
+  background: none;
+  color: inherit;
+  vertical-align: super;
+  font-size: 0.8em;
+}
+
+/* =============================================================================
+   QUARTO SIDEBAR POSITIONING (for TOC and "Other Formats")
+   ============================================================================= */
+
+#quarto-sidebar,
+#quarto-margin-sidebar {
+  position: fixed !important;
+  left: 20px !important;
+  top: 5rem !important;
+  width: 240px !important;
+  max-height: calc(100vh - 5rem) !important;
+  background: #fffff8 !important;
+  border: none !important;
+  padding: 1rem !important;
+  z-index: 1000 !important;
+}
+
+/* Hide duplicate "On this page" TOC toggle dropdown */
+#quarto-toc-toggle {
+  display: none !important;
+}
+
+/* Adjust main content positioning and spacing - CORRECTED */
+main.content.page-columns.page-full {
+  margin-left: 30px;   /* Move content AWAY from right, closer to left */
+  padding-left: -20px; /* Reduce left padding */
+  padding-right: 30px;
+  max-width: 900px;    /* Constrain content width */
+}
+
+/* Adjust body margin to make room for left sidebar */
+body {
+  margin-left: 150px;
+}
+
+#quarto-margin-sidebar{
+    left:150px !important;
+}
+
+no-row-height column-margin column-container {
+    margin-left: 30px;
+}
+
+/* =============================================================================
+   QUARTO-SPECIFIC FIXES
+   ============================================================================= */
+
+.quarto-title-block {
+  margin-bottom: 3rem;
+}
+
+.listing-container {
+  margin-top: 2rem;
+}
+
+/* Hide author in listings */
+.listing-item .listing-author,
+.quarto-listing .listing-author {
+  display: none;
+}
+
+.quarto-document-content {
+    margin-left: 6em;
+}
+
+/* =============================================================================
+   GISCUS COMMENTS STYLING
+   ============================================================================= */
+
+.giscus {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #ccc;
+}
+
+.giscus-frame {
+  border: none;
+  width: 100%;
+  background: transparent;
+}
+
+/* Ensure comments don't interfere with sidenotes */
+@media (min-width: 760px) {
+  .giscus {
+    padding-right: 12.5%;
+  }
+}
+
+/* =============================================================================
+   RESPONSIVE DESIGN
+   ============================================================================= */
+
+@media (max-width: 760px) {
+  body {
+    width: 84%;
+    margin-left: auto;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  
+  .sidenote,
+  .marginnote,
+  .column-margin,
+  .no-row-height.column-margin {
+    display: none;
+  }
+  
+  .margin-toggle:checked + .sidenote,
+  .margin-toggle:checked + .marginnote {
+    display: block;
+    float: left;
+    left: 1rem;
+    clear: both;
+    width: 95%;
+    margin: 1rem 2.5%;
+    vertical-align: baseline;
+    position: relative;
+  }
+  
+  .giscus {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
