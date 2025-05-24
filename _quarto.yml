@@ -13,7 +13,7 @@ website:
       repo: your-username/your-repo-name
       repo-id: "R_kgDOOvbpNQ"
       category: "General"
-      category-id: "YOUR_CATEGORY_ID"
+      category-id: "DIC_kwDOOvbpNc4CqifF"
       mapping: "pathname"
       reactions-enabled: true
       emit-metadata: false
