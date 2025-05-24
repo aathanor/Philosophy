@@ -4,6 +4,8 @@ date: 04.05.2025
 title: "Patterns, Pragmatism, and Mild Realism: An Empirical Probe"
 ---
 
+(a first draft proposal for Contemporary Metaphysics class)
+
 # Abstract
 
 This essay revisits the question of whether patterns in language are real, by comparing two opposing views: Daniel Dennett's "mild-realism" claim that sees patterns are real when they help us compress and predict information, and Norton Nelkin's instrumentalist view that patterns are interpretive constructs, not features of the world itself. To build the argument one could pick up any types of patterns. We chose look at patterns of sentences in a sentence-embedding model, SBERT. Instead of treating meaning as something attached to isolated words, we ask how *object-words* like *cat*, *hammer*, or *water* gain their meaning from how they are *used in* different kinds of sentences. By analyzing thousands of naturally occurring sentences, we show that meaning forms around a word not as a fixed point but as a *shape*---with a dense, literal "core" of usage and a more variable, figurative "halo."[^1] This structure is not imposed from outside but *emerges from the language itself*.
