@@ -11,6 +11,8 @@ version: 0.1
 
 \def\beforebib{\vspace{2cm}\noindent\rule{\textwidth}{0.4pt}\\[1cm]\noindent\textbf{Bibliography}\vspace{0.5cm}}
 
+(an essay submitted for the Philosophy of Language class)
+
 # Preliminary Considerations
 
 This essay started as a more focused and simple investigation into Donnellan's "Reference and Definite Descriptions" paper. However, as it is often the case, things plugged in quickly into former research, generating a quite different, more complex, and possibly confusing at times, essay.
