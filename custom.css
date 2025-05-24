@@ -291,7 +291,7 @@ p {
 #quarto-sidebar.sidebar,
 nav#quarto-sidebar {
   position: fixed !important;
-  left: 100px !important; /* Better centered in the 250px left margin space */
+  left: 200px !important; /* Better centered in the 250px left margin space */
   top: 5rem !important; /* Match h1 margin-top */
   width: 180px !important; /* Slightly smaller to fit nicely in margin */
   max-height: calc(100vh - 5rem) !important; /* Adjust height to account for top offset */
