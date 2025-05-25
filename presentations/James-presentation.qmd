@@ -48,18 +48,15 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 * "Its verity is in fact an event, a process... of its verifying itself"
 * "Its validity is the process of its valid-ation"
 
-• **Pragmatic question**: "What concrete difference will its being true make in anyone's actual life?"
+* **Pragmatic question**: "What concrete difference will its being true make in anyone's actual life?"
 
-# 3: Direct vs Indirect Verification
-**The Credit System of Truth**
+# 3: Direct vs Indirect Verification: the credit system of truth
 
-• **Direct verification**:
-
+* **Direct verification**:
 * Lost in woods example: "If I am lost in the woods and starved, and find what looks like a cow-path"
 * Success criterion: "if I do so and follow it, I save myself"
 
-• **Indirect verification dominates**:
-
+* **Indirect verification dominates**:
 * Clock example: "no one of us has seen the hidden works that make it one"
 * "We let our notion pass for true without attempting to verify"
 
