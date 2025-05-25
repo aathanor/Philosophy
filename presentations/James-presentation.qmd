@@ -154,7 +154,7 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 
 :::
 
-# Reality as Collective Construct: The asymmetry
+# [Reality as Collective Construct: The asymmetry]
 (a proposal)
 
 * First: Reality is built by the sum of subjective truths
