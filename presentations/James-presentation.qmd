@@ -128,6 +128,7 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 
 # Social Nature of Truth: consequences
 * **Consistency requirements**:
+
  [* "We must talk consistently just as we must think consistently"]{.smaller}
   [* "We mustn't now call Abel 'Cain' or Cain 'Abel'"]{.smaller}
 
