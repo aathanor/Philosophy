@@ -330,6 +330,8 @@ Here the analogy with the "force field" of Reality works again
 # Final point:
 #  "In this field of truth it is the pragmatists... who are the more genuine defenders of the universe's rationality"
 
+<button onclick="window.history.back()" style="background: #007acc; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">← Back to Site</button>
+
 ::: {.notes}
 
 :::
