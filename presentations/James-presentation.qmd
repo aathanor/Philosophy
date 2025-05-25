@@ -92,7 +92,7 @@ Or maybe it's a wolf trail to their den?
 * "We let our notion pass for true without attempting to verify"
 
 ::: {.notes}
-
+Most of what we take as true we never verify
 :::
 
 ## Direct vs Indirect Verification: the credit system of truth
@@ -103,7 +103,7 @@ Or maybe it's a wolf trail to their den?
 * **Foundation needed**: "All this points to direct face-to-face verifications somewhere, without which the fabric of truth collapses"
 
 ::: {.notes}
-
+This money analogy is very powerfull. As money, truth relies on credibility and trust.
 :::
 
 # 4: Truth's Practical Value: Cash Value?
@@ -114,7 +114,8 @@ Or maybe it's a wolf trail to their den?
   * ["Ideas that tell us which of them to expect count as the true ideas"]{style="font-size: 0.7em"}
 
 ::: {.notes}
-
+"cash value" are James's words.
+primitive pragmatism - it may work for animals too!
 :::
 
 # Truth's Practical Value: value equation
@@ -123,7 +124,7 @@ Or maybe it's a wolf trail to their den?
 *   [Ready for when they become "practically relevant to one of our emergencies"]{style="font-size: 0.7em"}
 
 ::: {.notes}
-- "Both these phrases mean exactly the same thing"
+- "Both these phrases mean exactly the same thing, 'true iff useful' "
 :::
 
 # 5: Social Nature of Truth
@@ -133,7 +134,7 @@ Or maybe it's a wolf trail to their den?
 * **Verbal truth building**: "All truth thus gets verbally built out, stored up, and made available for everyone"
 
 ::: {.notes}
-
+There is o powerfull idea here. Modern 
 :::
 
 # Social Nature of Truth: consequences
