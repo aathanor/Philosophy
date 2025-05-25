@@ -28,7 +28,7 @@ format:
 These are my speaker notes. I can write detailed explanations, reminders, or talking points here. The audience won't see this - only I will when I press 'S' during the presentation.
 :::
 
-## What Does "Agreement with Reality" Mean(3)?
+## "Agreement with Reality" Mean(3)?
 
 • **Abstract realities resist copying**:
 
