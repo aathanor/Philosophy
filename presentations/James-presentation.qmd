@@ -44,8 +44,7 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 * "The truth of an idea is not a stagnant property inherent in it"
 * "Truth happens to an idea. It becomes true, is made true by events"
 
-• **Process terminology**:
-
+* **Process terminology**:
 * "Its verity is in fact an event, a process... of its verifying itself"
 * "Its validity is the process of its valid-ation"
 
