@@ -208,10 +208,10 @@ Back to James
 # 8: Two Types of Truth: MoF vs. RAI
 * **Empirical truths**: Require sense-verification, can change
   * ["If I am lost in the woods... it is of utmost importance that I should think of a human habitation"]{style="font-size: 0.7em"}
-* [Objects: concrete things, dates, places, distances]{style="font-size: 0.7em"}
+	* [Objects: concrete things, dates, places, distances]{style="font-size: 0.7em"}
 * **Logical/Mathematical truths**: "Eternal character" - once true, always true
-  *[ "1 and 1 make 2... white differs less from gray than from black"]{style="font-size: 0.7em"}
-  * [Objects: mental concepts, abstract relations]{style="font-size: 0.7em"}
+	* [ "1 and 1 make 2... white differs less from gray than from black"]{style="font-size: 0.7em"}
+  	* [Objects: mental concepts, abstract relations]{style="font-size: 0.7em"}
 
 ::: {.notes}
 
