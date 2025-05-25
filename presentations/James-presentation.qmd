@@ -288,7 +288,7 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 :::
 
 # 12: Defense Against Subjectivism: The accusation
-* *: Critics say pragmatists "put foolishness and wisdom on one level"
+* Critics say pragmatists "put foolishness and wisdom on one level"
 * "Think that by saying whatever you find it pleasant to say and calling it truth you fulfill every pragmatistic requirement"
 
 ::: {.notes}
@@ -297,6 +297,7 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 
 # 12: Defense Against Subjectivism: James's response
 **Pragmatism is Not "Anything Goes"**
+
 * **Objective constraints on pragmatists**:
   * ["Pent in... between the whole body of funded truths squeezed from the past"]{style="font-size: 0.7em"}
   * ["And the coercions of the world of sense about him"]{style="font-size: 0.7em"}
