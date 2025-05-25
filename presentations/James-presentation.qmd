@@ -72,8 +72,8 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 
 * **Instrumental nature**: "The possession of truth... is only a preliminary means towards other vital satisfactions"
 * **Practical importance**:
-  * "We live in a world of realities that can be infinitely useful or infinitely harmful"
-  * "Ideas that tell us which of them to expect count as the true ideas"
+  * "We live in a world of realities that can be infinitely useful or infinitely harmful"{.smaller}
+  * "Ideas that tell us which of them to expect count as the true ideas"{.smaller}
 
 # Truth's Practical Value: value equation
 
