@@ -127,12 +127,12 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 
 # Social Nature of Truth: consequences
 * **Consistency requirements**:
-  * "We must talk consistently just as we must think consistently"{.smaller}
-  * "We mustn't now call Abel 'Cain' or Cain 'Abel'"{.smaller}
+  * ["We must talk consistently just as we must think consistently"]{.smaller}
+  * ["We mustn't now call Abel 'Cain' or Cain 'Abel'"]{.smaller}
 
 * **Systematic consequences**:
-  * "We ungear ourselves from the book of Genesis, and from all its connections with the universe of speech and fact"{.smaller}
-  * "We throw ourselves out of whatever truth that whole system may embody"{.smaller}
+  * ["We ungear ourselves from the book of Genesis, and from all its connections with the universe of speech and fact"]{.smaller}
+  * ["We throw ourselves out of whatever truth that whole system may embody"]{.smaller}
 
 ::: {.notes}
 
@@ -141,12 +141,12 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 # 6: Reality as Collective Construct
 (a proposal)
 * **Direct vs indirect evidence**:
-* Twin Towers example: "We all know they were real... but how do we know it?"{.smaller}
-* "We saw images, but the key point here is that we chose to trust"{.smaller}
+* [Twin Towers example: "We all know they were real... but how do we know it?"]{.smaller}
+* ["We saw images, but the key point here is that we chose to trust"]{.smaller}
 
 * **Verification delegation**:
-* "Different sources send different images showing the same event from different angles"{.smaller}
-* "Strictly speaking, it's a delegation of verification. I do not verify anything"{.smaller}
+* ["Different sources send different images showing the same event from different angles"]{.smaller}
+* ["Strictly speaking, it's a delegation of verification. I do not verify anything"]{.smaller}
 
 ::: {.notes}
 
