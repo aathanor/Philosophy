@@ -168,23 +168,23 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 * **Rationalist error**: Treating truth as existing "before the thing" (ante rem)
 * Like saying rich people are rich because they possess "wealth essence"
 
-• **James's analogies**:
+# The "Ante Rem" Fallacy: James's analogies
 
 * **Wealth**: "name for concrete processes that certain men's lives play a part in"
 * **Health**: "name for processes, as digestion, circulation, sleep"
 * **Truth**: exists only in verification activities, not as separate quality
 
-• **Habit vs. Act distinction**:
+# The "Ante Rem" Fallacy: James's analogies: Habit vs. Act distinction
 
 * Truth "becomes a habit of certain of our ideas... in their intervals of rest"
-* "But that \[verification] activity is the root of the whole matter"
+* "But that verification activity is the root of the whole matter"
 
-• **Key quote**: "Truth exists ante rem just as much and as little as the other things do"
+* **Key quote**: "Truth exists ante rem just as much and as little as the other things do"
 
 # 11: "Absolutely True" as Ideal
 **The Regulative Function of Perfect Truth**
 
-• **Definition**: "What no further experience will ever alter"
+* **Definition**: "What no further experience will ever alter"
 
 • **Status**: "Ideal vanishing-point towards which we imagine all our temporary truths will some day converge"
 
