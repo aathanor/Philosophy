@@ -217,4 +217,6 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 * Must "mediate between all previous truths and certain new experiences"
 * "Must lead to some sensible terminus or other that can be verified exactly"
 
-• **Final point**: "In this field of truth it is the pragmatists... who are the more genuine defenders of the universe's rationality"
+# Final point:
+
+* "In this field of truth it is the pragmatists... who are the more genuine defenders of the universe's rationality"
