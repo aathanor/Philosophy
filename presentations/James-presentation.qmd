@@ -107,7 +107,7 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 * "Strictly speaking, it's a delegation of verification. I do not verify anything"
 
 # Reality as Collective Construct: The asymmetry
-
+(a proposal)
 * First: Reality is built by the sum of subjective truths
 * Then: When some truth is validated we compare it with reality
 * Circularity? No.
