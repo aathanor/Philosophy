@@ -56,18 +56,34 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 * "Its verity is in fact an event, a process... of its verifying itself"
 * "Its validity is the process of its valid-ation"
 
+::: {.notes}
+
+:::
+
 ## Truth as Dynamic Process: James's alternative: Pragmatic question
 * "What concrete difference will its being true make in anyone's actual life?"
+
+::: {.notes}
+
+:::
 
 # 3: Direct vs Indirect Verification
 * **Direct verification**:
 * Lost in woods example: "If I am lost in the woods and starved, and find what looks like a cow-path"
 * Success criterion: "if I do so and follow it, I save myself"
 
+::: {.notes}
+
+:::
+
 # Direct vs Indirect Verification: indirect verification
 * **Indirect verification dominates**:
 * Clock example: "no one of us has seen the hidden works that make it one"
 * "We let our notion pass for true without attempting to verify"
+
+::: {.notes}
+
+:::
 
 ## Direct vs Indirect Verification: the credit system of truth
 
@@ -76,6 +92,10 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 * "You accept my verification of one thing, I yours of another"
 * **Foundation needed**: "All this points to direct face-to-face verifications somewhere, without which the fabric of truth collapses"
 
+::: {.notes}
+
+:::
+
 # 4: Truth's Practical Value: What Is Truth's Cash Value?
 
 * **Instrumental nature**: "The possession of truth... is only a preliminary means towards other vital satisfactions"
@@ -83,12 +103,18 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
   * "We live in a world of realities that can be infinitely useful or infinitely harmful"{.smaller}
   * "Ideas that tell us which of them to expect count as the true ideas"{.smaller}
 
-# Truth's Practical Value: value equation
+::: {.notes}
 
+:::
+
+# Truth's Practical Value: value equation
 * "You can say of it then either that 'it is useful because it is true' or that 'it is true because it is useful'"
-* "Both these phrases mean exactly the same thing"
 * **Truth storage**: "We store such extra truths away in our memories, and with the overflow we fill our books of reference"
-* Ready for when they become "practically relevant to one of our emergencies"
+*   Ready for when they become "practically relevant to one of our emergencies"{.smaller}
+
+::: {.notes}
+- "Both these phrases mean exactly the same thing"
+:::
 
 # 5: Social Nature of Truth: All Human Thinking Gets 'Discursified'
 
