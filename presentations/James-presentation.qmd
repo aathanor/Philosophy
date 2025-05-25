@@ -159,13 +159,15 @@ The Bible example is telling: it is not about The Book truth status, but about t
 
 * **Verification delegation**:
 * ["Different sources send different images showing the same event from different angles"]{style="font-size: 0.7em"}
-* ["Strictly speaking, it's a delegation of verification. I do not verify anything"]{style="font-size: 0.7em"}
+* ["Strictly speaking, it's a delegation of verification. I do not verify anything"]{style="font-size: 0.7em"} 
 
 ::: {.notes}
-
+"Reality" often ammounts to "Truth of the proposition describing a MoF".
+We delegate most of the verification of truth to the credibility of our sources
+Remember school, it's build on this ideea that the teachers cannot lie.
 :::
 
-# [Reality as Collective Construct: The asymmetry]{style="font-size: 0.85em"}
+# [Reality as Collective Construct: The asymmetry]
 (a proposal)
 
 * First: Reality is built by the sum of subjective truths
@@ -174,7 +176,10 @@ The Bible example is telling: it is not about The Book truth status, but about t
 * The collective reality is not the personal reality.
 
 * **Reality as collective conscious archetype**: I is everywhere, in everything, but you can't really see it"
-
+::: {.notes}
+An archetype is by definition a sort of 'matrix' to describe something we don't have direct access to but we know only by its effects. 'Energy' for instance is an archetypal concept.
+Collective Unconscious Archetypes of Jung function more like 'fileds of force' guiding all 
+:::
 
 # 7: Pragmatist vs Rationalist: Rationalist position
 
