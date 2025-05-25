@@ -152,9 +152,10 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 
 * **Core concept**: "True ideas are those that we can validate, corroborate and verify"
 * **Leading that pays**: Truth guides us toward valuable experiences
-* "Any idea that helps us deal with either the reality or its belongings... will agree sufficiently"
-* "Leading that is useful because it is into quarters that contain objects that are important"
+  * "Any idea that helps us deal with either the reality or its belongings... will agree sufficiently"
+  * "Leading that is useful because it is into quarters that contain objects that are important"
 
+# 9: Truth as "Leading": 
 • **Multiple forms of leading**:
 
 * Direct: toward sensible objects themselves
