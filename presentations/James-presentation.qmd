@@ -35,8 +35,7 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 # 2: Truth as Dynamic Process
 **"Truth Happens to an Idea"**
 
-• **Against static conception**:
-
+* **Against static conception**:
 * Intellectualists: "truth means essentially an inert static relation"
 * "When you've got your true idea of anything, there's an end of the matter"
 
