@@ -100,8 +100,8 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 
 * **Instrumental nature**: "The possession of truth... is only a preliminary means towards other vital satisfactions"
 * **Practical importance**:
-  * ["We live in a world of realities that can be infinitely useful or infinitely harmful"]{.smaller}
-  * ["Ideas that tell us which of them to expect count as the true ideas"]{.smaller}
+  * ["We live in a world of realities that can be infinitely useful or infinitely harmful"]{style="font-size: 0.8em"}
+  * ["Ideas that tell us which of them to expect count as the true ideas"]{style="font-size: 0.8em"}
 
 ::: {.notes}
 
