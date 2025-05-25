@@ -110,7 +110,7 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 # Truth's Practical Value: value equation
 * "You can say of it then either that 'it is useful because it is true' or that 'it is true because it is useful'"
 * **Truth storage**: "We store such extra truths away in our memories, and with the overflow we fill our books of reference"
-*   [Ready for when they become "practically relevant to one of our emergencies"]{.smaller}
+*   [Ready for when they become "practically relevant to one of our emergencies"]{style="font-size: 0.7em"}
 
 ::: {.notes}
 - "Both these phrases mean exactly the same thing"
@@ -128,12 +128,12 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 
 # Social Nature of Truth: consequences
 * **Consistency requirements**:
-  * [We must talk consistently just as we must think consistently]{.smaller}
-  * [We mustn't now call Abel 'Cain' or Cain 'Abel']{.smaller}
+  * [We must talk consistently just as we must think consistently]{style="font-size: 0.7em"}
+  * [We mustn't now call Abel 'Cain' or Cain 'Abel']{style="font-size: 0.7em"}
 
 * **Systematic consequences**:
-  * ["We ungear ourselves from the book of Genesis, and from all its connections with the universe of speech and fact"]{.smaller}
-  * ["We throw ourselves out of whatever truth that whole system may embody"]{.smaller}
+  * ["We ungear ourselves from the book of Genesis, and from all its connections with the universe of speech and fact"]{style="font-size: 0.7em"}
+  * ["We throw ourselves out of whatever truth that whole system may embody"]{style="font-size: 0.7em"}
 
 ::: {.notes}
 
@@ -142,12 +142,12 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 # 6: Reality as Collective Construct
 (a proposal)
 * **Direct vs indirect evidence**:
-* [Twin Towers example: "We all know they were real... but how do we know it?"]{.smaller}
-* ["We saw images, but the key point here is that we chose to trust"]{.smaller}
+* [Twin Towers example: "We all know they were real... but how do we know it?"]{style="font-size: 0.7em"}
+* ["We saw images, but the key point here is that we chose to trust"]{style="font-size: 0.7em"}
 
 * **Verification delegation**:
-* ["Different sources send different images showing the same event from different angles"]{.smaller}
-* ["Strictly speaking, it's a delegation of verification. I do not verify anything"]{.smaller}
+* ["Different sources send different images showing the same event from different angles"]{style="font-size: 0.7em"}
+* ["Strictly speaking, it's a delegation of verification. I do not verify anything"]{style="font-size: 0.7em"}
 
 ::: {.notes}
 
@@ -188,11 +188,11 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 
 # 8: Two Types of Truth: Matters of Fact vs. Relations Among Ideas
 * **Empirical truths**: Require sense-verification, can change
-  * ["If I am lost in the woods... it is of utmost importance that I should think of a human habitation"]{.smaller}
-* [Objects: concrete things, dates, places, distances]{.smaller}
+  * ["If I am lost in the woods... it is of utmost importance that I should think of a human habitation"]{style="font-size: 0.7em"}
+* [Objects: concrete things, dates, places, distances]{style="font-size: 0.7em"}
 * **Logical/Mathematical truths**: "Eternal character" - once true, always true
-  *[ "1 and 1 make 2... white differs less from gray than from black"]{.smaller}
-  * [Objects: mental concepts, abstract relations]{.smaller}
+  *[ "1 and 1 make 2... white differs less from gray than from black"]{style="font-size: 0.7em"}
+  * [Objects: mental concepts, abstract relations]{style="font-size: 0.7em"}
 
 ::: {.notes}
 
@@ -210,8 +210,8 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 # 9: Truth as "Leading": The Guidance Metaphor
 * **Core concept**: "True ideas are those that we can validate, corroborate and verify"
 * **Leading that pays**: Truth guides us toward valuable experiences
-  * ["Any idea that helps us deal with either the reality or its belongings... will agree sufficiently"]{.smaller}
-  * ["Leading that is useful because it is into quarters that contain objects that are important"]{.smaller}
+  * ["Any idea that helps us deal with either the reality or its belongings... will agree sufficiently"]{style="font-size: 0.7em"}
+  * ["Leading that is useful because it is into quarters that contain objects that are important"]{style="font-size: 0.7em"}
 
 ::: {.notes}
 
@@ -269,8 +269,8 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
  # 11: "Absolutely True" as Ideal: Practical consequences
 * **Practical consequence**: "We have to live today by what truth we can get today, and be ready tomorrow to call it falsehood"
 * **Historical examples**:
-  * ["Ptolemaic astronomy, Euclidean space, Aristotelian logic... were expedient for centuries"]{.smaller}
-  * [Now "only relatively true, or true within those borders of experience"]{.smaller}
+  * ["Ptolemaic astronomy, Euclidean space, Aristotelian logic... were expedient for centuries"]{style="font-size: 0.7em"}
+  * [Now "only relatively true, or true within those borders of experience"]{style="font-size: 0.7em"}
 * **Retrospective judgment**: "We live forwards... but we understand backwards"
 
 ::: {.notes}
@@ -288,9 +288,9 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 # 12: Defense Against Subjectivism: James's response
 **Pragmatism is Not "Anything Goes"**
 * **Objective constraints on pragmatists**:
-  * ["Pent in... between the whole body of funded truths squeezed from the past"]{.smaller}
-  * ["And the coercions of the world of sense about him"]{.smaller}
-  * ["Who so well as he feels the immense pressure of objective control?"]{.smaller}
+  * ["Pent in... between the whole body of funded truths squeezed from the past"]{style="font-size: 0.7em"}
+  * ["And the coercions of the world of sense about him"]{style="font-size: 0.7em"}
+  * ["Who so well as he feels the immense pressure of objective control?"]{style="font-size: 0.7em"}
 
 ::: {.notes}
 
