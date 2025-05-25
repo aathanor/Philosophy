@@ -194,7 +194,7 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 
 :::
 
-# 8: Two Types of Truth: Matters of Fact vs. Relations Among Ideas
+# 8: Two Types of Truth: MoF vs. RAI
 * **Empirical truths**: Require sense-verification, can change
   * ["If I am lost in the woods... it is of utmost importance that I should think of a human habitation"]{style="font-size: 0.7em"}
 * [Objects: concrete things, dates, places, distances]{style="font-size: 0.7em"}
