@@ -276,7 +276,7 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 
 :::
 
- # 11: "Absolutely True" as Ideal: consequences
+ # "Absolutely True" as Ideal: consequences
 * **Practical consequence**: "We have to live today by what truth we can get today, and be ready tomorrow to call it falsehood"
 * **Historical examples**:
   * ["Ptolemaic astronomy, Euclidean space, Aristotelian logic... were expedient for centuries"]{style="font-size: 0.7em"}
