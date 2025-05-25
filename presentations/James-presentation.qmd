@@ -53,7 +53,7 @@ Somewhat unclear if we're talking about "agreement with objects" or predicates
 * "When you've got your true idea of anything, there's an end of the matter"
 
 ::: {.notes}
-
+We can trace back to this conception the idea that truth is "some sort of object" like in "ultimate truth"
 :::
 
 ## Truth as Dynamic Process: James's alternative
@@ -67,14 +67,14 @@ Somewhat unclear if we're talking about "agreement with objects" or predicates
 * "Its validity is the process of its valid-ation"
 
 ::: {.notes}
-
+A sentence in itself has no truth value. Its truth value is always built by interaction, not only with the external world, but also with our own system of beliefs.
 :::
 
 ## Truth as Dynamic Process: James's alternative: Pragmatic question
 * "What concrete difference will its being true make in anyone's actual life?"
 
 ::: {.notes}
-
+Up to now we're mostly talking verificationsim and the argument was hard to discerne from an apiricist one. (empiricism and pragmatism have all the "verification" part common)
 :::
 
 # 3: Direct vs Indirect Verification
@@ -83,7 +83,7 @@ Somewhat unclear if we're talking about "agreement with objects" or predicates
 * Success criterion: "if I do so and follow it, I save myself"
 
 ::: {.notes}
-
+Or maybe it's a wolf trail to their den?
 :::
 
 # Direct vs Indirect Verification: indirect verification
