@@ -32,6 +32,10 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 * Even "time-keeping function" or "spring's elasticity" - "hard to see exactly what your ideas can copy"
 * **The core question**: "Where our ideas cannot copy definitely their object, what does agreement with that object mean?"
 
+::: {.notes}
+
+:::
+
 # 2: Truth as Dynamic Process: truth happens to an idea
 
 * **Against static conception**:
