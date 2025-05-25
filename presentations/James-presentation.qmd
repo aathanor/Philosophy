@@ -134,7 +134,7 @@ primitive pragmatism - it may work for animals too!
 * **Verbal truth building**: "All truth thus gets verbally built out, stored up, and made available for everyone"
 
 ::: {.notes}
-There is o powerfull idea here. Modern "The Social Construction of Reality" 
+There is o powerfull idea here. Modern "The Social Construction of Reality" of Berger and Luckmann: reality is a social construct
 :::
 
 # Social Nature of Truth: consequences
@@ -143,11 +143,11 @@ There is o powerfull idea here. Modern "The Social Construction of Reality"
   * [We mustn't now call Abel 'Cain' or Cain 'Abel']{style="font-size: 0.7em"}
 
 * **Systematic consequences**:
-  * ["We ungear ourselves from the book of Genesis, and from all its connections with the universe of speech and fact"]{style="font-size: 0.7em"}
-  * ["We throw ourselves out of whatever truth that whole system may embody"]{style="font-size: 0.7em"}
+  * ["[Iff] we ungear ourselves from the book of Genesis, and from all its connections with the universe of speech and fact"]{style="font-size: 0.7em"}
+  * ["[then] we throw ourselves out of whatever truth that whole system may embody"]{style="font-size: 0.7em"}
 
 ::: {.notes}
-
+The Bible example is telling: it is not about The Book truth status, but about the collective social truths that embeded into our beliefs, texts, culture etc, derived from The Bible.
 :::
 
 # 6: Reality as Collective Construct
