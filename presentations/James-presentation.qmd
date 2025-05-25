@@ -51,18 +51,17 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 ## Truth as Dynamic Process: James's alternative: Pragmatic question
 * "What concrete difference will its being true make in anyone's actual life?"
 
-# 3: Direct vs Indirect Verification: the credit system of truth
-
+# 3: Direct vs Indirect Verification
 * **Direct verification**:
 * Lost in woods example: "If I am lost in the woods and starved, and find what looks like a cow-path"
 * Success criterion: "if I do so and follow it, I save myself"
 
-# Direct vs Indirect Verification: the credit system of truth
+# Direct vs Indirect Verification: indirect verification
 * **Indirect verification dominates**:
 * Clock example: "no one of us has seen the hidden works that make it one"
 * "We let our notion pass for true without attempting to verify"
 
-## Direct vs Indirect Verification: the credit system 
+## Direct vs Indirect Verification: the credit system of truth
 
 * "Truth lives, in fact, for the most part on a credit system"
 * "Our thoughts and beliefs 'pass' so long as nothing challenges them, just as bank notes pass"
