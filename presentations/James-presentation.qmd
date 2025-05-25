@@ -168,9 +168,9 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 # 7: Pragmatist vs Rationalist: Static vs Dynamic
 * **Rationalist position**:
 * Truth "absolutely obtains, being a unique relation that does not wait upon any process"
-* "Shoots straight over the head of experience, and hits its reality every time"
-* Truth's quality is "timeless, like all essences and natures"
-* "You pragmatists put the cart before the horse"
+  * ["Shoots straight over the head of experience, and hits its reality every time"]{style="font-size: 0.7em"}
+  * [Truth's quality is "timeless, like all essences and natures"]{style="font-size: 0.7em"}
+  * ["You pragmatists put the cart before the horse"]
 
 ::: {.notes}
 
