@@ -305,4 +305,8 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 :::
 
 # Final point:
-* "In this field of truth it is the pragmatists... who are the more genuine defenders of the universe's rationality"
+* "In this field of truth it is the pragmatists... who are the more genuine defenders of the universe's rationality"{.large}
+
+::: {.notes}
+
+:::
