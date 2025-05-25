@@ -43,7 +43,7 @@ Here is the old problem of the "concept", what is a concept?
 * **The core question**: "Where our ideas cannot copy definitely their object, what does agreement with that object mean?"
 
 ::: {.notes}
-
+Somewhat unclear if we're talking about "agreement with objects" or predicates
 :::
 
 # 2: Truth as Dynamic Process: truth happens to an idea
