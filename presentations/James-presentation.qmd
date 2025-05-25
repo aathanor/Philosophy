@@ -60,6 +60,7 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 * Clock example: "no one of us has seen the hidden works that make it one"
 * "We let our notion pass for true without attempting to verify"
 
+## Direct vs Indirect Verification: the credit system of truth
 • **The credit system**:
 
 * "Truth lives, in fact, for the most part on a credit system"
