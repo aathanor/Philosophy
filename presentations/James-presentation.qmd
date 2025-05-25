@@ -27,7 +27,7 @@ format:
 Intelectualists do not map to a clear thinking current, it refers to any approach which claims truth can be pbtain exclusively by theoretical means.
 :::
 
-## "Agreement with Reality: the copying model fails"
+## Agreement with Reality: the copying model fails
 
 * Works for simple sensible things: "Shut your eyes and think of yonder clock on the wall, and you get just such a true picture or copy of its dial"
 * Breaks down for abstract concepts: "Your idea of its 'works'... is much less of a copy, yet it passes muster"
@@ -36,7 +36,7 @@ Intelectualists do not map to a clear thinking current, it refers to any approac
 Here is the old problem of the "concept", what is a concept?
 :::
 
-## "Agreement with Reality": abstract realities resist copying
+## Agreement with Reality: abstract realities resist copying
 
 * "Past time," "power," "spontaneity" - "how can our mind copy such realities?"
 * Even "time-keeping function" or "spring's elasticity" - "hard to see exactly what your ideas can copy"
@@ -88,8 +88,8 @@ Or maybe it's a wolf trail to their den?
 
 # Direct vs Indirect Verification: indirect verification
 * **Indirect verification dominates**:
-* Clock example: "no one of us has seen the hidden works that make it one"
-* "We let our notion pass for true without attempting to verify"
+* 	[Clock example: "no one of us has seen the hidden works that make it one"]{style="font-size: 0.7em"}
+* 	["We let our notion pass for true without attempting to verify"]{style="font-size: 0.7em"}
 
 ::: {.notes}
 Most of what we take as true we never verify
@@ -118,7 +118,7 @@ This money analogy is very powerfull. As money, truth relies on credibility and 
 primitive pragmatism - it may work for animals too!
 :::
 
-# Truth's Practical Value: value equation
+## Truth's Practical Value: value equation
 * "You can say of it then either that 'it is useful because it is true' or that 'it is true because it is useful'"
 * **Truth storage**: "We store such extra truths away in our memories, and with the overflow we fill our books of reference"
 *   [Ready for when they become "practically relevant to one of our emergencies"]{style="font-size: 0.7em"}
@@ -127,7 +127,7 @@ primitive pragmatism - it may work for animals too!
 - "Both these phrases mean exactly the same thing, 'true iff useful' "
 :::
 
-# 5: Social Nature of Truth
+## 5: Social Nature of Truth
 **All Human Thinking Gets 'Discursified'**
 
 * **Social construction**: "We exchange ideas; we lend and borrow verifications, get them from one another by means of social intercourse"
@@ -137,7 +137,7 @@ primitive pragmatism - it may work for animals too!
 There is o powerfull idea here. Modern "The Social Construction of Reality" of Berger and Luckmann: reality is a social construct
 :::
 
-# Social Nature of Truth: consequences
+## Social Nature of Truth: consequences
 * **Consistency requirements**:
   * [We must talk consistently just as we must think consistently]{style="font-size: 0.7em"}
   * [We mustn't now call Abel 'Cain' or Cain 'Abel']{style="font-size: 0.7em"}
@@ -167,7 +167,7 @@ We delegate most of the verification of truth to the credibility of our sources
 Remember school, it's build on this ideea that the teachers cannot lie.
 :::
 
-# Reality as Collective Construct: The asymmetry
+## Reality as Collective Construct: The asymmetry
 (a proposal)
 
 * First: Reality is built by the sum of subjective truths
@@ -195,7 +195,7 @@ Back to James
 :::
 
 
-# Pragmatist vs Rationalist Debate: James's response
+## Pragmatist vs Rationalist Debate: James's response
 * Rationalists treat verification as mere "signs of its being"
 * "Merely our lame ways of ascertaining, after the fact"
 * "Truth is made... in the course of experience"
@@ -218,7 +218,7 @@ Back to James
 
 :::
 
-# Two Types of Truth: Key insight
+## Two Types of Truth: Key insight
 * Both involve "leading" but different verification processes
   * Empirical: lead to sensible experiences
   * Logical: lead through abstract idea systems
@@ -234,10 +234,10 @@ Back to James
   * ["Leading that is useful because it is into quarters that contain objects that are important"]{style="font-size: 0.7em"}
 
 ::: {.notes}
-
+Here the analogy with the "force field" of Reality works again
 :::
 
-# Truth as "Leading": Multiple forms of leading
+## Truth as "Leading": Multiple forms of leading
 * Direct: toward sensible objects themselves
 * Indirect: toward "useful verbal and conceptual quarters"
 * Social: toward "consistency, stability and flowing human intercourse"
@@ -257,7 +257,7 @@ Back to James
 
 :::
 
-# The "Ante Rem" Fallacy: James's analogies
+## The "Ante Rem" Fallacy: James's analogies
 * **Wealth**: "name for concrete processes that certain men's lives play a part in"
 * **Health**: "name for processes, as digestion, circulation, sleep"
 * **Truth**: exists only in verification activities, not as separate quality
@@ -266,7 +266,7 @@ Back to James
 
 :::
 
-# The "Ante Rem" Fallacy: Habit vs. Act distinction
+## The "Ante Rem" Fallacy: Habit vs. Act distinction
 * Truth "becomes a habit of certain of our ideas... in their intervals of rest"
 * "But that verification activity is the root of the whole matter"
 
@@ -288,7 +288,7 @@ Back to James
 
 :::
 
-# "Absolutely True" as Ideal: consequences
+## "Absolutely True" as Ideal: consequences
 * **Practical consequence**: "We have to live today by what truth we can get today, and be ready tomorrow to call it falsehood"
 * **Historical examples**:
   * ["Ptolemaic astronomy, Euclidean space, Aristotelian logic... were expedient for centuries"]{style="font-size: 0.7em"}
@@ -307,7 +307,7 @@ Back to James
 
 :::
 
-# 12: Defense Against Subjectivism: James's response
+## Defense Against Subjectivism: James's response
 **Pragmatism is Not "Anything Goes"**
 
 * **Objective constraints on pragmatists**:
@@ -319,7 +319,7 @@ Back to James
 
 :::
 
-# Defense Against Subjectivism: Expedient ≠ Pleasant
+## Defense Against Subjectivism: Expedient ≠ Pleasant
 * "Expedient in the long run and on the whole"
 * Must "mediate between all previous truths and certain new experiences"
 * "Must lead to some sensible terminus or other that can be verified exactly"
@@ -329,7 +329,7 @@ Back to James
 :::
 
 # Final point:
-#  ["In this field of truth it is the pragmatists... who are the more genuine defenders of the universe's rationality"]{.large}
+#  "In this field of truth it is the pragmatists... who are the more genuine defenders of the universe's rationality"
 
 ::: {.notes}
 
