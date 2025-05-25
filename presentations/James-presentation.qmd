@@ -254,7 +254,7 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 
 :::
 
-# The "Ante Rem" Fallacy: James's analogies: Habit vs. Act distinction
+# The "Ante Rem" Fallacy: Habit vs. Act distinction
 * Truth "becomes a habit of certain of our ideas... in their intervals of rest"
 * "But that verification activity is the root of the whole matter"
 
