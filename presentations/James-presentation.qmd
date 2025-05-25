@@ -19,7 +19,7 @@ format:
 
 ## What Does "Agreement with Reality" Mean?
 
-• **Traditional definition**: Truth means ideas "agree" with reality, falsity means "disagreement"
+* **Traditional definition**: Truth means ideas "agree" with reality, falsity means "disagreement"
 
 * Both pragmatists and intellectualists accept this starting point
 
