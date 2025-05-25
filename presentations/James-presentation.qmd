@@ -26,9 +26,7 @@ format:
 These are my speaker notes. I can write detailed explanations, reminders, or talking points here. The audience won't see this - only I will when I press 'S' during the presentation.
 :::
 
-## "Agreement with Reality" Mean(3)?
-
-• **Abstract realities resist copying**:
+## "Agreement with Reality": abstract realities resist copying
 
 * "Past time," "power," "spontaneity" - "how can our mind copy such realities?"
 * Even "time-keeping function" or "spring's elasticity" - "hard to see exactly what your ideas can copy"
