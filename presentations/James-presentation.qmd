@@ -130,21 +130,15 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 * Rationalists treat verification as mere "signs of its being"
 * "Merely our lame ways of ascertaining, after the fact"
 * "Truth is made... in the course of experience"
-* Experience and truth are "everlastingly in process of mutation"
 * "Truths emerge from facts; but they dip forward into facts again"
+* **Fundamental difference**: "Pragmatism faces forward to the future, while rationalism face backward to a past eternity"
 
-• **Fundamental difference**: "Pragmatism faces forward to the future, so does rationalism... face backward to a past eternity"
+# 8: Two Types of Truth: Matters of Fact vs. Relations Among Ideas
 
-# 8: Two Types of Truth
-**Matters of Fact vs. Relations Among Ideas**
-
-• **Empirical truths**: Require sense-verification, can change
-
+* **Empirical truths**: Require sense-verification, can change
 * "If I am lost in the woods... it is of utmost importance that I should think of a human habitation"
 * Objects: concrete things, dates, places, distances
-
-• **Logical/Mathematical truths**: "Eternal character" - once true, always true
-
+* **Logical/Mathematical truths**: "Eternal character" - once true, always true
 * "1 and 1 make 2... white differs less from gray than from black"
 * Objects: mental concepts, abstract relations
 
