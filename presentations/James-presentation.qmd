@@ -23,13 +23,17 @@ format:
 
 * Both pragmatists and intellectualists accept this starting point
 
+::: {.notes}
+Intelectualists do not map to a clear thinking current, it refers to any approach which claims truth can be pbtain exclusively by theoretical means.
+:::
+
 ## "Agreement with Reality: the copying model fails"
 
 * Works for simple sensible things: "Shut your eyes and think of yonder clock on the wall, and you get just such a true picture or copy of its dial"
 * Breaks down for abstract concepts: "Your idea of its 'works'... is much less of a copy, yet it passes muster"
 
 ::: {.notes}
-These are my speaker notes. I can write detailed explanations, reminders, or talking points here. The audience won't see this - only I will when I press 'S' during the presentation.
+Here is the old problem of the "concept", what is a concept?
 :::
 
 ## "Agreement with Reality": abstract realities resist copying
