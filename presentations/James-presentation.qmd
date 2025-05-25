@@ -124,8 +124,8 @@ These are my speaker notes. I can write detailed explanations, reminders, or tal
 # Social Nature of Truth: consequences
 
 * **Consistency requirements**:
-  * "We must talk consistently just as we must think consistently"
-  * "We mustn't now call Abel 'Cain' or Cain 'Abel'"
+  * "We must talk consistently just as we must think consistently"{.smaller}
+  * "We mustn't now call Abel 'Cain' or Cain 'Abel'"{.smaller}
 
 * **Systematic consequences**:
   * "We ungear ourselves from the book of Genesis, and from all its connections with the universe of speech and fact"
