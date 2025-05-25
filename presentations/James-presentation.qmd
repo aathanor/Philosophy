@@ -154,7 +154,7 @@ The Bible example is telling: it is not about The Book truth status, but about t
 (a proposal)
 
 * **Direct vs indirect evidence**:
-*	Twin Towers example: "We all know they were real... but how do we know it?"]{style="font-size: 0.7em"}
+*	[Twin Towers example: "We all know they were real... but how do we know it?"]{style="font-size: 0.7em"}
 *	["We saw images, but the key point here is that we chose to trust"]{style="font-size: 0.7em"}
 * **Verification delegation**:
 * 	["Different sources send different images showing the same event from different angles"]{style="font-size: 0.7em"}
