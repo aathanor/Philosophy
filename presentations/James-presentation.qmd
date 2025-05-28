@@ -116,7 +116,8 @@ Fake news is, to a point, similar to fake money, they disrupt the credibility an
 * **Instrumental nature**: "The possession of truth... is only a preliminary means towards other vital satisfactions"
 * **Practical importance**:
   * ["We live in a world of realities that can be infinitely useful or infinitely harmful"]{style="font-size: 0.7em"}
-  * ["Ideas that tell us which of them to expect count as the true ideas"]{style="font-size: 0.7em"}
+  * [True ideas correctly predict whether we'll encounter helpful or harmful aspects of reality.
+]{style="font-size: 0.7em"}
 
 ::: {.notes}
 "cash value" are James's words.
@@ -187,7 +188,7 @@ Remember school, it's built on this idea that the teachers cannot lie.
 An archetype is by definition a sort of 'matrix' to describe something we don't have direct access to but we know only by its effects. 'Energy' for instance is an archetypal concept.
 Collective Unconscious Archetypes of Jung function more like 'fields of force' guiding any individual psyche along its lines while allowing definite individual freedom. Its individual manifestation is personal (in dreams and behavior) but its nature is collective.
 To this effect, Reality as a Conscious Archetype is some sort of consciously accepted 'field of force' that we all align to.
-This also links well into Quine’s ideas about “web of beliefs” and his famous 
+This also links well into Quine’s  idea that our beliefs face the "tribunal of sense experience" not individually but as a "corporate body." (“Two Dogmas”) 
 :::
 
 # 7: Pragmatist vs Rationalist: Rationalist position
@@ -222,7 +223,7 @@ Back to James
   	* [Objects: mental concepts, abstract relations]{style="font-size: 0.7em"}
 
 ::: {.notes}
-
+This is pure David Hume and it is interesting to note that in the long run “Hume’s Fork”” proved untenable.
 :::
 
 ## Two Types of Truth: Key insight
@@ -241,7 +242,8 @@ Back to James
   * ["Leading that is useful because it is into quarters that contain objects that are important"]{style="font-size: 0.7em"}
 
 ::: {.notes}
-Here the analogy with the "force field" of Reality works again
+Here the analogy with the "force field" of Reality works again.  The pragmatic interpretation is relatively forced, as the truth we’re guided to may have ‘negative’ value.
+It is telling how often we encounter the term “alignment” or “re-alignment” in modern talk.
 :::
 
 ## Truth as "Leading": Multiple forms of leading
@@ -251,7 +253,7 @@ Here the analogy with the "force field" of Reality works again
 * **Bottom line**: "Agreement turns out to be essentially an affair of leading"
 
 ::: {.notes}
-
+This is true, but agreement is on ething and truth another. There is a risk to reduce truth to agreement.
 :::
 
 # 10: The "Ante Rem" Fallacy
@@ -270,17 +272,8 @@ Here the analogy with the "force field" of Reality works again
 * **Truth**: exists only in verification activities, not as separate quality
 
 ::: {.notes}
-
-:::
-
-## The "Ante Rem" Fallacy: Habit vs. Act distinction
-* Truth "becomes a habit of certain of our ideas... in their intervals of rest"
-* "But that verification activity is the root of the whole matter"
-
-* **Key quote**: "Truth exists ante rem just as much and as little as the other things do"
-
-::: {.notes}
-
+It seems to me there is a slight confusion here between "process" and “state”. Sleep is a state more than a process. 
+There is also a forced analogy, truth can be attributed to elementary, non-complex statements about things; while evaluating the health of an individual is a complex process, evaluating the truth of “it is raining” it’s not. This may be the weakest point in James’s view for truth as process.
 :::
 
 # 11: "Absolutely True" as Ideal
@@ -311,16 +304,14 @@ Here the analogy with the "force field" of Reality works again
 * "Think that by saying whatever you find it pleasant to say and calling it truth you fulfill every pragmatistic requirement"
 
 ::: {.notes}
-
+They seem to think that pragmatism is defining truth to your own liking. But in fact this is the opposite of pragmatism, as it usually leds to great suffering or even death.
 :::
 
 ## Defense Against Subjectivism: James's response
 **Pragmatism is Not "Anything Goes"**
 
-* **Objective constraints on pragmatists**:
-  * ["Pent in... between the whole body of funded truths squeezed from the past"]{style="font-size: 0.7em"}
-  * ["And the coercions of the world of sense about him"]{style="font-size: 0.7em"}
-  * ["Who so well as he feels the immense pressure of objective control?"]{style="font-size: 0.7em"}
+*   **Past knowledge constrains us**: Must work with existing verified truths, can't ignore established facts
+*   **Reality constrains us**: The physical world forces compliance - "coercions of the world of sense"
 
 ::: {.notes}
 
