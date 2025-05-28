@@ -22,9 +22,11 @@ format:
 * **Traditional definition**: Truth means ideas "agree" with reality, falsity means "disagreement"
 
 * Both pragmatists and intellectualists accept this starting point
+* But what “reality” is? And what exactly agrees with it?
+* Is truth referring to some sort of exact copy of reality in our mind?
 
 ::: {.notes}
-Intelectualists do not map to a clear thinking current, it refers to any approach which claims truth can be pbtain exclusively by theoretical means.
+“Intelectualists” do not map to a clear thinking current, it refers to any approach which claims truth can be obtain exclusively by theoretical means.
 :::
 
 ## Agreement with Reality: the copying model fails
@@ -33,7 +35,7 @@ Intelectualists do not map to a clear thinking current, it refers to any approac
 * Breaks down for abstract concepts: "Your idea of its 'works'... is much less of a copy, yet it passes muster"
 
 ::: {.notes}
-Here is the old problem of the "concept", what is a concept?
+Here is the old problem of the "concept", what is a concept? What exactly is the 'corespondent' of objects in our mind?
 :::
 
 ## Agreement with Reality: abstract realities resist copying
@@ -43,7 +45,7 @@ Here is the old problem of the "concept", what is a concept?
 * **The core question**: "Where our ideas cannot copy definitely their object, what does agreement with that object mean?"
 
 ::: {.notes}
-Somewhat unclear if we're talking about "agreement with objects" or predicates
+Somewhat unclear if we're talking about "agreement with objects" or predicates; I cannot agree with “the clock”, as this is not a proposition
 :::
 
 # 2: Truth as Dynamic Process: truth happens to an idea
@@ -53,7 +55,8 @@ Somewhat unclear if we're talking about "agreement with objects" or predicates
 * "When you've got your true idea of anything, there's an end of the matter"
 
 ::: {.notes}
-We can trace back to this conception the idea that truth is "some sort of object" like in "ultimate truth"
+We can trace back to this conception the pervasive idea that truth is "some sort of object" like in "ultimate truth"
+
 :::
 
 ## Truth as Dynamic Process: James's alternative
@@ -63,18 +66,19 @@ We can trace back to this conception the idea that truth is "some sort of object
 * "Truth happens to an idea. It becomes true, is made true by events"
 
 * **Process terminology**:
-* "Its verity is in fact an event, a process... of its verifying itself"
+* "Its verity is in fact an event, a process [...] of its verifying itself"
 * "Its validity is the process of its valid-ation"
 
 ::: {.notes}
 A sentence in itself has no truth value. Its truth value is always built by interaction, not only with the external world, but also with our own system of beliefs.
+It’s important, we tend to use 'truth' more often than we think in our language like some sort of object. James makes a valuable point here, truth is a process. Keep in mind, when we say that a proposition is true in logic, we actually mean there is a proof for that and proof in istself is process.
 :::
 
 ## Truth as Dynamic Process: James's alternative: Pragmatic question
 * "What concrete difference will its being true make in anyone's actual life?"
 
 ::: {.notes}
-Up to now we're mostly talking verificationsim and the argument was hard to discerne from an apiricist one. (empiricism and pragmatism have all the "verification" part common)
+Up to now we're mostly talking verificationsim and the argument was hard to discern from an empiricist one. (empiricism and pragmatism have all the "verification" part common). But here is pure pragmatism.
 :::
 
 # 3: Direct vs Indirect Verification
@@ -92,7 +96,7 @@ Or maybe it's a wolf trail to their den?
 * 	["We let our notion pass for true without attempting to verify"]{style="font-size: 0.7em"}
 
 ::: {.notes}
-Most of what we take as true we never verify
+Most of what we take as true we never verify. This is another profound insight
 :::
 
 ## Direct vs Indirect Verification: the credit system of truth
@@ -103,7 +107,8 @@ Most of what we take as true we never verify
 * **Foundation needed**: "All this points to direct face-to-face verifications somewhere, without which the fabric of truth collapses"
 
 ::: {.notes}
-This money analogy is very powerfull. As money, truth relies on credibility and trust.
+This money analogy is very powerfull. As money, truth relies on credibility and trust. In fact much more than we currently think to rely on ‘hard rules’ in our civilization is in fact built on credibility and trust.
+Fake news is, to a point, similar to fake money, they disrupt the credibility and trust. But, it must be said, fake money, as fake news, always existed. And it also must be said, while for fake money there is an objective criteria, anybody can call fake news anything. This is not annecdotal, it is a vicious cycle by which the very notion of truth colapses in our times.
 :::
 
 # 4: Truth's Practical Value: Cash Value?
@@ -116,6 +121,7 @@ This money analogy is very powerfull. As money, truth relies on credibility and 
 ::: {.notes}
 "cash value" are James's words.
 primitive pragmatism - it may work for animals too!
+- whatever we call “value” it is in fact related to feeling and thinking judging functions. The whole idea of “truth as process” becomes much more clear if we look at how we decide truth, what is the process of deciding the truth. Pragmatism is using only feeling (is it good for me?) while Logic is using only thinking.
 :::
 
 ## Truth's Practical Value: value equation
@@ -125,6 +131,7 @@ primitive pragmatism - it may work for animals too!
 
 ::: {.notes}
 - "Both these phrases mean exactly the same thing, 'true iff useful' "
+- Here James introduces, with our “extension” of memory, the ideea of social nature of truth.
 :::
 
 ## 5: Social Nature of Truth
@@ -134,7 +141,7 @@ primitive pragmatism - it may work for animals too!
 * **Verbal truth building**: "All truth thus gets verbally built out, stored up, and made available for everyone"
 
 ::: {.notes}
-There is o powerfull idea here. Modern "The Social Construction of Reality" of Berger and Luckmann: reality is a social construct
+There is o powerfull idea here. There is a more recent important text on that , "The Social Construction of Reality" of Berger and Luckmann: reality is a social construct
 :::
 
 ## Social Nature of Truth: consequences
@@ -147,7 +154,7 @@ There is o powerfull idea here. Modern "The Social Construction of Reality" of B
   * ["[then] we throw ourselves out of whatever truth that whole system may embody"]{style="font-size: 0.7em"}
 
 ::: {.notes}
-The Bible example is telling: it is not about The Book truth status, but about the collective social truths that embeded into our beliefs, texts, culture etc, derived from The Bible.
+The Bible example is telling: it is not about The Book truth status, but about the collective social truths that embeded into our beliefs, texts, culture etc, derived from The Bible. We’re prisoners to our conventions which go beyond language and definitions as they are *cultural* conventions.
 :::
 
 # 6: Reality as Collective Construct
@@ -161,9 +168,9 @@ The Bible example is telling: it is not about The Book truth status, but about t
 	* 	["Strictly speaking, it's a delegation of verification. I do not verify anything"]{style="font-size: 0.7em"} 
 
 ::: {.notes}
-"Reality" often ammounts to "Truth of the proposition describing a MoF".
-We delegate most of the verification of truth to the credibility of our sources
-Remember school, it's build on this ideea that the teachers cannot lie.
+"Reality" often amounts to "Truth of the proposition describing a MoF".
+We delegate most of the verification of truth to the credibility of our sources.
+Remember school, it's built on this idea that the teachers cannot lie.
 :::
 
 ## Reality as Collective Construct: The asymmetry
@@ -178,8 +185,9 @@ Remember school, it's build on this ideea that the teachers cannot lie.
 
 ::: {.notes}
 An archetype is by definition a sort of 'matrix' to describe something we don't have direct access to but we know only by its effects. 'Energy' for instance is an archetypal concept.
-Collective Unconscious Archetypes of Jung function more like 'fileds of force' guiding all individual psyche along its lines. Its individual manifestation is personal (in dreams and behavior) but its nature is collective.
-To this effect, Reality as a Conscious Archetype is some sort of consiously accepted 'field of force' that we all align to.
+Collective Unconscious Archetypes of Jung function more like 'fields of force' guiding any individual psyche along its lines while allowing definite individual freedom. Its individual manifestation is personal (in dreams and behavior) but its nature is collective.
+To this effect, Reality as a Conscious Archetype is some sort of consciously accepted 'field of force' that we all align to.
+This also links well into Quine’s ideas about “web of beliefs” and his famous 
 :::
 
 # 7: Pragmatist vs Rationalist: Rationalist position
