@@ -1,0 +1,37 @@
+---
+title: "Florin Cojocariu's things"
+listing:
+ - id: essays
+   contents: "essays"
+   type: default
+   sort: "date desc"
+ - id: presentations
+   contents: "presentations"
+   type: default
+   sort: "date desc"
+ - id: stuff
+   contents: "stuff"
+   type: default
+   sort: "date desc"
+---
+
+### Welcome
+
+This collection of writings primarily contains my school projects but also some other things I work on (under "Stuff").
+
+## Essays
+::: {#essays}
+:::
+
+## Presentations
+::: {#presentations}
+:::
+
+## Stuff
+::: {#stuff}
+:::
+
+## About me
+
+I have a Bachelor's degree in Physics and am currently pursuing a Master's degree in Analytical Philosophy. My interests have shifted lately to the Philosophy of Language and LLMs. I can be reached at florin.cojocariu at s.unibuc.ro
+

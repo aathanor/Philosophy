@@ -1,0 +1,39 @@
+project:
+  type: website
+  output-dir: _site
+website:
+  title: "Florin Cojocariu"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+  sidebar:                          # ← Add this website-level sidebar
+    style: "floating"
+    search: false
+  comments:
+    giscus:
+      repo: aathanor/Philosophy
+      repo-id: "R_kgDOOvbpNQ"
+      category: "General"
+      category-id: "DIC_kwDOOvbpNc4CqifF"
+      mapping: "pathname"
+      reactions-enabled: true
+      input-position: "bottom"
+      theme: "light"
+      language: "en"
+format:
+  html:
+    theme: cosmo
+    css: ["custom.css"]
+    reference-location: margin
+    cap-location: margin
+    toc: true                    # ← New
+    include-in-header:
+      - text: |
+          <script defer async 
+            src="https://tracker.hakanai.io/hakanai.min.js" 
+            data-site="c1fe82c6-73e8-4680-b675-9dd43b57cd35" 
+            data-link-tracking="true">
+          </script>
+  pdf:
+    documentclass: article
