@@ -28,5 +28,9 @@ format:
     reference-location: margin
     cap-location: margin
     toc: true                    # ← New
+    include-in-header:
+      text: |
+        <!-- hakanai Analytics -->
+        <script defer async src="https://tracker.hakanai.io/hakanai.min.js" data-site="c1fe82c6-73e8-4680-b675-9dd43b57cd35" data-link-tracking="true"></script>
   pdf:
     documentclass: article
