@@ -1,7 +1,7 @@
 ---
 title: "Truth as Collective Conscious Archetype"
 author: "Florin Cojocariu"
-date: "Epistemology Presentation"
+date: "18.06.2025"
 format:
   revealjs:
     theme: dark
@@ -15,13 +15,9 @@ format:
 > "Truth lives, in fact, for the most part on a credit system"  
 > — William James
 
-**Florin Cojocariu**  
-*Epistemology Presentation*
-
 ::: {.notes}
 **Speaker Notes - Opening (1 minute):**
 
-- Start with James's powerful metaphor of truth as a credit system
 - This presentation will explore how truth isn't just individual belief but a collective construction that shapes our reality
 - We'll be challenging traditional views of truth as merely describing an independent reality
 - Set the tone: This is about how we BUILD reality, not just describe it
