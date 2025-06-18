@@ -42,8 +42,6 @@ Individual verification is epistemologically impossible. We rely on a "credit sy
 
 ::: {.notes}
 **Speaker Notes (1.5-2 minutes):**
-
-- Engage the audience by asking them to really think about these examples - pause for effect
 - Most of our "knowledge" cannot be personally verified
 - We accept these truths based on collective validation through institutions (universities, scientific journals, historical records)
 - This sets up the main argument: truth emerges from social processes, not individual certainty
@@ -178,17 +176,3 @@ Understanding truth as reality's builder—rather than its reporter—gives us t
 5. **Contemporary Relevance**: Current epistemic conflicts are battles over truth-validation methods, not abandonment of truth
 
 ---
-
-## Key Phrases & Tips
-
-### Key Phrases to Remember
-- "Truth lives on a credit system"
-- "Reality as a collective conscious archetype"
-- "We build reality through truth"
-- "Truth as reality's builder, not its reporter"
-
-### Presentation Tips
-- **Timing**: Aim for 1-1.5 minutes per slide
-- **Engagement**: Pause after verification questions on Slide 2
-- **Examples**: Emphasize Japan and quantum mechanics examples
-- **Closing**: End with forward-looking question about future institutions
