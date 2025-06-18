@@ -8,10 +8,7 @@ format:
     slide-number: true
     transition: slide
     background-transition: fade
-    css: custom.css
 ---
-
-## {.title-slide}
 
 # Truth as Collective Conscious Archetype
 
@@ -30,10 +27,10 @@ format:
 - Set the tone: This is about how we BUILD reality, not just describe it
 :::
 
+---
+
 ## The Epistemological Puzzle
 
-:::: {.columns}
-::: {.column width="100%"}
 ::: {.callout-question}
 ### Can you personally verify that:
 - Japan exists?
@@ -46,8 +43,6 @@ format:
 ### James's Insight
 Individual verification is epistemologically impossible. We rely on a "credit system" of collective validation.
 :::
-:::
-::::
 
 ::: {.notes}
 **Speaker Notes (1.5-2 minutes):**
@@ -59,9 +54,11 @@ Individual verification is epistemologically impossible. We rely on a "credit sy
 - **Example to emphasize:** "You've never been to Japan, yet you're certain it exists. Why? Because of our collective truth-validation system."
 :::
 
+---
+
 ## Escaping the Circular Trap
 
-:::: {.columns}
+::: {.columns}
 ::: {.column width="45%"}
 ### Phase 1: Reality Construction
 Multiple individual verifications aggregate into collective "reality"
@@ -75,7 +72,7 @@ Multiple individual verifications aggregate into collective "reality"
 ### Phase 2: Truth Validation
 New truth claims validated against collective reality standards
 :::
-::::
+:::
 
 ::: {.callout-note}
 ### Key Insight
@@ -91,6 +88,8 @@ Reality functions as a **Collective Conscious Archetype** - a shared pattern we 
 - **Critical distinction:** This is CONSCIOUS (we can debate and change it) unlike Jung's unconscious archetypes
 - We're not trapped by invisible forces - we can see and modify the system
 :::
+
+---
 
 ## How We Build Reality Together
 
@@ -117,6 +116,8 @@ When quantum mechanics emerged, it didn't just add new facts - it transformed ho
 - This is Kuhn's paradigm shift on steroids - it changes the archetype of reality itself
 :::
 
+---
+
 ## Why This Matters Now
 
 ::: {.callout-warning}
@@ -140,6 +141,8 @@ We're witnessing a battle over which truth-validation institutions will construc
 - **Emphasize hope:** Because reality is a conscious archetype, we can deliberately improve our truth-validation institutions
 - We're not victims of misinformation - we're architects of tomorrow's reality
 :::
+
+---
 
 ## Truth as Reality's Builder
 
@@ -168,9 +171,9 @@ Understanding truth as reality's builder—rather than its reporter—gives us t
 
 ---
 
-# Appendix: Key Concepts
+## Appendix: Key Concepts
 
-## Summary of Main Arguments
+### Summary of Main Arguments
 
 1. **James's Credit System**: Truth operates like currency - we trade on each other's verifications
 2. **The Asymmetry Solution**: Avoids circularity through temporal distinction between reality construction and truth validation
@@ -178,16 +181,17 @@ Understanding truth as reality's builder—rather than its reporter—gives us t
 4. **Evolution of Truth-Validation**: From hierarchical institutions to networked algorithms to AI mediation
 5. **Contemporary Relevance**: Current epistemic conflicts are battles over truth-validation methods, not abandonment of truth
 
-## Key Phrases to Remember
+---
 
+## Key Phrases & Tips
+
+### Key Phrases to Remember
 - "Truth lives on a credit system"
 - "Reality as a collective conscious archetype"
 - "We build reality through truth"
-- "Conscious vs. unconscious patterns"
 - "Truth as reality's builder, not its reporter"
 
-## Presentation Tips
-
+### Presentation Tips
 - **Timing**: Aim for 1-1.5 minutes per slide
 - **Engagement**: Pause after verification questions on Slide 2
 - **Examples**: Emphasize Japan and quantum mechanics examples
