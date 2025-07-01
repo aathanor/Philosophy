@@ -1,0 +1,19 @@
+\contentsline {section}{\numberline {1}Abstract}{3}{section.1}%
+\contentsline {section}{\numberline {2}Introduction}{3}{section.2}%
+\contentsline {section}{\numberline {3}Sentence Embeddings and Structuralist Semantics}{6}{section.3}%
+\contentsline {section}{\numberline {4}From Words to Space: Semantic Embeddings and Role Axes}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Semantic Roles as Axes}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}The Method: Proust vs Quine in Role Space}{7}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Empirical Patterns in the Data}{8}{section.5}%
+\contentsline {section}{\numberline {6}Our Model: Rods and Caps}{9}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Rods and Dennett's Real Patterns}{9}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Caps and Nelkin's Anti-Realism}{12}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Insights from Recent Research}{12}{subsection.6.3}%
+\contentsline {section}{\numberline {7}A First Conclusion: Reliability of the Hybrid Claim}{14}{section.7}%
+\contentsline {section}{\numberline {8}A second conclusion about patterns as projections}{14}{section.8}%
+\contentsline {section}{\numberline {9}A Philosophical Conclusion}{15}{section.9}%
+\contentsline {section}{\numberline {10}What's next}{15}{section.10}%
+\contentsline {subsubsection}{\numberline {10.0.1}Known architectural biases}{15}{subsubsection.10.0.1}%
+\contentsline {subsubsection}{\numberline {10.0.2}Understanding or mimicking?}{16}{subsubsection.10.0.2}%
+\contentsline {subsubsection}{\numberline {10.0.3}Prove Q-caps have subjective content but objective shape}{16}{subsubsection.10.0.3}%
+\contentsline {section}{\numberline {11}Bibliography:}{16}{section.11}%
