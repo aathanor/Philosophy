@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Florin Cojocariu">
+<meta name="dcterms.date" content="2025-06-17">
+
+<title>Probability as Instrumentalist Construction of Determinism – Florin Cojocariu</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script defer="" async="" src="https://tracker.hakanai.io/hakanai.min.js" data-site="c1fe82c6-73e8-4680-b675-9dd43b57cd35" data-link-tracking="true">
+</script>
+
+
+<link rel="stylesheet" href="../custom.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Florin Cojocariu</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Probability as Instrumentalist Construction of Determinism</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#humes-challenge-and-the-structure-of-inference" id="toc-humes-challenge-and-the-structure-of-inference" class="nav-link" data-scroll-target="#humes-challenge-and-the-structure-of-inference">Hume’s Challenge and the Structure of Inference</a>
+  <ul class="collapse">
+  <li><a href="#the-problem-of-inductive-reasoning" id="toc-the-problem-of-inductive-reasoning" class="nav-link" data-scroll-target="#the-problem-of-inductive-reasoning">The Problem of Inductive Reasoning</a></li>
+  <li><a href="#levels-of-cognitive-processing-and-inference" id="toc-levels-of-cognitive-processing-and-inference" class="nav-link" data-scroll-target="#levels-of-cognitive-processing-and-inference">Levels of Cognitive Processing and Inference</a></li>
+  </ul></li>
+  <li><a href="#probability-as-reification-of-indeterminism" id="toc-probability-as-reification-of-indeterminism" class="nav-link" data-scroll-target="#probability-as-reification-of-indeterminism">Probability as Reification of Indeterminism</a>
+  <ul class="collapse">
+  <li><a href="#the-demand-for-determinism" id="toc-the-demand-for-determinism" class="nav-link" data-scroll-target="#the-demand-for-determinism">The Demand for Determinism</a></li>
+  <li><a href="#the-instrumentalist-nature-of-probability" id="toc-the-instrumentalist-nature-of-probability" class="nav-link" data-scroll-target="#the-instrumentalist-nature-of-probability">The Instrumentalist Nature of Probability</a></li>
+  <li><a href="#the-bridge-function" id="toc-the-bridge-function" class="nav-link" data-scroll-target="#the-bridge-function">The Bridge Function</a></li>
+  </ul></li>
+  <li><a href="#probabilities-and-ai-are-llms-stochastic-parrots" id="toc-probabilities-and-ai-are-llms-stochastic-parrots" class="nav-link" data-scroll-target="#probabilities-and-ai-are-llms-stochastic-parrots">Probabilities and AI: Are LLMs Stochastic Parrots?</a></li>
+  <li><a href="#beyond-probabilities-and-temporal-reasoning-a-broader-pattern" id="toc-beyond-probabilities-and-temporal-reasoning-a-broader-pattern" class="nav-link" data-scroll-target="#beyond-probabilities-and-temporal-reasoning-a-broader-pattern">Beyond Probabilities and Temporal Reasoning : A Broader Pattern</a></li>
+  <li><a href="#some-more-objections-and-limitations" id="toc-some-more-objections-and-limitations" class="nav-link" data-scroll-target="#some-more-objections-and-limitations">Some More Objections and Limitations</a>
+  <ul class="collapse">
+  <li><a href="#the-persistence-of-inductive-assumptions" id="toc-the-persistence-of-inductive-assumptions" class="nav-link" data-scroll-target="#the-persistence-of-inductive-assumptions">The Persistence of Inductive Assumptions</a></li>
+  <li><a href="#the-normative-descriptive-gap" id="toc-the-normative-descriptive-gap" class="nav-link" data-scroll-target="#the-normative-descriptive-gap">The Normative-Descriptive Gap</a></li>
+  <li><a href="#causation-in-special-theory-of-relativity" id="toc-causation-in-special-theory-of-relativity" class="nav-link" data-scroll-target="#causation-in-special-theory-of-relativity">Causation in Special Theory of Relativity</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Bibliography</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="hume_essay_draft.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Probability as Instrumentalist Construction of Determinism</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Florin Cojocariu </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 17, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>A Response to Hume’s Problem of Causation</p>
+<section id="abstract" class="level1">
+<h1>Abstract</h1>
+<p>This essay argues that probability theory bridges pre-verbal pattern recognition (non-deterministic) and rational inference (deterministic), responding to Hume’s challenge about causation. The central insight is that rationality requires deterministic structures to function, leading us to construct determinism even where none exists. Hume demonstrated that causality exemplifies this problem. Probability represents a sophisticated form of this construction—a mathematical reification of uncertainty that preserves the logical apparatus of rational discourse while acknowledging epistemic limitations. Moreover, the LLMs pattern recognition mechanism seems to be a new method to construct determinism, one that transcend probability.</p>
+</section>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Hume’s analysis in the <em>Inquiry Concerning Human Understanding</em> demonstrated that causal reasoning lacks rational foundation, yet we continue to reason causally and make successful predictions. This essay proposes that probability theory serves a crucial philosophical function: it satisfies rationality’s structural need for determinism while honestly encoding our uncertainty.</p>
+<p>The key insight is that rational discourse—with its logical operations, mathematical calculations, and precise predictions—requires deterministic objects to manipulate. When faced with genuine uncertainty, rationality doesn’t abandon its project, but instead creates mathematical objects that can be treated deterministically. Probability assignments like P(rain|clouds) = 0.7 become facts we can reason about, calculate with, and build theories upon, even though they encode our epistemic limitations rather than metaphysical necessities.</p>
+<p>This transformation turns epistemic uncertainty into formal mathematical structures that function as determinate objects. We preserve rational inference while avoiding the metaphysical overreach that Hume exposed.</p>
+<p>This analysis reveals a broader trajectory in how rationality constructs formal structures: from naive causation, to sophisticated probability theory, to emerging frameworks for non-temporal pattern recognition exemplified in artificial intelligence systems.</p>
+</section>
+<section id="humes-challenge-and-the-structure-of-inference" class="level1 page-columns page-full">
+<h1>Hume’s Challenge and the Structure of Inference</h1>
+<section id="the-problem-of-inductive-reasoning" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem-of-inductive-reasoning">The Problem of Inductive Reasoning</h2>
+<p>Hume showed that causal reasoning relies on the unjustifiable assumption that future instances will resemble past ones (<em>Inquiry</em>, §4.2). What we call causation reduces to observed “constant conjunction” projected onto future cases through psychological habit rather than logical necessity. This creates a fundamental problem: our most basic form of reasoning appears to lack rational foundation.</p>
+</section>
+<section id="levels-of-cognitive-processing-and-inference" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="levels-of-cognitive-processing-and-inference">Levels of Cognitive Processing and Inference</h2>
+<p>The solution requires distinguishing different levels at which inference operates:</p>
+<p><strong>Pre-rational pattern recognition</strong>: Animals and humans unconsciously detect regularities in experience. This capacity requires no justification—it simply describes what cognitive systems naturally do when processing sensory input over time. Hume explicitly supports this view in his discussion of animal reasoning: “First, It seems evident, that animals, as well as men, learn many things from experience, and infer, that the same events will always follow from the same causes” (<em>Inquiry</em>, §9).</p>
+<p>Crucially, Hume argues this learning occurs without rational deliberation: “It is impossible, that this inference of the animal can be founded on any process of argument or reasoning” (<em>Inquiry</em>, §9). He extends this point to humans: “Animals, therefore, are not guided in these inferences by reasoning: Neither are children: Neither are the generality of mankind, in their ordinary actions and conclusions” (<em>Inquiry</em>, §9). As Evans (2008) shows in dual-process theory, this “System 1” processing operates automatically and pre-consciously, forming the foundation for higher-level reasoning without itself requiring rational warrant.</p>
+<p><strong>Causal interpretation</strong>: Humans bring detected patterns to conscious reasoning and interpret them as <em>necessary connections</em>—“A must produce B.” This interpretation imports metaphysical claims that cannot be rationally defended.</p>
+<p>Hume identifies this as the core philosophical error: “There are no ideas, which occur in metaphysics, more obscure and uncertain, than those of power, force, energy or necessary connection” (<em>Inquiry</em>, §7). The problem is that we never actually observe the supposed causal powers: “In reality, there is no part of matter, that does ever, by its sensible qualities, discover any power or energy, or give us ground to imagine, that it could produce any thing” (<em>Inquiry</em>, §7).</p>
+<p>Even in familiar cases, the connection remains mysterious: “We know that, in fact, heat is a constant attendant of flame; but what is the connexion between them, we have no room so much as to conjecture or imagine” (<em>Inquiry</em>, §7). The idea of necessary connection arises not from observation but from mental habit: “This connexion, therefore, which we feel in the mind, this customary transition of the imagination from one object to its usual attendant, is the sentiment or impression from which we form the idea of power or necessary connection” (<em>Inquiry</em>, §7).</p>
+<p><strong>Probabilistic interpretation</strong>: There is an alternative (and better) interpretation that represents ‘habit’ strength mathematically without claiming necessity—“A produces B with probability P.”</p>
+<p>The key insight is that pattern recognition (or what Hume relegates to the “habit” theory) itself is not the problem. The difficulty arises when we try to translate detected patterns into claims about <em>logical necessity</em>. Hume captures this precisely: “All events seem entirely loose and separate. One event follows another, but we never can observe any tie between them. They seem conjoined, but never connected” (<em>Inquiry</em>, §7). The transition from observing regular conjunction to claiming necessary connection is the philosophical misstep that generates the Humean problem.</p>
+<p>Moving from causal to probabilistic interpretation represents a more sophisticated strategy for preserving rational discourse despite Humean skepticism<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;It can be noted that this is what saved Quantum Mechanics from its apparent contradictions.</p></div></div></section>
+</section>
+<section id="probability-as-reification-of-indeterminism" class="level1 page-columns page-full">
+<h1>Probability as Reification of Indeterminism</h1>
+<section id="the-demand-for-determinism" class="level2">
+<h2 class="anchored" data-anchor-id="the-demand-for-determinism">The Demand for Determinism</h2>
+<p>Rational discourse operates through logical relations, mathematical operations, and systematic inferences—all of which require determinate objects. We cannot perform modus ponens on maybes, calculate with perhapses, or build scientific theories on vague hunches. This creates a fundamental tension: experience provides patterns without necessity, but rationality needs necessity (or something structurally equivalent) to function.</p>
+<p>The causal interpretation represents rationality’s first attempt to resolve this tension—simply declaring that observed patterns reflect necessary connections. Hume devastates this move by showing we never observe the supposed necessity, only regular succession.</p>
+</section>
+<section id="the-instrumentalist-nature-of-probability" class="level2">
+<h2 class="anchored" data-anchor-id="the-instrumentalist-nature-of-probability">The Instrumentalist Nature of Probability</h2>
+<p>Rather than abandoning rational discourse, we developed a more sophisticated construction. Probability theory transforms our epistemic limitations into mathematical objects with all the properties rationality requires:</p>
+<ul>
+<li><strong>Deterministic values</strong>: P(A) = 0.7 is a precise number we can calculate with</li>
+<li><strong>Logical relations</strong>: Probability spaces follow Boolean algebra</li>
+<li><strong>Systematic operations</strong>: Bayes’ theorem, marginalization, conditioning</li>
+<li><strong>Theoretical embedding</strong>: Probabilities become facts in scientific theories</li>
+</ul>
+<p>Consider how weather services treat “30% chance of rain” not as an expression of ignorance but as objective information to be broadcast, planned around, and evaluated for accuracy. The probability has become a determinate fact about the world, even though it encodes uncertainty.</p>
+</section>
+<section id="the-bridge-function" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="the-bridge-function">The Bridge Function</h2>
+<p>This reification serves as a bridge by preserving what rationality needs (deterministic structures) while respecting what Hume showed (no observable necessity). We can engage in all the formal operations of rational discourse—calculation, inference, theory-building—without claiming to have detected metaphysical necessities in nature.</p>
+<p>Probability transforms the problem: instead of trying to find determinism in the world (the causal strategy), we create deterministic representations of our indeterminate situation (the probabilistic strategy)<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. This allows rational discourse to proceed without metaphysical overreach. It creates a hybrid form of inference that maintains mathematical precision while remaining grounded in pure, non causal, non-deterministic observation.</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;This approach differs fundamentally from probabilistic theories of causation (e.g., Suppes 1970; Kvart 1986, as discussed in <span class="citation" data-cites="ben-menahemCausationScience2018">[@ben-menahemCausationScience2018, p.7]</span>) which attempt to analyze causal relations in probabilistic terms—arguing that causes raise the probability of their effects. Such theories still make metaphysical claims about causation itself and face their own paradoxes regarding spurious correlations and probability-lowering causes. By contrast, the present approach treats probability not as an analysis of causation but as an alternative mode of interpretation entirely—a formal structure we impose on detected patterns to enable rational discourse without any metaphysical commitments about causal relations in nature. We are not saying “causation is probabilistic” but rather “probability provides a way to mathematically represent patterns without invoking causation at all.”</p></div></div><p>De Finetti’s instrumentalist framework that <span class="citation" data-cites="barlowIntroductionFinetti19371992">[@barlowIntroductionFinetti19371992]</span> explicates, provides the philosophical foundation for this approach: just as de Finetti argued that probabilities function as degrees of belief rather than objective features of reality—famously declaring that ‘probability does not exist’ in any objective sense—the present argument extends this insight to show how probability assignments serve as mathematical tools that preserve rational discourse while honestly encoding our epistemic uncertainty about detected patterns.</p>
+<p>If probability serves as the mathematical reification of temporal uncertainty, this raises the question: what formal structures might serve non-temporal pattern recognition? Recent developments in AI systems suggest this is not merely theoretical speculation.</p>
+</section>
+</section>
+<section id="probabilities-and-ai-are-llms-stochastic-parrots" class="level1">
+<h1>Probabilities and AI: Are LLMs Stochastic Parrots?</h1>
+<p>Having shown how probability theory imposes deterministic form on temporal uncertainty, we now consider a contrasting case. Large language models do not accumulate frequencies over time to build probabilistic expectations; instead, they encode an entire prompt all at once into a high‑dimensional vector space, extracting patterns through simultaneous attention over every token. This parallel processing is not “temporal probability” in the usual sense—there is no sequence of past events whose frequencies are being tallied—but a non‑temporal recognition of geometric configurations. In other words, whereas classical probability theory bridges inductive gaps by translating time‑based uncertainty into precise numerical values, LLMs bridge the same gap by converting fuzzy, context‑laden inputs into a single deterministic embedding that captures all relational patterns at once.</p>
+<p>Current explanations of how LLMs function rely heavily on statistics and probabilities. The “most probable next word” theory is still the most widely adopted by the general public while in the academic papers on LLMs “statistics” and “probabilities” can be encountered at every step. <span class="citation" data-cites="benderDangersStochasticParrots2021">[@benderDangersStochasticParrots2021]</span>’s “stochastic parrot” critique helped to make this probabilistic vision almost the norm, to the point that any LLM answering questions about its own functioning, will present some sort of probabilistic or statistic view. This probabilistic paradigm exemplifies the pattern identified in our analysis of Hume: rationality creating mathematical structures to handle indeterminate phenomena. But what if this framework misses something fundamental about how these systems actually operate?</p>
+<p>Human causal and probabilistic reasoning unfolds sequentially over time—we observe patterns, track frequencies, build temporal expectations. Our idea of probability is closely connected to the idea of repeated observation or measurement: something is repeated <em>in time</em>. LLMs, through the sequential behavior of their interfaces which print a word after another, created the illusion that they search “the most probable next word”, which became the first main paradigm for understanding them. However, this is an illusion.</p>
+<p>LLMs process patterns through weighted associations in high-dimensional spaces where relationships exist simultaneously rather than sequentially. As <span class="citation" data-cites="vaswaniAttentionAllYou2023">[@vaswaniAttentionAllYou2023]</span> demonstrated in developing transformer architecture, attention mechanisms allow models to access all pattern relationships <strong>at once</strong> rather than processing them temporally.</p>
+<p>To see this in concrete terms, imagine feeding an LLM the entire text of Shakespeare’s&nbsp;<em>Hamlet</em>&nbsp;at once: the model’s self-attention mechanism “computes” relationships among every pair of words <strong>in parallel</strong>, instantly “seeing” thematic links (e.g.&nbsp;“to be” ↔︎ “not to be,” “ghost” ↔︎ “revenge”) without traversing the play linearly. These attention-weighted associations are a simultaneous map of semantic and syntactic connections—rather than the time-based frequency counts underlying classical probability. In traditional inference, we build P(event) by tallying occurrences over successive trials; by contrast, the LLM’s embedding space encodes the entire text’s structure in one go and yields a deterministic representation that the decoder then linearizes. This non-temporal pattern capture has been demonstrated in the original Transformer paper, which shows how self-attention layers compute all pairwise token interactions in a single pass.</p>
+<p>Modern LLMs actually operate in two distinct phases. First, upon receiving the entire prompt, self‑attention layers compute representations for every token in parallel—analogous to instantly perceiving a cow as a whole image rather than piecemeal parts. In this encoding phase the model “decides” what content and arguments to produce, drawing on its high‑dimensional pattern of associations. Only afterward does it enter an autoregressive decoding phase, linearizing that decision into a sequence of output tokens. Thus, the apparent sequentiality of LLM responses reflects the necessary formatting for human readers, whereas the core “inferential” work occurs non‑temporally in the parallel encoding stage.</p>
+<p><span class="citation" data-cites="ferroneSymbolicDistributedDistributional2020">[@ferroneSymbolicDistributedDistributional2020]</span> further show how these models create distributed representations where semantic relationships exist as geometric configurations in vector spaces, fundamentally different from sequential temporal processing. When we repeatedly flip a coin many times to prove that the probability for each side is 0.5, we need to enter each result in some sort of table so that we can compute probabilities after sufficient throws. But a LLM functions more like having the result table at once, with its internal pattern already clear.</p>
+<p>This suggests that probability is the temporal special case of patterns—a formalism to describe patterns occurring in time.</p>
+</section>
+<section id="beyond-probabilities-and-temporal-reasoning-a-broader-pattern" class="level1 page-columns page-full">
+<h1>Beyond Probabilities and Temporal Reasoning : A Broader Pattern</h1>
+<p>This progression from causation through probability toward pattern recognition reveals that probability theory may be one instance of a broader class of formal bridges between immediate perception and rational discourse. If probability serves temporal reasoning by mathematically encoding uncertainty over time, perhaps other formal structures could serve different types of pattern recognition. Recent developments in large language models illuminate this possibility by revealing forms of pattern recognition that operate through simultaneous rather than sequential processing.</p>
+<p>Consider the difference between building probability estimates through temporal observation (flipping coins over time) versus apprehending patterns immediately (seeing balance in a spatial array of 10,000 simultaneous coin flips displayed as a 100 by 100 matrix, where each cell is either black (a “head” result) or white(a “tail” result). In the temporal case, we require probability theory as mathematical scaffolding to handle uncertain accumulation over time. In the simultaneous case, we might perceive pattern directly without numerical calculation—the overall “noisiness” or “balance” of the visual display (its grayness) embodies the probabilistic information without mathematical abstraction.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;This insight is actually developed in a new paper, linking into my actual research on pattern recognition; a draft is available on request.</p></div><div id="fn4"><p><sup>4</sup>&nbsp;One of the most intriguing ideas following from this approach is that what we call “reasoning” or “inference” is just the special, temporal case of something more general that becomes apparent in the parallel, non-temporal nature of pattern recognition in LLMs. There is some sort of “reasoning”, only it is not in its formalized, temporal form, but in something closer to what any living being is practicing daily: pattern recognition.</p></div></div><p>This distinction suggests that probability might be one instance of a broader class of formal structures that enable rational discourse about different types of patterns. Just as we created probability to handle temporal uncertainty, i.e.&nbsp;<em>temporal patterns</em>, we may need new mathematical frameworks to handle simultaneous, non-temporal, high-dimensional patterns. This remains a promissory note for future investigation, but it suggests the philosophical strategy explored here may have applications beyond traditional causal reasoning.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+</section>
+<section id="some-more-objections-and-limitations" class="level1 page-columns page-full">
+<h1>Some More Objections and Limitations</h1>
+<section id="the-persistence-of-inductive-assumptions" class="level2">
+<h2 class="anchored" data-anchor-id="the-persistence-of-inductive-assumptions">The Persistence of Inductive Assumptions</h2>
+<p>Critics might argue that probabilistic reasoning still assumes past frequencies guide future expectations. The claim that P(B|A) = 0.8 based on observed frequencies requires believing future instances will resemble past ones—exactly what Hume showed cannot be rationally justified: “If there be any suspicion that the course of nature may change, and that the past may be no rule for the future, all experience becomes useless, and can give rise to no inference or conclusion” (<em>Inquiry</em>, §4).</p>
+<p><strong>Response</strong>: The probabilistic interpretation acknowledges this limitation explicitly. Rather than claiming justified knowledge about future frequencies, it represents the current state of our pattern detection systems. We’re not making metaphysical claims about the world, but describing our cognitive situation.</p>
+</section>
+<section id="the-normative-descriptive-gap" class="level2">
+<h2 class="anchored" data-anchor-id="the-normative-descriptive-gap">The Normative-Descriptive Gap</h2>
+<p>Understanding the psychological mechanism of pattern recognition does not address whether we <em>should</em> rely on such mechanisms. Hume’s challenge operates at the level of rational justification, not psychological description.</p>
+<p><strong>Response</strong>: This objection assumes that rational justification must be foundational rather than pragmatic. The success of probabilistic reasoning in prediction and control may provide sufficient warrant without requiring a priori certainty.</p>
+</section>
+<section id="causation-in-special-theory-of-relativity" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="causation-in-special-theory-of-relativity">Causation in Special Theory of Relativity</h2>
+<p>In <span class="citation" data-cites="ben-menahemCausationScience2018">[@ben-menahemCausationScience2018]</span>, the author argues that:</p>
+<blockquote class="blockquote">
+<p>According to the special theory of relativity (STR), the temporal relations between events are only well-defined in regions of spacetime charted by light signals representing (and limiting) the possibility of causal interaction. When events are separated by space-like distances, there can be no causal interaction between them, and consequently, their temporal order is not invariant, but varies with the coordinate system. Rather than being reducible to spatiotemporal relations, causality now appears to be the basis for the very structure of spacetime. Causal relations are thus at least as fundamental as temporal relations, and arguably (as suggested, for example, in Reichenbach 1956), conceptually prior to temporal relations.</p>
+</blockquote>
+<p>While this seems to bring causation back, I argue the opposite is the case. The relativity of simultaneity in STR further illustrates how causal interpretation depends on theoretical frameworks. Without absolute simultaneity, we cannot even identify which events could potentially be cause and effect without first accepting the theory’s constraints on causal possibility.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> This reinforces that causation functions as a theoretical organizing principle rather than an observable relation. That is to say in modern physics causation is rather constructed<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> than discovered.</p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;A simple mental experiment can be imagined to show it: a fire cracker explodes in London at midnight and another in New York 1 milliseconds later (suppose we have synchronized clocks). The interval is sufficiently small so light cannot reach from the London event to the New York event before the NY event. Depending on their speed, position and direction, two observers may not agree on the real order of events. In fact causation is only possible for events inside the light-cone (separated in space so that light can travel from one to another in a shorter time), but for an observer who knows nothing about STR this is not apparent. The conclusion here is that causation is a feature of the theory, not of reality and ,yes, certain theories like STR are explicetly causal.</p></div><div id="fn6"><p><sup>6</sup>&nbsp;<span class="citation" data-cites="ben-menahemCausationScience2018">[@ben-menahemCausationScience2018]</span> introduces the notion of causal constraints, one that better integrates into the modern physics theories and better avoids this ‘construction’ argument.</p></div></div></section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>Probability theory serves as a crucial philosophical bridge between unconscious pattern recognition and rational inference. This preserves the bridge function identified earlier—enabling rational discourse while acknowledging epistemic limitations.</p>
+<p>This reveals something deep about the nature of rationality itself: it requires deterministic structures to function, and when reality doesn’t provide them, rationality constructs them (hence all what we call “instrumentalism”). The movement from causal to probabilistic interpretation represents an evolution in this constructive project—from naive metaphysical claims about necessity to sophisticated mathematical encodings of uncertainty.</p>
+<p>This philosophical strategy finds remarkable parallel in the development of quantum mechanics. Classical physics assumed ontological determinism—complete predictability given perfect knowledge of initial conditions. Quantum mechanics forced physicists to confront fundamental uncertainty, yet rather than abandoning systematic reasoning, they developed mathematical frameworks to work with irreducible uncertainty itself. The wave function represents precisely this transformation: taking epistemic limitations about measurement and encoding them in mathematical structures that become the foundation for physical predictions.</p>
+<p>Rather than abandoning systematic reasoning, physicists developed mathematical frameworks that treat uncertainty itself as the fundamental reality. The wave function performs precisely the transformation identified here: it takes our epistemic limitations about measurement and encodes them in mathematical structures that become the foundation for physical predictions. Probability amplitudes become determinate mathematical objects we can calculate with, even though they represent our fundamental inability to simultaneously know position and momentum.</p>
+<hr>
+</section>
+<section id="bibliography" class="level1">
+<h1>Bibliography</h1>
+
+
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="light">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "aathanor/Philosophy";
+    script.dataset.repoId = "R_kgDOOvbpNQ";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOOvbpNc4CqifF";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "bottom";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

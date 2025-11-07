@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Florin Cojocariu">
+<meta name="dcterms.date" content="2025-05-04">
+
+<title>Patterns, Pragmatism, and Mild Realism: An Empirical Probe – Florin Cojocariu</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script defer="" async="" src="https://tracker.hakanai.io/hakanai.min.js" data-site="c1fe82c6-73e8-4680-b675-9dd43b57cd35" data-link-tracking="true">
+</script>
+
+
+<link rel="stylesheet" href="../custom.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Florin Cojocariu</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Patterns, Pragmatism, and Mild Realism: An Empirical Probe</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#sentence-embeddings-and-structuralist-semantics" id="toc-sentence-embeddings-and-structuralist-semantics" class="nav-link" data-scroll-target="#sentence-embeddings-and-structuralist-semantics">Sentence Embeddings and Structuralist Semantics</a></li>
+  <li><a href="#from-words-to-space-semantic-embeddings-and-role-axes" id="toc-from-words-to-space-semantic-embeddings-and-role-axes" class="nav-link" data-scroll-target="#from-words-to-space-semantic-embeddings-and-role-axes">From Words to Space: Semantic Embeddings and Role Axes</a>
+  <ul class="collapse">
+  <li><a href="#semantic-roles-as-axes" id="toc-semantic-roles-as-axes" class="nav-link" data-scroll-target="#semantic-roles-as-axes">Semantic Roles as Axes</a></li>
+  <li><a href="#the-method-proust-vs-quine-in-role-space" id="toc-the-method-proust-vs-quine-in-role-space" class="nav-link" data-scroll-target="#the-method-proust-vs-quine-in-role-space">The Method: Proust vs Quine in Role Space</a></li>
+  </ul></li>
+  <li><a href="#empirical-patterns-in-the-data" id="toc-empirical-patterns-in-the-data" class="nav-link" data-scroll-target="#empirical-patterns-in-the-data">Empirical Patterns in the Data</a></li>
+  <li><a href="#our-model-rods-and-caps" id="toc-our-model-rods-and-caps" class="nav-link" data-scroll-target="#our-model-rods-and-caps">Our Model: Rods and Caps</a>
+  <ul class="collapse">
+  <li><a href="#rods-and-dennetts-real-patterns" id="toc-rods-and-dennetts-real-patterns" class="nav-link" data-scroll-target="#rods-and-dennetts-real-patterns">Rods and Dennett’s Real Patterns</a></li>
+  <li><a href="#caps-and-nelkins-anti-realism" id="toc-caps-and-nelkins-anti-realism" class="nav-link" data-scroll-target="#caps-and-nelkins-anti-realism">Caps and Nelkin’s Anti-Realism</a></li>
+  <li><a href="#insights-from-recent-research" id="toc-insights-from-recent-research" class="nav-link" data-scroll-target="#insights-from-recent-research">Insights from Recent Research</a></li>
+  </ul></li>
+  <li><a href="#a-first-conclusion-reliability-of-the-hybrid-claim" id="toc-a-first-conclusion-reliability-of-the-hybrid-claim" class="nav-link" data-scroll-target="#a-first-conclusion-reliability-of-the-hybrid-claim">A First Conclusion: Reliability of the Hybrid Claim</a></li>
+  <li><a href="#a-second-conclusion-about-patterns-as-projections" id="toc-a-second-conclusion-about-patterns-as-projections" class="nav-link" data-scroll-target="#a-second-conclusion-about-patterns-as-projections">A second conclusion about patterns as projections</a></li>
+  <li><a href="#a-philosophical-conclusion" id="toc-a-philosophical-conclusion" class="nav-link" data-scroll-target="#a-philosophical-conclusion">A Philosophical Conclusion</a></li>
+  <li><a href="#whats-next" id="toc-whats-next" class="nav-link" data-scroll-target="#whats-next">What’s next</a>
+  <ul class="collapse">
+  <li><a href="#known-architectural-biases" id="toc-known-architectural-biases" class="nav-link" data-scroll-target="#known-architectural-biases">Known architectural biases</a></li>
+  <li><a href="#understanding-or-mimicking" id="toc-understanding-or-mimicking" class="nav-link" data-scroll-target="#understanding-or-mimicking">Understanding or mimicking?</a></li>
+  <li><a href="#prove-q-caps-have-subjective-content-but-objective-shape" id="toc-prove-q-caps-have-subjective-content-but-objective-shape" class="nav-link" data-scroll-target="#prove-q-caps-have-subjective-content-but-objective-shape">Prove Q-caps have subjective content but objective shape</a></li>
+  </ul></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Bibliography:</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="New_Patterns_Essay.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Patterns, Pragmatism, and Mild Realism: An Empirical Probe</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Florin Cojocariu </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 4, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>(a first draft proposal for Contemporary Metaphysics class)</p>
+<section id="abstract" class="level1 page-columns page-full">
+<h1>Abstract</h1>
+<p>This essay revisits the question of whether patterns in language are real, by comparing two opposing views: Daniel Dennett’s “mild-realism” claim that sees patterns are real when they help us compress and predict information, and Norton Nelkin’s instrumentalist view that patterns are interpretive constructs, not features of the world itself. To build the argument one could pick up any types of patterns. We chose look at patterns of sentences in a sentence-embedding model, SBERT. Instead of treating meaning as something attached to isolated words, we ask how <em>object-words</em> like <em>cat</em>, <em>hammer</em>, or <em>water</em> gain their meaning from how they are <em>used in</em> different kinds of sentences. By analyzing thousands of naturally occurring sentences, we show that meaning forms around a word not as a fixed point but as a <em>shape</em>—with a dense, literal “core” of usage and a more variable, figurative “halo.”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> This structure is not imposed from outside but <em>emerges from the language itself</em>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;We chose to move technical details to footnotes to allow for philosophical focus. Technically, we use sentence embeddings from a transformer language model to represent each sentence as a point in a high-dimensional space. We then project these points onto conceptual axes (e.g., literal/metaphoric) constructed from contrastive examples, reducing the data to a 5-dimensional semantic role space. Within this space, we observe consistent geometric patterns: literal uses of a word tend to cluster densely, while figurative uses spread out more diffusely. This allows us to model meaning not as a static label, but as a distributional topology grounded in actual use.</p></div></div><p>Our method is simple: we classify large sets of naturally occurring sentences into literal (P-type) and idiomatic (Q-type) uses of object-words (e.g., <em>“cat,” “tomato”</em>), and map them into a 2D semantic space using 5-dimensional role-based projections. The resulting sentence embeddings consistently reveal a distinctive shape: a dense, stable <em>P-core</em> surrounded by a looser <em>Q-cap</em>.</p>
+<p>We argue that <strong>P-cores</strong> satisfy Dennett’s criteria for real patterns—they are stable, reproducible, and predictive across samples—while <strong>Q-caps</strong> exhibit the some of the variability and interpretive dependence that motivates Nelkin’s skepticism but nevertheless, contrary to his view, these are also “real patterns”. Thus, we propose that patterns of sentences can have their own interior structure, determined by the functional role employed by the word. Concepts, in this view, are not a priori givens but <em>semantical attractors</em> in the sentence space formed through use.</p>
+<p>Philosophically there are two important consequences. First, our discovery of a spectrum running from literal, sensory uses to idiomatic uses, give a solution to the ancient puzzles about how words “hook” into reality, and also shows that concepts (like the famous “concept horse”) are not atomic objects but fluid patterns. More broadly, any pattern of meaning — even attitude-propositional or visual — can be conceived as a dual structure with a stable core that anchors shared objectivity and a fluid halo that shifts with individual experience.</p>
+<p>Finally, our model shows that Dennet’s mild realism description of patterns is closer to what the actual patterns inside a LLM <em>really are</em>. It is difficult to understand the actual rod and cap distributions as a conceptual artifact in the way Nelkin does because they do not depend, as patterns, by the theoretical method we use to look at them.</p>
+</section>
+<section id="introduction" class="level1 page-columns page-full">
+<h1>Introduction</h1>
+<p>What makes a pattern real? This question sits at the core of Daniel Dennett’s influential 1991 paper <em>Real Patterns</em>, which argues that a pattern is real if it enables compression and predictive power — if it “pays for the cost of its own description.” Norton Nelkin (1994) counters that patterns, especially in scientific or linguistic domains, are epistemic conveniences, not ontological commitments: they reflect how we organize the world, not how the world is. This debate remains unresolved and important in contemporary metaphysics: do the structures we find in data reflect an underlying reality, or just our interpretive apparatus?</p>
+<p>Our essay uses Dennett and Nelkin’s debate about the reality of patterns—whether physical, biological, linguistic or mental—as a starting point for the study of patterns in LLM sentence embeddings.&nbsp; We use their discussion of various patterns, including belief‑patterns, as a familiar case study, but our focus lies in a different domain: do these emergent clusters in sentences embedding space reflect something real, or are they merely artifacts of our interpretive framework?</p>
+<p>Dennett himself opens <em>Real Patterns</em> (Dennett 1991) with visual examples (a bar‑code pattern) to clarify what a pattern is before tackling propositional attitudes.&nbsp; His claim — that any pattern “pays for its own description” by enabling compression and prediction—applies universally, not only to minds but to any reliable regularity<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.&nbsp; If every pattern carries compressed information — and if meaning is what multiple observers can extract from a pattern — then our project is not about patterns in general but about how meaning is instantiated as patterns in the semantic geometry of an LLM.</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;It is true that ‘the elephantine pattern’ of Ella’s propositional attitudes employed by Dennett makes a point but also risks confusing the reader: it is not the visual pattern that matters, just the fact that two different sets of points, that do not totally overlap, make the same pattern.</p></div><div id="fn3"><p><sup>3</sup>&nbsp;Among others: Hollich GJ, Hirsh-Pasek K, Golinkoff RM, et al.&nbsp;Breaking the language barrier: an emergentist coalition model for the origins of word learning.&nbsp;<em>Monogr Soc Res Child Dev</em>. 2000;65(3):i-123, (Seidl, Indarjit, and Borovsky 2024), (Pruden et al.&nbsp;2006)</p></div><div id="fn4"><p><sup>4</sup>&nbsp;It is clear that a LLM like BERT acquires language not from embodied experience but by training on large corpuses of text. But, however different, the LLM builds its internal patterns on sentences we <em>really</em> use, utter, write etc. The “object-word” we introduced first in the abstract is far more than a theoretical device, but its relation to how language develops is beyond the scope of this essay. For our purposes, it is to be taken simply as the <em>phenomenological</em> side of any word.</p></div></div><p>The reasoning in this essay is founded on the idea (supported by results related to cognitive development in infants<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>) that words are acquired at first as simple labels for patterns of sensations. “Cat” is, at first, just a label for a shape, a texture, some specific sounds, affects related to it. We call this ‘primitive’ label-usage of the word, the “object-word”<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>Our method targets only one region of language, containing sentences with words such as <em>cat</em>, <em>fork</em>, <em>tomato</em> etc.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> For each, we build a corpus of naturally occurring sentences and classify them into <strong>P-type</strong> (literal, concrete use) and <strong>Q-type</strong><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> (figurative, idiomatic or technical use), using a role-based classifier we trained. This classification allows us to visualize how meaning unfolds in semantic space — not as isolated word vectors but as <em>clusters of use of a word in sentences</em>. Projected into 2D<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>, the embeddings reveal a consistent topological form: a more dense <em>stem-like cluster</em> of literal sentences (the rod), surrounded by a <em>diffuse cap</em> of idiomatic uses (the mushroom).</p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;Of course, language is much more complicated, including concepts with no real-world existence, like mathematical concepts (like <em>matrix</em>, <em>vector</em>, <em>function</em> we’ll discuss briefly later on), verbs, indexicals, prepositions and so on. But for the purposes of this essay, which are to investigate patterns and not to create a full blown theory about how laguage works in LLMs, sticking with words denoting <em>real objects</em> suffice.</p></div><div id="fn6"><p><sup>6</sup>&nbsp;The origin of this notation comes from the first set of sentences we used to make the difference between sentences where words are used in the literal, concrete, phenomenological sense, which we called “Proust set” and the idiomatic set which we called “Quine set”.</p></div><div id="fn7"><p><sup>7</sup>&nbsp;A projection from a 348D space into a 2D space (our screen), however complicated may sound, it is easy to understand as a process which preserves every point neighborhood: all points adjacent in the 348D space stay adjacent in the 2D space. This answers a central requirement in topological transformation and ensure that at least some of the features of the distribution are preserved in the visualization. Of course, in any projection features are lost, but the point is not to preserve all of them but to observe those they do.</p></div><div id="fn8"><p><sup>8</sup>&nbsp;Further analysis showed that propositions which can be taken as the definitions of the word form another cluster, close to the P-rod. They do not overlap with them, spreading inside the Q-cap, possibly because definitions are conceptual by their definition (pun intended). However, in terms of compressibility, both the P-rod and the definitions cluster are very effective compressions, they “encode” most of the possible sentences with a word to a bunch of them.</p></div><div id="fn9"><p><sup>9</sup>&nbsp;As with the “object-word” used as a label for patterns of sensations, the “concept-word” is a label for <em>patterns of sentences use</em> with said word. The discussion exceeds the bounds of this essay, but, again, this is not a simple theoretical device but a model which directly corelates meaning with use, employing real data from SBERT.</p></div></div><p>We interpret this rod-and-cap structure as a hybrid answer to the realism vs instrumentalism debate on patterns. The critical insight is that patterns may have structure, like <em>internal patterns</em>; more often than not patterns are not atomic entities and because of this generalizing about their meaning, behavior etc. might be risky. The <em>rod</em>, composed of literal and perceptual uses, meets Dennett’s criteria: it is dense, generalizable, and predictive.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> The <em>cap</em>, more diffuse and variable, reflects a pattern of extensions, metaphors, and abstract uses. While this aligns with Nelkin’s more instrumentalist view because its structure depends heavily on context (text corpus, language user etc.), we argue that the cap is not an epiphenomenon. It is the <em>word-concept itself</em><a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>—not a prior schema that guides recognition, but a structure that <em>emerges</em> from linguistic use.</p>
+<p>Our model shows that the pattern of the cap (i.e.&nbsp;the meaning of the word) is a pattern of sentences, that is, a pattern of word use; one acquired by use, and not by definition. This approach also solves some problems pertaining to meaning in general: how can meanings evolve and still be coherent? How can we have slightly different meanings for words and still be able to communicate? It also sheds some new light on Quine’s indeterminacy of translation: “gavagai” is not to be translated by observing actions and stances but by looking at the pattern of sentences the word is used in.</p>
+<p>Theoretically, this model also draws on Wittgenstein’s “meaning is use” and Quine’s semantic holism, while showing how phenomenological demands for grounding—especially from Husserl and Merleau-Ponty—remain unresolved in current LLMs. Lacking sensory input, LLMs produce patterns that are meaningful within the system but unanchored in perception. Still, their internal geometry lets us ask the philosophical question anew: what makes a pattern <em>really</em> real?</p>
+<p>It is important to note that Dennett and Nelkin each treat a wide array of patterns—visual, biological, linguistic, and mental—using propositional attitudes (beliefs, desires, intentions) as a prominent example.&nbsp; Their focus on belief‑patterns illustrates how any higher‑order regularity can serve explanatory work, but does not limit their account to minds alone.&nbsp; By contrast, our rod‑and‑cap model examines <em>patterns in language</em>—clusters of sentences containing a given word, mapped into a high‑dimensional semantic‑role space via LLM embeddings.&nbsp; These linguistic patterns do not presuppose a theory of mind or belief attribution; they track <em>how words surface and cohere</em> in use—literal versus metaphorical, agentive versus perceptual, etc.&nbsp; While we draw on Dennett’s and Nelkin’s insights about realism and emergence, we do not aim to offer a new theory of propositional attitudes.&nbsp; Instead, we show that <em>concepts in language emerge topologically from observable usage‑patterns</em>, and that witnessing this dual structure can illuminate the broader Realist/Instrumentalist debate they inaugurated.</p>
+<p>I moved all technical references to footnotes, to focus on the philosophy wile giving a chance to the interested reader to evaluate the method. All programming is accessible through a Jupyter notebook that can be <a href="https://jupyter.antimaterie.ro/user/jhubuser/notebooks/HomepageTopologicalSemantics.ipynb">accessed here</a> using user:jhubuser and password:uvc3xfy. As I am not a programmer, nor a LLM technical expert, I used ChatGPT extensively to write the code included in the notebooks.</p>
+</section>
+<section id="sentence-embeddings-and-structuralist-semantics" class="level1 page-columns page-full">
+<h1>Sentence Embeddings and Structuralist Semantics</h1>
+<p>Some preliminary considerations, which touch to our model and the fundamental ideas from the structuralist view of meaning, may be needed to avoid possible confusions later on in the text.</p>
+<p>First, our model is built in the <em>sentences embedding space</em> not in the word embedding space. It follows that each point in our plots is a sentence containing the word it is plotted for, not some other words. Simply said, for <em>cat</em>, we plot the projection in a 2D plane of the vectors of all the sentences with <em>cat</em> in our experimental sets. What we show is that the pattern of the sum of projections, <strong>has a structure</strong>: sentences where <em>cat</em> is used literally (P) are clustered. We use this cluster to calculate a <em>semantic attractor</em><a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> which we posit represents the “object-word” and we figure it by a big black dot in many of our plots. But keep in mind this is not a word, we are in a sentence space.</p>
+<div class="no-row-height column-margin column-container"><div id="fn10"><p><sup>10</sup>&nbsp;We note later on, “attractor” here is a metaphorical and not a technical term.</p></div></div><p>Second, the structuralist view had an importat role in understanding LLMs:</p>
+<blockquote class="blockquote">
+<p>_“Another important theoretical stepping stone on the road to modern language models is the so-called distributional hypothesis, first proposed by the linguist Zellig Harris in the 1950s (Harris 1954). This idea was grounded in the structuralist view of language, which posits that linguistic units acquire meaning through their patterns of co-occurrence with other units in the system.Harris specifically suggested that the meaning of a word could be inferred by examining its distributional properties, or the contexts in which it occurs. Firth (1957) aptly summarized this hypothesis with the slogan”You shall know a word by the company it keeps,” acknowledging the influence of Wittgenstein (1953)’s conception of meaning-as-use to highlight the importance of context in understanding linguistic meaning._ (Millière and Buckner 2024)”</p>
+</blockquote>
+<p>This view still prevails today in the idea that the meaning of one word is determined by the cloud of “neighbors” in the highly-dimensional LLM embedding space; the training representation as a process of “word vectors alignment” makes this interpretation of a word meaning quite popular. However, it is my view that if it is to properly investigate Witgenstein “meaning as use”, we need to look at the <em>sentence embedding space</em>, not at the <em>word embedding space</em>, simply because we use words only in sentences. In other words, meaning does not emerge from words association inside the LLM, but also from patterns of the sentences a given word is used in.<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn11"><p><sup>11</sup>&nbsp;Most probably, it’s a mixed bag: both word embedding and sentence embedding carry some sort of meaning. Recent research shows that models using sentences embedding are better at describing complex situation while losing details and those using words embedding do just the oposite.</p></div></div></section>
+<section id="from-words-to-space-semantic-embeddings-and-role-axes" class="level1 page-columns page-full">
+<h1>From Words to Space: Semantic Embeddings and Role Axes</h1>
+<p>Picture a vast conceptual field where every sentence is assigned a coordinate, i.e.&nbsp;a point.&nbsp; If we focus on sentences that share a given word, all these points create some sort of shape rather than falling at random.&nbsp; In the 768D space of SBERT they curve and fold like a thin surface (technically a manifold in a lower dimension, say 5D) floating inside a 3D space—much as a circle sits inside three-dimensional space.&nbsp;There is a lot of research done on these lower dimension manifolds that can be found inside the embedding space. Some of them found that even if the 768 dimensions are needed for proper embedding, only between 5-20 of them really count when the model is used. Our question then, is: in what subspace these shapes created by all sentences with <em>cat</em> live and what do these subspaces axes mean to us?</p>
+<section id="semantic-roles-as-axes" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="semantic-roles-as-axes">Semantic Roles as Axes</h2>
+<p>We took an empiric approach and picked five cardinal directions that track familiar philosophical contrasts; we call them “semantic axes”. Initial research suggested that there are several semantic axes around which patterns of sentences display a verifiable gradient:</p>
+<ul>
+<li><strong>Agent ↔︎ Object</strong> Who acts or is acted on</li>
+<li><strong>Literal ↔︎ Metaphoric</strong> Whether words point directly or obliquely</li>
+<li><strong>Perceived ↔︎ Symbolic</strong> Whether reference is sensory or conceptual</li>
+<li><strong>Quantity ↔︎ Quality</strong> Whether talk is about how much or of what kind</li>
+<li><strong>Thing ↔︎ Concept</strong> Whether the word names a substance or a signification</li>
+</ul>
+<p>Except “Thing ↔︎ Concept”, it became clear later on that they can be quite arbitrary<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>. Every sentence can thus be located by a five-number “role vector,” revealing its blend of agency, literality, and so on.<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a>&nbsp; As more sentences are classified and evaluated against this specific 5D space, it soon became clear that one composite axis—angled away from <em>Perceived vs.&nbsp;Symbolic</em> and leaning toward both <em>Thing vs.&nbsp;Sign</em> and <em>Literal vs.&nbsp;Metaphoric</em>—turns out to be the main corridor along which meaning slides from concrete usage into idiom; we called that “real axis” because it captures a familiar philosophical journey: from showing to saying, from concrete to concept.</p>
+<div class="no-row-height column-margin column-container"><div id="fn12"><p><sup>12</sup>&nbsp;This is because once an arbitrary system of coordinates is used, we can rotate it to find the highest gradient distribution in our sentences manifold. In this way we found what we called the “real axis”, one accross which the gradient is the highest.</p></div><div id="fn13"><p><sup>13</sup>&nbsp;Each axis is computed from carefully curated sentence pairs and validated on disjoint examples, with area-under-curve (AUC) scores averaging &gt; 0.9.&nbsp; Together they span a five-dimensional subspace of SBERT.</p></div></div></section>
+<section id="the-method-proust-vs-quine-in-role-space" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="the-method-proust-vs-quine-in-role-space">The Method: Proust vs Quine in Role Space</h2>
+<p>To test the idea, we constructed two contrasting sets of sentences, where a given word appears in each of them:</p>
+<ul>
+<li><strong>Proust Set</strong>: sensory, phenomenal uses (e.g.&nbsp;“the candle flickered”)</li>
+<li><strong>Quine Set</strong>: abstract, symbolic uses (e.g.&nbsp;“the candle represents hope”)</li>
+</ul>
+<p>We tested these sentences against the semantic axes: each sentence projected into 5D role space using the semantic axes. The separation proved to be clear and measurable.<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a>&nbsp; For philosophers this may be a deep claim: phenomenological and analytic sentences occupy genuinely different regions of the sentences space, not just different moods of the same discourse.</p>
+<div class="no-row-height column-margin column-container"><div id="fn14"><p><sup>14</sup>&nbsp;Separation is quantified by principal-component analysis and centroid-distance metrics.</p></div></div></section>
+</section>
+<section id="empirical-patterns-in-the-data" class="level1 page-columns page-full">
+<h1>Empirical Patterns in the Data</h1>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="figures/rods_and_caps.png" title="'Rods and Caps'" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">‘Rods and Caps’</figcaption>
+</figure>
+</div>
+<p>In the topology of linguistic space, literal utterances gravitate toward their lexical centre, gathering in taut, pillar-like formations that attest to a word’s stable core of use. By contrast, figurative utterances disperse outward in loose, mutable halos whose boundaries blur into those of neighbouring words, testifying to meaning’s dependence on shifting context. Visualised in the so-called <em>mushroom plots</em>, rod sentences appear as tight, grey clusters centred on the word embedding, while cap sentences form asymmetrical red fans.&nbsp; Quantitatively, literal clusters show low variance and high pairwise cosine similarity, whereas figurative clusters occupy a far larger semantic volume.</p>
+<p>These patterns – <em>compact, repeatable clusters for rods vs.&nbsp;sprawling, context-dependent clouds for caps</em> – are observed consistently across multiple embedding models and pretraining runs.</p>
+</section>
+<section id="our-model-rods-and-caps" class="level1 page-columns page-full">
+<h1>Our Model: Rods and Caps</h1>
+<p>Across many examples, literal sentences huddle tightly around a word’s centre, like a slender rod.&nbsp; Figurative sentences spread outward in wide, overlapping caps.&nbsp; The tight rods point to a repeatable essence; the sprawling caps to a dependency on context.&nbsp; The pattern is robust: whatever model we use, rods stay compact, caps diffuse.<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a>&nbsp; It offers a linguistic mirror of Aristotle’s substance/accident divide: the rod marks the substance, the cap the shifting accidents.</p>
+<div class="no-row-height column-margin column-container"><div id="fn15"><p><sup>15</sup>&nbsp;Statistics: literal clusters show mean intra-cluster cosine similarity ≈ 0.83; figurative clusters ≈ 0.46.</p></div></div><ul>
+<li><p><strong>Rods (P‑sentences)</strong>:&nbsp; Embeddings of literal usages cluster tightly near the word’s core meaning. In every visualization, P‑sentences form a small, centered “rod” around the word embedding (black dot), with little sprawl. High pairwise cosine similarities among P-sentences and low PCA spread indicate that these literal instances are highly compressible and repeatable across contexts.</p></li>
+<li><p><strong>Caps (Q‑sentences)</strong>: Embeddings of figurative usages scatter outward in many directions, forming broad “caps.” For a given word, Q-sentences often occupy a multi-lobed shape (e.g.&nbsp;[11] shows distinct clouds for “vector Q,” “square Q,” etc.). These caps overlap arbitrarily with those of other words and rarely share exact sentences (e.g.&nbsp;the cat–fork cap plot shows zero overlap). In short, caps are <strong>diffuse, polymorphic, and less systematically compressible</strong> than rods.</p></li>
+</ul>
+<p>These project findings support a clear empirical dichotomy: <em>rod</em> patterns are tight and stable, <em>cap</em> patterns are wide-ranging and variable.</p>
+<section id="rods-and-dennetts-real-patterns" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="rods-and-dennetts-real-patterns">Rods and Dennett’s Real Patterns</h2>
+<p>Dennett (1991) defines <strong>real patterns</strong> by their <strong>compressibility, predictive power, and generality</strong>.&nbsp; The rod-clusters satisfy each of these criteria. First, they are highly compressible: instead of storing each literal sentence, one can describe a whole cluster succinctly (e.g.&nbsp;“all sentences using <em>cat</em> in the literal sense”).&nbsp; Dennett formalizes this via Kolmogorov complexity – a sequence has a pattern iff it admits an efficient description .&nbsp; The rod clusters clearly allow such compression (one rule covers all cluster points) as opposed to caps which require many bits to list.&nbsp; Second, rods have predictive utility.&nbsp; In folk-psychological terms, knowing a rod-pattern (a word’s literal usage) lets us predict usage in new contexts.&nbsp; Dennett notes that folk-psychology’s “enormous predictive leverage” comes from such reliable patterns.&nbsp; Analogously, the embedding-space rod for <em>“cat”</em> helps predict where new literal-sense <em>cat</em>-sentences will lie (they all map near that cluster). Finally, rods generalize: the same compact structure reappears across different corpora, models, or contexts.&nbsp; Recent work on model embeddings finds that <strong>semantic categories form low-dimensional manifolds</strong> that align across models . For example, Park et al.&nbsp;(2024) show that <strong>hierarchical/conceptual relations</strong> are encoded as geometric structure in token embeddings – precisely the kind of stable, generalizable pattern rods exemplify.</p>
+<p>In summary, rod-patterns behave like Dennettian real patterns: they compress data (one “rod” covers many examples), they enhance prediction (future literal uses fall into the same cluster), and they recur across settings.&nbsp; These findings strongly support treating rods as <strong>real patterns with epistemic and (mild) ontic status</strong> .</p>
+<p>Our empirical mapping of sentence-level embeddings reveals a structured distribution in which different functional uses of the word <em>cat</em>—literal, intensional, distributive, symbolic—form a coherent topological subspace between two poles: the phenomenal base (P) and the conceptual abstraction (Q). By computing the centroid of the P set—the most perceptually grounded uses—we obtain an empirical anchor point for what we call the <em>object-word</em>: a statistical center of the word’s appearance across literal contexts. Interestingly, this centroid lies beneath and slightly offset from the cluster of definitional sentences like “A cat is a mammal,” suggesting that intensional definitions are not the semantic core of the word, but rather a compressed projection that stabilizes certain generalizations. (See Fig.2, below) This aligns with Dennett’s view, especially in his discussion of Churchland and Fodor (Fodor 1987), that the apparent precision of linguistic definition masks a much higher-dimensional pattern of cognitive regularity. Just as Churchland (Churchland 2000) describes declarative utterances as one-dimensional projections of a multi-dimensional kinematic state, our analysis shows that definitions emerge as linear stabilizations within a broader semantic manifold. The object-word, in this view, is not a fixed token or entry, but a center of gravity within a distributed field of appearances—a real pattern in Dennett’s sense, empirically discoverable through topological regularities in language use.</p>
+<p>Dennett repeatedly warns against reifying categories like “belief” or “definition” as discrete states. Instead, he proposes that what we treat as a stable cognitive or linguistic category is often:</p>
+<ul>
+<li>A <strong>real pattern</strong> across a cloud of behaviors (or sentences),</li>
+<li>Detectable because of its <strong>predictive compressibility</strong>.</li>
+</ul>
+<blockquote class="blockquote">
+<p>“A pattern exists in some data—<em>is real</em>—if there is a description of the data that is more efficient than the bit map, whether or not anyone can concoct it. That’s what it is for a pattern to be real. […] It has explanatory power; it makes predictions; it shows up across multiple levels of description.” (<em>Real Patterns</em>, Dennett 1991)</p>
+<p>“Folk psychology works, not because beliefs and desires are ‘real’ in some special metaphysical sense, but because there are real patterns in behavior that are captured—usefully, predictively—by the intentional stance.” (ibid.)</p>
+</blockquote>
+<p>Our model seems to show exactly that:</p>
+<blockquote class="blockquote">
+<p>The intensional subset (definitions subset) is not a class, but a <strong>coherent submanifold</strong>—a repeatable, structurally discoverable <strong>cluster of semantic trajectories</strong>.</p>
+</blockquote>
+<p>This vindicates Dennett’s middle path between Fodorian modular essentialism and Churchland’s vectorial reconceptualization.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="figures/definitions.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">‘Definitions in the semantic cap’</figcaption>
+</figure>
+</div>
+<p>It is important to note that, just like the dots in the “elephant patterns” used to illustrate Dennett’s points, where dots were ‘beliefs’, our dots here are sentences, i.e.&nbsp;devices of usage for a given word. The patterns we see emerging are ‘use-patterns’ and not any sort of statistical averages:</p>
+<blockquote class="blockquote">
+<p><em>“The patterns discerned are not statistical averages (e.g., ‘Democrats tend to favor welfare programs’) but personal cognitive idiosyncrasies (e.g., ‘She thinks she should get her queen out early’).” (ibid.)</em></p>
+</blockquote>
+<p>What we calculated above as ‘object-word “cat”’ is more of a “semantic attractor”<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a> for sentences where ‘cat’ is used in its literal menaing, and not an ‘average’.</p>
+<div class="no-row-height column-margin column-container"><div id="fn16"><p><sup>16</sup>&nbsp;The term is not usually used as this and is introduced here more like a metaphor than a precise technical term.</p></div></div><p>There is another interesting result here: the “cat” P-sentences semantic attractor is not centered within the definition-sentences for ‘cat’, showing that, in fact, the ‘true meaning’ of cat (the sum of all literal P-sentences with ‘cat’) is different from what we take as ‘dictionary definitions’.</p>
+</section>
+<section id="caps-and-nelkins-anti-realism" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="caps-and-nelkins-anti-realism">Caps and Nelkin’s Anti-Realism</h2>
+<p>Nelkin’s argument is This apparent alignment with Nelkin, however, breaks down when we consider his central claim about <em>conceptual priority</em>. Nelkin argues that we cannot even <em>recognize</em> a belief-pattern until we already <em>possess</em> the relevant propositional-attitude concepts—making the concept epistemically prior to the pattern. But in our rod/cap framework, this chicken-and-egg structure is avoided entirely. The <em>rod</em> is assembled empirically, as a body of appearances—sentences in which a word like <em>cat</em> is used across diverse roles and contexts. The <em>cap</em>, or conceptual cluster, then emerges from the ¨conceptual¨use of the word <em>cat</em> in differend Q sentences. It is not that we see the pattern <em>because</em> we have the concept; rather, we <em>form</em> the concept <em>because</em> we encounter and respond to the pattern. In this view, caps are not imposed by prior concepts but are <em>stabilizations of functional use</em>—resolvable from the rod without assuming prior interpretive categories. The concept is not a precondition for pattern-recognition, but a <em>post hoc crystallization</em> of patterns already implicit in language.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="figures/caps.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">‘Caps’</figcaption>
+</figure>
+</div>
+<p>This emergence is visible in the comparative cap plots above. In the upper graph, the Q-sentence clouds for <em>cat</em> and <em>tomato</em> partially overlap and share a single sentence (circled), indicating a thin zone of functional convergence—likely metaphorical or figurative. In the lower graph, <em>cat</em> and <em>fork</em> exhibit no shared Q-sentences and form disjoint semantic manifolds, despite both being concrete nouns. The <em>cap</em> for each word—marked by the black dot—represents the center of its pattern of usage, not a prior conceptual scaffold. The fact that these caps <strong>do not require predefined categories</strong> to separate them, and yet fall into stable, functionally distinct clusters, illustrates precisely the point: concepts <em>emerge from patterned use</em>, not from conceptual imposition.</p>
+</section>
+<section id="insights-from-recent-research" class="level2">
+<h2 class="anchored" data-anchor-id="insights-from-recent-research">Insights from Recent Research</h2>
+<p>Recent AI and cognitive-science work resonates with these interpretations. For example, Lee et al.&nbsp;(2024) find that semantic content in LLMs occupies <strong>high-dimensional, nonlinear</strong> subspaces, whereas formal (syntactic or literal) structure is more “linear” .&nbsp; In their “Geometric Signatures” study, the authors show that <strong>semantic complexity correlates with nonlinear geometry</strong>, suggesting that figurative or abstract meaning (as in caps) lives in complex, dispersed regions. This supports the idea that caps – rich in semantic nuance – are geometrically diffuse. Conversely, researchers have observed that <strong>literal category information tends to reside in low-dimensional manifolds</strong>. Park et al.&nbsp;(2024) demonstrate that token embeddings encode categorical and hierarchical relationships in tidy geometric form .&nbsp; Such findings imply rods (tied to concrete categories) naturally form tight clusters, whereas caps (tied to open-ended meanings) remain scattered.</p>
+<p>Another line of work (“semantic wave functions” (Laine 2025) ) treats word embeddings analogously to quantum states, highlighting that meaning involves both magnitude and phase.&nbsp; While more speculative, this view underscores that <strong>meaning is inherently contextual and dynamic</strong> in embedding space – a picture in line with Nelkin’s anti-realism for caps. No recent work directly asserts “Dennett vs.&nbsp;Nelkin,” but overall the AI literature agrees: embeddings neatly capture literal/concrete patterns, whereas figurative and abstract meanings require richer, more entangled representations.</p>
+</section>
+</section>
+<section id="a-first-conclusion-reliability-of-the-hybrid-claim" class="level1">
+<h1>A First Conclusion: Reliability of the Hybrid Claim</h1>
+<p>In sum, the project data largely vindicate the hybrid claim.&nbsp; <strong>Rods</strong> satisfy Dennett’s realism: they are compressible, predictive, and systematic (i.e.&nbsp;real patterns) . <strong>Caps</strong> display Nelkin-style anti-realism: they depend on our interpretive framework and have fuzzy, labile boundaries (the data show they “overlap everything and define nothing” in themselves).&nbsp; Thus the distinction “rod = real pattern, cap = anti-real pattern” is <strong>broadly defensible</strong> given the evidence.</p>
+<p>That said, some nuance is needed. Not all literal clusters are perfectly ideal (occasional P‑sentence outliers occur), and certain recurring metaphors might form moderately tight sub-clusters (blurring the rod/cap line).&nbsp; Moreover, equating metaphysical “reality” with these distributional facts risks overreach: Dennettian realism is a pragmatically minded ontology, and Nelkin’s stance is one perspective on pattern discovery.&nbsp; However, <strong>philosophically the hybrid view holds up</strong> as a working interpretation. The rods behave as stable patterns on which one can base abstraction, while the caps behave like contextually imposed patterns. In practice, the project’s cap-and-rod framework provides a useful and largely coherent mapping onto Dennett’s and Nelkin’s criteria – with the caveat that meaning in neural embeddings is subtle and sometimes resists strict categorization (as recent research shows).</p>
+<p>There is also an interesting question to be asked about Nelkin instrumentalist view. He says: <em>“If there are ‘visible’ patterns of bodily movements that constitute believing that Clinton is President, I, for one, am totally ignorant of what they are. It is true that I ascribe this belief (and others) to people on the basis of what they say and do; but if it is on account of seeing a pattern, I am unaware of what that pattern is, or that I see it, or even what sort of pattern it could possibly be.”</em> (Nelkin 1994, 63) But one can ask, if I take all of Nelkin’s sentences he can form with “Clinton” and “president” in them, and map them in our model, will some sort of _real_pattern, observable pattern, emerge? It loks like a flaw in Nelkin’s argument when he reduces beliefs to bodily patterns.</p>
+</section>
+<section id="a-second-conclusion-about-patterns-as-projections" class="level1">
+<h1>A second conclusion about patterns as projections</h1>
+<p>Nelkin’s point, even if it seems flawed because of its reduction to bodily movements, carries some intuitive truth about patterns that we can see in the way our rod and cap mushroom model works.</p>
+<blockquote class="blockquote">
+<p>We realize, from an introspective understanding of our own internal states, that we impose these patterns on our bodily movements because we have beliefs, desires, or the like. The patterns are not already out there, awaiting discovery. We create those patterns because we are the kinds of beings we are, because we have the kinds of internal states we have, because we are capable of acting on the world. (Nelkin 1994, 69)</p>
+</blockquote>
+<p>What seems to be at work allways in pattern recognition is some sort of projection: we do project onto the objects of the world the content of our minds when we recognize them. Nelkin seems to say that in order to project something you need to have it first, and because he implicitly considers concepts to be some sort of “objects” we’re given, he claims there is a faulty recursion in this, like in his ‘cat’ example. But in our model the ‘cap’, which is in its totality the meaning of the word, constantly grows since our infancy when we acquired language, being constantly projected <em>and adjusted</em> as a result of the feedback from projection. If I only knew black cats all my life, “this is a white cat” it is not a sentence in my ‘cat cap’. But once I see a white cat, the cap increases to accomodate the reality check.</p>
+</section>
+<section id="a-philosophical-conclusion" class="level1">
+<h1>A Philosophical Conclusion</h1>
+<p>One important consequence derives from the finding of a literal, concrete use vs idiomatic, metaphorical or symbolic use axis that structure any semantic pattern. Beyond the technical jargon it is very probable that this axis relates to the very old philosophical problem of how a word “hooks” to the real world but also to the equally old problem of what “concepts” really are. Our model links the pre-verbal patterns of sensations with patterns of words usage in sentences, proposing a new definition for concepts.</p>
+<p>In philosophical terms there is nothing preventing a generalization of our findings in semantic patterns. We think of patterns, usually, as some sort of atomic entities that lack internal structure. But a dual structure, with a hard core - a more rigid part of the pattern, and a flexible halo acquired in time and in continuous change, or even dependent on the individual experiences, can be in principle theorized for all sort of patterns, including propositional states patterns or even visual patterns. This may be possible because all our knowledge implies a connection from the outside world to our mind and it lives allways under the tension of “hard, objective truth” and “personal, subjective interpretation”</p>
+</section>
+<section id="whats-next" class="level1">
+<h1>What’s next</h1>
+<p>There are a number of issues with the above argument that we chose to leave for the end, for the sake of the fluidity of the essay. Any future work needs to address them:</p>
+<section id="known-architectural-biases" class="level3">
+<h3 class="anchored" data-anchor-id="known-architectural-biases">Known architectural biases</h3>
+<p>Throughout we treat clustering structure in SBERT embeddings as candidate <em>real patterns</em>. But any detecting device carries its own inductive biases, so we need to ask: <em>are the literal/figurative clusters properties of English usage, or artefacts of SBERT’s transformer architecture?</em> There are some known architecture biases we need to consider:</p>
+<table class="table">
+<colgroup>
+<col style="width: 29%">
+<col style="width: 37%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Architectural tendency</th>
+<th style="text-align: left;">Empirical evidence</th>
+<th style="text-align: left;">Possible impact on our task</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Permutation-symmetry bias</strong> – self-attention favours token-order–invariant correlations</td>
+<td style="text-align: left;">Lavie et al.&nbsp;2024 derive this analytically in the infinite-width limit</td>
+<td style="text-align: left;">Could group idioms with similar content words even when syntax differs</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Similarity decisions dominated by high-order feature interactions</strong></td>
+<td style="text-align: left;">Vasileiou &amp; Eberle 2024 use BiLRP to show SBERT similarity is driven by a few high-relevance token pairs</td>
+<td style="text-align: left;">May exaggerate metaphor clusters if certain lexical triggers recur</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Documented drop on figurative tasks</strong></td>
+<td style="text-align: left;">Wen &amp; Rezapour 2025 (preprint) report that vanilla SBERT underperforms on sarcasm until a prototype layer is added</td>
+<td style="text-align: left;">Suggests literal/figurative separation could partly reflect model weakness, not linguistic essence</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="understanding-or-mimicking" class="level3">
+<h3 class="anchored" data-anchor-id="understanding-or-mimicking">Understanding or mimicking?</h3>
+<p>A common rejoinder is that LLMs do not <em>understand</em> meaning but merely reproduce statistical form. Dennett’s “real pattern” criterion is epistemic and predictive, not ontological. If a statistical pattern lets us compress and predict use, it counts as real for us, even if the underlying mechanism is brute-force memorisation. The question if a LLM understands the pattern when using it is beside the point. It would be the same to ask if a cat understands the “mose” pattern when seeing one. But this being said, a more reliable “human-used” set of sentences may be needed to show that P-rods and Q-caps are feature patterns of the real natural language and not some LLM artifact.</p>
+</section>
+<section id="prove-q-caps-have-subjective-content-but-objective-shape" class="level3">
+<h3 class="anchored" data-anchor-id="prove-q-caps-have-subjective-content-but-objective-shape">Prove Q-caps have subjective content but objective shape</h3>
+<p>Related to the problem above, but somewhat different, is the supposition made in the text that Q-caps (the “meaning caps”) have similar shapes but different sentence content from person to person. An experiment can be made, asking a number of people to write 30 cat sentences on a piece of paper, as they come to mind. Then introduce them in our model and compare the resulting caps.</p>
+<div class="pagebreak">
+
+</div>
+</section>
+</section>
+<section id="bibliography" class="level1">
+<h1>Bibliography:</h1>
+<p>For some geometry / embedding ideas: (Park et al.&nbsp;2025), (Lee et al.&nbsp;2025) , both preprints</p>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-churchlandNeurocomputationalPerspectiveNature2000" class="csl-entry" role="listitem">
+Churchland, Paul M. 2000. <em>A Neurocomputational Perspective: The Nature of Mind and the Structure of Science</em>. 4.print ed.&nbsp;A Bradford Book. Cambridge, Mass.: MIT Press.
+</div>
+<div id="ref-dennettRealPatterns1991" class="csl-entry" role="listitem">
+Dennett, Daniel C. 1991. “Real Patterns.” <em>The Journal of Philosophy</em> 88 (1): 27. doi:<a href="https://doi.org/10.2307/2027085">10.2307/2027085</a>.
+</div>
+<div id="ref-fodorPsychosemanticsProblemMeaning1987" class="csl-entry" role="listitem">
+Fodor, Jerry A. 1987. <em>Psychosemantics: The Problem of Meaning in the Philosophy of Mind</em>. Explorations in Cognitive Science 2. Cambridge, Mass: MIT Press.
+</div>
+<div id="ref-laineSemanticWaveFunctions" class="csl-entry" role="listitem">
+Laine, Timo Aukusti. 2025. “Semantic Wave Functions: Exploring Meaning in Large Language Models Through Quantum Formalism.” <em>Open Access Journal of Applied Science and Technology</em>. Accessed May 4. doi:<a href="https://doi.org/10.33140/OAJAST">10.33140/OAJAST</a>.
+</div>
+<div id="ref-leeGeometricSignaturesCompositionality2025" class="csl-entry" role="listitem">
+Lee, Jin Hwa, Thomas Jiralerspong, Lei Yu, Yoshua Bengio, and Emily Cheng. 2025. “Geometric Signatures of Compositionality Across a Language Model’s Lifetime.” arXiv. doi:<a href="https://doi.org/10.48550/arXiv.2410.01444">10.48550/arXiv.2410.01444</a>.
+</div>
+<div id="ref-millierePhilosophicalIntroductionLanguage2024" class="csl-entry" role="listitem">
+Millière, Raphaël, and Cameron Buckner. 2024. “A Philosophical Introduction to Language Models — Part i: Continuity with Classic Debates.” arXiv. <a href="https://arxiv.org/abs/2401.03910" class="uri">https://arxiv.org/abs/2401.03910</a>.
+</div>
+<div id="ref-nelkinPatterns1994" class="csl-entry" role="listitem">
+Nelkin, Norton. 1994. “Patterns.” <em>Mind &amp; Language</em> 9 (1): 56–87. doi:<a href="https://doi.org/10.1111/j.1468-0017.1994.tb00216.x">10.1111/j.1468-0017.1994.tb00216.x</a>.
+</div>
+<div id="ref-parkGeometryCategoricalHierarchical2025" class="csl-entry" role="listitem">
+Park, Kiho, Yo Joong Choe, Yibo Jiang, and Victor Veitch. 2025. “The Geometry of Categorical and Hierarchical Concepts in Large Language Models.” arXiv. doi:<a href="https://doi.org/10.48550/arXiv.2406.01506">10.48550/arXiv.2406.01506</a>.
+</div>
+<div id="ref-prudenBirthWordsTenMonthOlds2006" class="csl-entry" role="listitem">
+Pruden, Shannon M., Kathy Hirsh-Pasek, Roberta Michnick Golinkoff, and Elizabeth A. Hennon. 2006. “The Birth of Words: Ten-Month-Olds Learn Words Through Perceptual Salience.” <em>Child Development</em> 77 (2): 266–80. doi:<a href="https://doi.org/10.1111/j.1467-8624.2006.00869.x">10.1111/j.1467-8624.2006.00869.x</a>.
+</div>
+<div id="ref-seidlTouchLearnMultisensory2024" class="csl-entry" role="listitem">
+Seidl, Amanda H., Michelle Indarjit, and Arielle Borovsky. 2024. “Touch to Learn: Multisensory Input Supports Word Learning and Processing.” <em>Developmental Science</em> 27 (1): e13419. doi:<a href="https://doi.org/10.1111/desc.13419">10.1111/desc.13419</a>.
+</div>
+</div>
+
+
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="light">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "aathanor/Philosophy";
+    script.dataset.repoId = "R_kgDOOvbpNQ";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOOvbpNc4CqifF";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "bottom";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
