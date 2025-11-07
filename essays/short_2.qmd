@@ -2,7 +2,7 @@
 title: Short Version - Patterns, Pragmatism, and Mild Realism - An Empirical Probe
 author: Florin Cojocariu
 date: 06.05.2025
-bibliography: '/Users/florin/My Library.bib'
+bibliography: ../biblio.bib
 ---
 
 # Abstract
