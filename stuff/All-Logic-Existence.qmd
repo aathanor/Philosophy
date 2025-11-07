@@ -17,43 +17,172 @@ transcend these propositions, and then he will see the world aright.\"'*
 --- Wittgenstein, *Tractatus* 6.54
 :::
 
-# The Basic Setup
+# No Final Theory of All Logic?  
+*A Schematic Argument and Its Theological Analogy*
 
-- For any natural number $n$, let $L_n$ be a logic system of order $n$
+## 1. Aim and Background
 
-- Let $P_n$ be **all** the semantic and syntactic components
-  (predicates, constants, variables, quantifiers, models etc) available
-  in $L_n$
+This note develops a simple line of thought:
 
-- Let $\mathscr{P}$ represent **every possible semantic and syntactic
-  components** across all systems:
-  $\mathscr{P}= P_1 \cup P_2 \cup P_3 \cup \cdots$
+1. Modern limitative theorems (Gödel, Tarski) show that no sufficiently strong formal theory can fully capture its own truth-theoretic profile (Gödel 1931; Tarski 1933/36).
+2. Work on *indefinite extensibility* suggests that certain key concepts—set, truth, domain, and perhaps “validity”—are inherently open-ended (Dummett 1991; Williamson 1998).
+3. Together, these support the claim that there is no *single, final* effectively axiomatized theory that exhaustively captures “all logic” while also providing a globally correct account of its own truth.
+4. Read in a more speculative key, this yields an analogy with classical theistic claims about the in-principle uncapturability of a maximal, “God-like” reality by any finite scheme.
 
-# The Core Problem
+None of this is new as a *theorem* of logic. The originality lies in the way standard results are packaged and connected.
 
-- In any system $L_n$, we can *use* its \"tools\" $P_n$ freely
+---
 
-- But we *can't formally talk about* $P_n$ as a complete package within
-  $L_n$ itself
+## 2. Limitative Theorems and Self-Description
 
-# The Fatal Loop
+Two classical results are central:
 
-Now consider $\mathscr{P}$ - the hypothetical collection of *all*
-semantic and syntactic components from *all* systems. To claim
-"$\mathscr{P}$ exists":
+- **Gödel’s incompleteness theorems.**  
+  For any consistent, effectively axiomatized theory $T$ capable of representing elementary arithmetic, there are arithmetical truths expressible in the language of $T$ that are not provable in $T$ (Gödel 1931; see also Raatikainen 2020).
 
-1.  You'd need to make this claim in some specific system $L_k$
+- **Tarski’s undefinability theorem.**  
+  For any sufficiently strong formal system, truth in its intended model is not definable by a predicate of the system’s own language; there is no formula $\mathsf{True}(x)$ that picks out exactly the true sentences of that language (Tarski 1933/36).
 
-2.  But $\mathscr{P}$ by definition includes tools from $L_{k+1}$,
-    $L_{k+2}$, etc.
+These theorems build on the technique of *arithmetization of syntax*: a theory such as first-order arithmetic can represent syntactic notions like “$x$ is a formula”, “$x$ is a proof of $y$”, and so on, via Gödel coding.
 
-3.  These tools aren't available in your starting system $L_k$
+We get a crucial contrast:
 
-4.  Therefore, $L_k$ can't actually formalize the full $\mathscr{P}$
-    it's trying to describe
+- Self-description of **structure** (syntax, provability, modelhood) can be internalized.
+- Self-description of **truth** (a full Tarskian truth predicate for one’s own language) cannot be internalized without inconsistency.
 
-This amounts to the conclusion that there is no formal language in which
-I can say \"$\mathscr{P}$ exists\".
+Thus, any theory strong enough to talk sensibly about its own sentences and proofs is, in a precise sense, too weak to give a complete and correct theory of *its own* truth.
+
+---
+
+## 3. Open-Endedness and Indefinite Extensibility
+
+A parallel thread comes from the notion of **indefinite extensibility**, associated with Dummett and later developed by Williamson.
+
+Very roughly, a concept $C$ is *indefinitely extensible* if:
+
+> Whenever we have a definite grasp of some totality falling under $C$, we can see how to extend it to a strictly larger totality still governed by the same concept.
+
+Classic candidates include:
+
+- **Set** or **class**: for any domain of sets, one can form new sets (e.g. of subsets, or of all sets in the domain) that fall outside the original totality.
+- Certain semantic notions, such as **truth**, where attempts to totalize all truths tend to push us to stronger languages or metalanguages (Dummett 1991; Williamson 1998).
+
+This framework gives us a vocabulary for talking about “no final encompassing standpoint”: the very nature of some concepts ensures that any given totalization can be properly extended.
+
+When we ask about “all logic” in a very strong sense—*all* valid consequence relations, *all* formal systems, *all* semantic frameworks for them—we are plausibly dealing with something like an indefinitely extensible concept.
+
+---
+
+## 4. A Schematic “No Final Theory of All Logic” Claim
+
+Fix a standard background framework, such as ZFC, in which we can talk about formal languages, theories, proofs, and models.
+
+Consider an open-ended family of logical “packages” $\{P_n : n \in \mathbb{N}\}$, where each $P_n$ consists of:
+
+- a language $L_n$,
+- a designated class of models for $L_n$,
+- a proof system,
+- and the usual metatheoretic apparatus we use to describe these.
+
+Write $\mathscr{P} = \{P_n : n \in \mathbb{N}\}$ for the class of all such packages we are prepared to define in the background theory.
+
+In this setting, the following is **not** controversial:
+
+1. Our background set theory can quantify over $\mathscr{P}$ as a (proper) class, exactly as it quantifies over “all groups,” “all models of ZFC,” etc.
+2. For each *particular* logic $P_n$, we can develop a metatheory describing its syntax, proof system, and models; often, much of this metatheory can be internalized in a sufficiently strong arithmetical or set-theoretic theory.
+
+The interesting question is different:
+
+> Could there be a *single*, effectively axiomatized, consistent theory $T^*$ that  
+> (i) internalizes the usual syntax/semantics of *all* the $P_n$ in $\mathscr{P}$;  
+> (ii) proves all the true arithmetical facts about their behaviour (e.g. consistency, completeness, theorems, etc.); **and**  
+> (iii) contains a globally correct truth predicate not only for the languages $L_n$ but also for its *own* language?
+
+Conditions (i)–(ii) are very strong but, taken in isolation, not obviously inconsistent with standard practice: we routinely build rich “meta-theories of many logics.” The sticking point is (iii):
+
+- By Tarski’s undefinability theorem, no sufficiently strong consistent theory can contain a predicate that exactly captures its own notion of truth.
+
+So any $T^*$ that aspires to be an all-encompassing, self-describing theory of “all logic” in this robust sense—pulling its own truth predicate into the same net—cannot succeed, on pain of contradiction.
+
+Combined with Gödel’s incompleteness theorems, this yields a looser but philosophically potent slogan:
+
+> For any fixed, effectively axiomatized, consistent, sufficiently strong theory $T$, there are true statements about formal systems—including $T$ itself—that escape the reach of $T$.
+
+Thus no such $T$, treated as “just another formal theory,” can serve as a *final* theory of “all logic” in the ambitious, self-closing sense sketched above.
+
+The conclusion is not that we cannot *talk* about all these logics (we can, in the background set theory), but that:
+
+- any particular formalization we adopt as “the theory of all logic” will be, in principle, extendable and incomplete with respect to its own truth-theoretic profile and to stronger logical resources.
+
+In this sense, “all logic” functions as an **ideal limit**: approximated from within many systems, but never fully realized as a single, internally self-complete formal theory.
+
+---
+
+## 5. Relation to Logical Pluralism
+
+This view is compatible with, but distinct from, **logical pluralism**, the thesis that there is more than one correct logic (Russell 2013/2023).
+
+- Pluralists argue on normative and semantic grounds that classical, intuitionistic, relevant, and so on, may all be “correct” in their own domains.
+- The present line of thought is not primarily about *normative correctness*, but about the **non-finality of any single formal theory** purporting to capture “all logical structure” and its own truth.
+
+The two themes can of course interact: if there is no single final theory of all logical consequence, that sits comfortably with the idea that the space of logics is open and plural. But the metalogical argument itself does not depend on pluralism.
+
+---
+
+## 6. A Theological Analogy (Explicitly Labeled as Such)
+
+If one is interested in philosophy of religion, there is a natural analogy here.
+
+Many classical theistic traditions characterize God as:
+
+- a maximal or ultimate reality,
+- the complete ground of order, being, or intelligibility,
+- in principle beyond full capture by any finite conceptual scheme.
+
+Ontological arguments typically proceed inside some relatively modest modal or higher-order framework: a particular logic $L_n$ plus axioms about necessity, essence, perfection, and so on. They aim to derive the existence of a maximal being from within that framework.
+
+The metalogical picture above does **not** refute such arguments outright. But it does suggest a structural moral:
+
+- Any formal argument is carried out in a specific system $L_n$, with its own expressive limitations.
+- We have strong general reasons to think that no such system—when treated as just another formal theory—can be both (a) complete concerning its own truths and (b) self-sufficient as a final account of all logical structure.
+
+If the theist’s God is understood as “that than which no greater can be conceived,” or as the maximal ground of all being and intelligibility, then:
+
+- the **open-endedness** of our best formal frameworks, and
+- the impossibility of any one of them fully capturing its own truth and all stronger frameworks,
+
+can be read as a formal echo of the intuition that no single finite scheme—logical or otherwise—can *finally* domesticate such a reality.
+
+This is, emphatically, an *analogy*, not a proof:
+
+- Logic does not entail that such a maximal reality exists.
+- Nor does it prove that no formal argument about God can ever be sound.
+
+But it does provide a disciplined way of saying:
+
+> Even in our most precise and austere theories, the aspiration to a single, self-contained, final theory of “all logic” is blocked by principled limitations. If there is a maximal reality, we should not be surprised if it resists capture by any one such theory as well.
+
+---
+
+## 7. Status of the Argument
+
+As far as I know, no existing result in mathematical logic is commonly stated as *“the non-existence of a final theory of all logic”* in the precise format above. What exists are:
+
+- Gödel’s and Tarski’s limit theorems, and their many refinements;
+- philosophical work on indefinite extensibility and the open-endedness of key concepts;
+- discussions of logical pluralism and the diversity of consequence relations.
+
+The present line of argument is best understood as a **synthesis** of these strands, pushed in a specific, higher-level direction (plus a theological gloss).
+
+---
+
+## References (indicative, not exhaustive)
+
+- Dummett, M. (1991). *The Logical Basis of Metaphysics*. Harvard University Press.  
+- Gödel, K. (1931). “Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I.” *Monatshefte für Mathematik und Physik*, 38, 173–198.  
+- Russell, G. (2013/2023). “Logical Pluralism.” In *The Stanford Encyclopedia of Philosophy*, ed. E. N. Zalta & U. Nodelman.  
+- Tarski, A. (1933/1956). “The Concept of Truth in Formalized Languages.” In *Logic, Semantics, Metamathematics*, 2nd ed., Hackett, 1983.  
+- Williamson, T. (1998). “Indefinite Extensibility.” *Mind*, 107(427), 453–473.
 
 # Conclusion
 
