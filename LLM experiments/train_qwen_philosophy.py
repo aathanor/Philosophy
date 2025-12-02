@@ -78,15 +78,21 @@ def main():
         load_in_4bit=True,
         bnb_4bit_compute_dtype=torch.float16,
         bnb_4bit_use_double_quant=True,
-        bnb_4bit_quant_type="nf4"
+        bnb_4bit_quant_type="nf4",
+        llm_int8_enable_fp32_cpu_offload=True  # Enable CPU offload
     )
+
+    # Calculate available GPU memory (use 90% to be safe)
+    max_memory = {0: "7GB", "cpu": "24GB"}
 
     model = AutoModelForCausalLM.from_pretrained(
         MODEL_NAME,
         quantization_config=quantization_config,
         device_map="auto",
+        max_memory=max_memory,
         trust_remote_code=True,
-        low_cpu_mem_usage=True
+        low_cpu_mem_usage=True,
+        offload_folder="offload",  # Offload to disk if needed
     )
 
     # Prepare for training
