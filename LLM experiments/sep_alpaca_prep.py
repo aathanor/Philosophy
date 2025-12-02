@@ -127,37 +127,121 @@ class SEPAlpacaPrep:
         self.logger.info("Fetching SEP table of contents...")
         entries = []
 
-        try:
-            # Get from main contents page
-            response = requests.get(f"{self.base_url}/contents.html",
-                                  headers=self.headers, timeout=30)
-            response.raise_for_status()
-            soup = BeautifulSoup(response.text, 'html.parser')
+        # Create a session for better connection handling
+        session = requests.Session()
+        session.headers.update(self.headers)
 
-            # Extract entries
-            for link in soup.find_all('a', href=True):
-                href = link['href']
-                if href.startswith('entries/') and href.count('/') == 1:
-                    entry_id = href.split('/')[-1].replace('/', '').replace('.html', '')
-                    if entry_id and not any(e['id'] == entry_id for e in entries):
-                        title = link.text.strip() or entry_id.replace('-', ' ').title()
-                        entries.append({
-                            'id': entry_id,
-                            'title': title,
-                            'url': urljoin(self.base_url, href)
-                        })
+        try:
+            # Try multiple pages to get entries
+            urls_to_try = [
+                f"{self.base_url}/contents.html",
+                f"{self.base_url}/index.html",
+            ]
+
+            # Also try alphabetical index pages
+            for letter in 'abcdefghijklmnopqrstuvwxyz':
+                urls_to_try.append(f"{self.base_url}/contents.html#{letter}")
+
+            self.logger.info("Attempting to fetch entry list...")
+
+            for url in urls_to_try[:3]:  # Try first 3 URLs
+                try:
+                    self.logger.info(f"Trying {url}...")
+                    response = session.get(url, timeout=30)
+
+                    if response.status_code == 200:
+                        soup = BeautifulSoup(response.text, 'html.parser')
+
+                        # Look for entry links in various formats
+                        for link in soup.find_all('a', href=True):
+                            href = link['href']
+
+                            # Match patterns like: entries/epistemology/ or entries/kant/
+                            if 'entries/' in href:
+                                # Clean up the href
+                                if href.startswith('/'):
+                                    href = href[1:]
+                                elif href.startswith('http'):
+                                    # Extract path from full URL
+                                    parsed = urlparse(href)
+                                    href = parsed.path.lstrip('/')
+
+                                # Extract entry ID
+                                if href.startswith('entries/'):
+                                    parts = href.split('/')
+                                    if len(parts) >= 2:
+                                        entry_id = parts[1]
+
+                                        # Skip if already added or invalid
+                                        if entry_id and not any(e['id'] == entry_id for e in entries):
+                                            # Filter out navigation items
+                                            if entry_id not in ['index', 'contents', 'new', 'archives']:
+                                                title = link.text.strip() or entry_id.replace('-', ' ').title()
+                                                entries.append({
+                                                    'id': entry_id,
+                                                    'title': title,
+                                                    'url': f"{self.base_url}/entries/{entry_id}/"
+                                                })
+
+                        if entries:
+                            break  # Found entries, stop trying
+
+                    time.sleep(1)  # Respectful delay between tries
+
+                except Exception as e:
+                    self.logger.warning(f"Failed to fetch from {url}: {e}")
+                    continue
+
+            # If still no entries, use a predefined list of common entries
+            if not entries:
+                self.logger.warning("Could not fetch from SEP website, using predefined entry list...")
+                entries = self._get_fallback_entries()
 
             self.logger.info(f"Found {len(entries)} entries")
 
             # Save to cache
-            with open(cache_file, 'w', encoding='utf-8') as f:
-                json.dump(entries, f, indent=2)
+            if entries:
+                with open(cache_file, 'w', encoding='utf-8') as f:
+                    json.dump(entries, f, indent=2)
 
             return entries
 
         except Exception as e:
             self.logger.error(f"Error fetching entries: {e}")
-            return []
+            # Return fallback list
+            return self._get_fallback_entries()
+
+    def _get_fallback_entries(self) -> List[Dict]:
+        """Fallback list of major SEP entries when scraping fails"""
+        self.logger.info("Using fallback entry list of major philosophy topics...")
+
+        fallback_ids = [
+            'epistemology', 'metaphysics', 'ethics', 'logic-classical',
+            'plato', 'aristotle', 'kant', 'hume', 'descartes', 'locke',
+            'nietzsche', 'wittgenstein', 'heidegger', 'quine', 'rawls',
+            'consciousness', 'free-will', 'personal-identity', 'mind',
+            'philosophy-science', 'causation', 'time', 'space',
+            'truth', 'knowledge-analysis', 'skepticism', 'perception',
+            'moral-realism', 'consequentialism', 'deontological-ethics',
+            'virtue-ethics', 'justice', 'rights', 'political-obligation',
+            'social-contract', 'liberalism', 'democracy',
+            'aesthetic-judgment', 'art-definition', 'beauty',
+            'existence', 'ontology', 'universals', 'tropes',
+            'language-thought', 'meaning', 'reference', 'pragmatics',
+            'logic-modal', 'logic-inductive', 'rationality',
+            'scientific-method', 'laws-of-nature', 'reductionism',
+            'quantum-mechanics', 'action', 'emotion', 'self-knowledge',
+        ]
+
+        entries = []
+        for entry_id in fallback_ids:
+            entries.append({
+                'id': entry_id,
+                'title': entry_id.replace('-', ' ').title(),
+                'url': f"{self.base_url}/entries/{entry_id}/"
+            })
+
+        return entries
 
     def download_article(self, entry: Dict) -> Optional[Dict]:
         """Download and parse a single article"""
