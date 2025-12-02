@@ -1,0 +1,7 @@
+# Minimal requirements for sep_alpaca_prep.py
+# Install with: pip install -r requirements_minimal.txt
+
+requests>=2.28.0
+beautifulsoup4>=4.11.0
+html2text>=2020.1.16
+tqdm>=4.64.0
