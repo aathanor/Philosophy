@@ -78,8 +78,14 @@ def main():
         trust_remote_code=True,
     )
 
+    # Prepare model for k-bit training
+    model = prepare_model_for_kbit_training(model)
+
     model.config.use_cache = False
     model.config.pretraining_tp = 1
+
+    # Enable gradient checkpointing
+    model.gradient_checkpointing_enable()
 
     # Setup LoRA
     logger.info("Setting up LoRA...")
@@ -93,8 +99,14 @@ def main():
     )
 
     model = get_peft_model(model, peft_config)
+
+    # Print trainable parameters
     trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
-    logger.info(f"Trainable params: {trainable:,}")
+    total = sum(p.numel() for p in model.parameters())
+    logger.info(f"Trainable params: {trainable:,} / {total:,} ({100 * trainable / total:.2f}%)")
+
+    # Verify gradients are enabled
+    model.print_trainable_parameters()
 
     # Format data
     def format_prompt(example):
@@ -138,7 +150,6 @@ You are a philosophy expert with knowledge from the Stanford Encyclopedia of Phi
         warmup_steps=100,
         lr_scheduler_type="cosine",
         optim="paged_adamw_32bit",
-        gradient_checkpointing=True,
         max_grad_norm=0.3,
         report_to="none",
     )
