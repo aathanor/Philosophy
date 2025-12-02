@@ -133,7 +133,7 @@ You are a philosophy expert with knowledge from the Stanford Encyclopedia of Phi
         eval_steps=250,
         logging_steps=25,
         save_total_limit=2,
-        evaluation_strategy="steps",
+        eval_strategy="steps",  # Changed from evaluation_strategy
         load_best_model_at_end=True,
         warmup_steps=100,
         lr_scheduler_type="cosine",
