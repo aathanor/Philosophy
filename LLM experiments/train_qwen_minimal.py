@@ -22,8 +22,8 @@ from transformers import (
 from peft import LoraConfig, get_peft_model
 import logging
 
-# Critical memory settings
-os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:128"
+# Critical memory settings - EXACTLY what the error message suggests!
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 torch.cuda.empty_cache()
 gc.collect()
 
@@ -107,9 +107,9 @@ def main():
     train_dataset = train_dataset.map(format_prompt, remove_columns=train_dataset.column_names)
     eval_dataset = eval_dataset.map(format_prompt, remove_columns=eval_dataset.column_names)
 
-    # Tokenize
+    # Tokenize - reduced to 256 for more memory
     def tokenize(examples):
-        return tokenizer(examples["text"], truncation=True, max_length=384, padding="max_length")
+        return tokenizer(examples["text"], truncation=True, max_length=256, padding="max_length")
 
     train_dataset = train_dataset.map(tokenize, batched=True, remove_columns=["text"])
     eval_dataset = eval_dataset.map(tokenize, batched=True, remove_columns=["text"])
@@ -145,10 +145,15 @@ def main():
         data_collator=DataCollatorForLanguageModeling(tokenizer, mlm=False),
     )
 
+    # Clear cache one more time before training
+    torch.cuda.empty_cache()
+    gc.collect()
+
     # Train
     logger.info("="*60)
     logger.info("Starting training...")
-    logger.info("Settings: Batch=1, GradAccum=16, Epochs=2")
+    logger.info("Settings: Batch=1, GradAccum=16, Epochs=2, MaxLen=256")
+    logger.info(f"GPU Free: {torch.cuda.memory_reserved(0) - torch.cuda.memory_allocated(0)} bytes")
     logger.info("="*60)
 
     try:
