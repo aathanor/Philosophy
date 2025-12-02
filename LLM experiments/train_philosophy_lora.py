@@ -106,20 +106,27 @@ class PhilosophyLLMTrainer:
                 load_in_8bit=True,
                 bnb_8bit_compute_dtype=torch.float16,
                 bnb_8bit_use_double_quant=True,
+                llm_int8_enable_fp32_cpu_offload=True  # Enable CPU offload for 8GB VRAM
             )
+
+            # Set memory limits for 8GB GPU
+            max_memory = {0: "7GB", "cpu": "20GB"}
 
             model = AutoModelForCausalLM.from_pretrained(
                 self.model_name,
                 quantization_config=quantization_config,
                 device_map="auto",
-                trust_remote_code=True
+                max_memory=max_memory,
+                trust_remote_code=True,
+                low_cpu_mem_usage=True
             )
         else:
             model = AutoModelForCausalLM.from_pretrained(
                 self.model_name,
                 device_map="auto",
                 torch_dtype=torch.float16,
-                trust_remote_code=True
+                trust_remote_code=True,
+                low_cpu_mem_usage=True
             )
 
         # Prepare model for k-bit training
