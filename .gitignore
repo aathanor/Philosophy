@@ -19,6 +19,13 @@ sep_test/
 sep_complete/
 *.log
 
+# LLM experiments
+LLM experiments/llama.cpp/
+LLM experiments/qwen7b_philosophy/
+LLM experiments/qwen7b_philosophy_merged/
+LLM experiments/offload_merge/
+LLM experiments/*.gguf
+
 # IDE
 .vscode/
 .idea/
