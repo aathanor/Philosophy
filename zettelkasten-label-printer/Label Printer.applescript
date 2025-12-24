@@ -1,17 +1,15 @@
 -- Label Printer macOS Application
--- Double-click to run, or save as Application in Script Editor
+-- Save as Application in Script Editor to create a double-clickable app
 
 on run
-	-- Get the directory containing this script
-	set scriptPath to POSIX path of (path to me)
-	set appFolder to do shell script "dirname " & quoted form of scriptPath
-
-	-- Build path to launcher script
-	set launcherScript to appFolder & "/launch-label-printer.sh"
+	-- Path to the zettelkasten-label-printer folder
+	-- Update this path if you moved the folder to a different location
+	set projectFolder to (path to home folder as text) & "Philosophy:zettelkasten-label-printer"
+	set projectPath to POSIX path of projectFolder
 
 	-- Open Terminal and run the launcher
 	tell application "Terminal"
 		activate
-		do script "cd " & quoted form of appFolder & " && ./launch-label-printer.sh"
+		do script "cd " & quoted form of projectPath & " && ./launch-label-printer.sh"
 	end tell
 end run
