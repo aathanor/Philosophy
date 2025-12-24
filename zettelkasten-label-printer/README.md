@@ -14,19 +14,48 @@ A Python application for printing zettelkasten cards on a Brother QL-810W label 
 
 ## Installation
 
+### Quick Setup (Recommended)
+
+1. Clone or download this repository
+2. Run the setup script:
+   ```bash
+   cd zettelkasten-label-printer
+   ./setup.sh
+   ```
+
+The setup script will:
+- Check your Python version
+- Create a virtual environment (venv/)
+- Install all dependencies in the virtual environment
+
+### Manual Installation
+
+If you prefer manual setup:
+
 1. Install Python 3.8 or higher
-2. Install dependencies:
+2. Create a virtual environment:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-
-3. Configure your printer and folders in `config.yaml`
+4. Configure your printer and folders in `config.yaml`
 
 ## Usage
 
 ### Run the Streamlit App
 
+**Using the run script (recommended):**
 ```bash
+./run.sh
+```
+
+**Or manually:**
+```bash
+source venv/bin/activate
 streamlit run app.py
 ```
 
