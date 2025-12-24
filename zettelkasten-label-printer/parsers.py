@@ -355,13 +355,112 @@ class HighlightedParser:
         return all_notes
 
 
-def get_all_notes(zotero_folder: str, highlighted_folder: str) -> List[Note]:
+class ScappleParser:
+    """Parser for Scapple plain text exports."""
+
+    @staticmethod
+    def parse_file(filepath: str) -> List[Note]:
+        """
+        Parse a Scapple plain text export file.
+
+        Scapple exports have a simple format:
+        - First line: Title
+        - Blank line
+        - Remaining lines: Body text
+
+        Args:
+            filepath: Path to text file
+
+        Returns:
+            List of Note objects (typically one per file)
+        """
+        notes = []
+
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read().strip()
+
+        if not content:
+            return notes
+
+        lines = content.split('\n')
+
+        # First non-empty line is the title
+        title = ""
+        body_start = 0
+
+        for i, line in enumerate(lines):
+            if line.strip():
+                title = line.strip()
+                body_start = i + 1
+                break
+
+        if not title:
+            return notes
+
+        # Skip blank lines after title, then gather body
+        body_lines = []
+        started_body = False
+
+        for i in range(body_start, len(lines)):
+            line = lines[i]
+            if line.strip():
+                started_body = True
+                body_lines.append(line)
+            elif started_body:
+                # Include blank lines in the body once we've started
+                body_lines.append(line)
+
+        body = '\n'.join(body_lines).strip()
+
+        if title or body:
+            note = Note(
+                title=title if title else "Untitled",
+                author="",  # Scapple exports don't have author
+                source="Scapple",  # Mark as from Scapple
+                body=body,
+                page="",  # No page numbers
+                source_file=filepath
+            )
+            notes.append(note)
+
+        return notes
+
+    @staticmethod
+    def scan_folder(folder_path: str) -> List[Note]:
+        """
+        Scan a folder for Scapple text exports and parse all notes.
+
+        Args:
+            folder_path: Path to folder containing text files
+
+        Returns:
+            List of all Note objects found
+        """
+        all_notes = []
+        folder = Path(folder_path).expanduser()
+
+        if not folder.exists():
+            return all_notes
+
+        # Scapple can export as .txt
+        for filepath in folder.glob('*.txt'):
+            try:
+                notes = ScappleParser.parse_file(str(filepath))
+                all_notes.extend(notes)
+            except Exception as e:
+                print(f"Error parsing {filepath}: {e}")
+
+        return all_notes
+
+
+def get_all_notes(zotero_folder: str, highlighted_folder: str, scapple_folder: str = None) -> List[Note]:
     """
-    Get all notes from both Zotero and Highlighted export folders.
+    Get all notes from Zotero, Highlighted, and optionally Scapple export folders.
 
     Args:
         zotero_folder: Path to Zotero exports folder
         highlighted_folder: Path to Highlighted exports folder
+        scapple_folder: Path to Scapple exports folder (optional)
 
     Returns:
         Combined list of all Note objects
@@ -376,7 +475,25 @@ def get_all_notes(zotero_folder: str, highlighted_folder: str) -> List[Note]:
     highlighted_notes = HighlightedParser.scan_folder(highlighted_folder)
     notes.extend(highlighted_notes)
 
+    # Get Scapple notes if folder provided
+    if scapple_folder:
+        scapple_notes = ScappleParser.scan_folder(scapple_folder)
+        notes.extend(scapple_notes)
+
     return notes
+
+
+def get_scapple_notes(scapple_folder: str) -> List[Note]:
+    """
+    Get only Scapple notes.
+
+    Args:
+        scapple_folder: Path to Scapple exports folder
+
+    Returns:
+        List of Scapple Note objects
+    """
+    return ScappleParser.scan_folder(scapple_folder)
 
 
 def save_notes_to_file(filepath: str, notes: List[Note]) -> bool:

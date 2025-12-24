@@ -25,6 +25,7 @@ layout:
 data_sources:
   zotero_export_folder: "~/Documents/Zotero-Exports"
   highlighted_export_folder: "~/Documents/Highlighted-Exports"
+  scapple_export_folder: "~/Documents/Scapple-Exports"
 
 # Processing options
 options:

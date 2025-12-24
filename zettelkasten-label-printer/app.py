@@ -9,7 +9,7 @@ from pathlib import Path
 import json
 
 from config_loader import ConfigLoader
-from parsers import get_all_notes, Note, ZoteroParser, HighlightedParser, save_notes_to_file
+from parsers import get_all_notes, get_scapple_notes, Note, ZoteroParser, HighlightedParser, ScappleParser, save_notes_to_file
 from label_renderer import LabelRenderer
 from printer import create_printer, BROTHER_QL_AVAILABLE
 from print_history import PrintHistory
@@ -120,11 +120,17 @@ def init_session_state():
     if 'notes' not in st.session_state:
         st.session_state.notes = []
 
+    if 'scapple_notes' not in st.session_state:
+        st.session_state.scapple_notes = []
+
     if 'notes_loaded' not in st.session_state:
         st.session_state.notes_loaded = False
 
     if 'current_note_index' not in st.session_state:
         st.session_state.current_note_index = None
+
+    if 'current_scapple_note_index' not in st.session_state:
+        st.session_state.current_scapple_note_index = None
 
     if 'printer' not in st.session_state:
         config = st.session_state.config.get_all()
@@ -146,28 +152,37 @@ def load_notes():
     config = st.session_state.config
     zotero_folder = config.get('data_sources.zotero_export_folder', '~/Documents/Zotero-Exports')
     highlighted_folder = config.get('data_sources.highlighted_export_folder', '~/Documents/Highlighted-Exports')
+    scapple_folder = config.get('data_sources.scapple_export_folder', '~/Documents/Scapple-Exports')
 
     # Expand paths
     zotero_path = config.expand_path(zotero_folder)
     highlighted_path = config.expand_path(highlighted_folder)
+    scapple_path = config.expand_path(scapple_folder)
 
     # Create folders if they don't exist
     zotero_path.mkdir(parents=True, exist_ok=True)
     highlighted_path.mkdir(parents=True, exist_ok=True)
+    scapple_path.mkdir(parents=True, exist_ok=True)
 
     # Log folder info
     logger.info(f"Loading notes from:")
     logger.info(f"  Zotero: {zotero_path}")
     logger.info(f"  Highlighted: {highlighted_path}")
+    logger.info(f"  Scapple: {scapple_path}")
 
     # Count files
     zotero_files = list(zotero_path.glob('*.md'))
     highlighted_files = list(highlighted_path.glob('*.md'))
-    logger.info(f"Found {len(zotero_files)} Zotero files, {len(highlighted_files)} Highlighted files")
+    scapple_files = list(scapple_path.glob('*.txt'))
+    logger.info(f"Found {len(zotero_files)} Zotero files, {len(highlighted_files)} Highlighted files, {len(scapple_files)} Scapple files")
 
-    # Load notes
+    # Load notes (Zotero + Highlighted only, Scapple kept separate)
     notes = get_all_notes(str(zotero_path), str(highlighted_path))
-    logger.info(f"Parsed {len(notes)} total notes")
+    logger.info(f"Parsed {len(notes)} notes from Zotero/Highlighted")
+
+    # Load Scapple notes separately
+    scapple_notes = get_scapple_notes(str(scapple_path))
+    logger.info(f"Parsed {len(scapple_notes)} Scapple notes")
 
     # Sort: unprinted first, then by title
     notes.sort(key=lambda n: (
@@ -175,7 +190,13 @@ def load_notes():
         n.title.lower()
     ))
 
+    scapple_notes.sort(key=lambda n: (
+        st.session_state.print_history.is_printed(n),
+        n.title.lower()
+    ))
+
     st.session_state.notes = notes
+    st.session_state.scapple_notes = scapple_notes
     st.session_state.notes_loaded = True
     return notes
 
@@ -188,11 +209,14 @@ def render_compact_sidebar():
         # Stats in columns for compactness
         col1, col2 = st.columns(2)
         with col1:
-            st.metric("Total", len(st.session_state.notes))
+            total = len(st.session_state.notes) + len(st.session_state.scapple_notes)
+            st.metric("Total", total)
         with col2:
-            unprinted = sum(1 for n in st.session_state.notes
-                           if not st.session_state.print_history.is_printed(n))
-            st.metric("New", unprinted)
+            unprinted_regular = sum(1 for n in st.session_state.notes
+                                   if not st.session_state.print_history.is_printed(n))
+            unprinted_scapple = sum(1 for n in st.session_state.scapple_notes
+                                   if not st.session_state.print_history.is_printed(n))
+            st.metric("New", unprinted_regular + unprinted_scapple)
 
         # Reload button (prominent)
         if st.button("🔄 Reload Notes", type="primary", use_container_width=True):
@@ -254,53 +278,101 @@ def render_compact_sidebar():
 
 
 def render_note_list():
-    """Render note list in right column."""
-    st.markdown("### 📝 Notes")
+    """Render note list in right column with tabs for Notes and Scapple."""
 
-    # Search
-    search = st.text_input("🔍", placeholder="Filter...", key="search", label_visibility="collapsed")
+    # Create tabs
+    tab1, tab2 = st.tabs(["📝 Notes", "🔷 Scapple"])
 
-    # Filter notes
-    filtered_notes = st.session_state.notes
-    if search:
-        search_lower = search.lower()
-        filtered_notes = [
-            n for n in st.session_state.notes
-            if search_lower in n.title.lower()
-            or search_lower in n.author.lower()
-            or search_lower in n.body.lower()
-        ]
+    # Tab 1: Regular Notes (Zotero + Highlighted)
+    with tab1:
+        # Search
+        search = st.text_input("🔍", placeholder="Filter...", key="search_notes", label_visibility="collapsed")
 
-    st.caption(f"{len(filtered_notes)}/{len(st.session_state.notes)} notes")
+        # Filter notes
+        filtered_notes = st.session_state.notes
+        if search:
+            search_lower = search.lower()
+            filtered_notes = [
+                n for n in st.session_state.notes
+                if search_lower in n.title.lower()
+                or search_lower in n.author.lower()
+                or search_lower in n.body.lower()
+            ]
 
-    # Scrollable note list
-    for i, note in enumerate(filtered_notes):
-        is_printed = st.session_state.print_history.is_printed(note)
+        st.caption(f"{len(filtered_notes)}/{len(st.session_state.notes)} notes")
 
-        # Find actual index in full list
-        actual_index = st.session_state.notes.index(note)
-        is_selected = st.session_state.current_note_index == actual_index
+        # Scrollable note list
+        for i, note in enumerate(filtered_notes):
+            is_printed = st.session_state.print_history.is_printed(note)
 
-        # Status indicator
-        if is_printed:
-            status = "✓"
-            style = "🔖"
-        else:
-            status = "●"
-            style = "🆕"
+            # Find actual index in full list
+            actual_index = st.session_state.notes.index(note)
+            is_selected = st.session_state.current_note_index == actual_index
 
-        # Button for each note - more compact
-        button_label = f"{style} {note.title[:35]}..."
+            # Status indicator
+            if is_printed:
+                style = "🔖"
+            else:
+                style = "🆕"
 
-        if st.button(
-            button_label,
-            key=f"note_{actual_index}",
-            use_container_width=True,
-            type="primary" if is_selected else "secondary"
-        ):
-            st.session_state.current_note_index = actual_index
-            st.session_state.edit_mode = False
-            st.rerun()
+            # Button for each note - more compact
+            button_label = f"{style} {note.title[:35]}..."
+
+            if st.button(
+                button_label,
+                key=f"note_{actual_index}",
+                use_container_width=True,
+                type="primary" if is_selected else "secondary"
+            ):
+                st.session_state.current_note_index = actual_index
+                st.session_state.current_scapple_note_index = None  # Deselect Scapple
+                st.session_state.edit_mode = False
+                st.rerun()
+
+    # Tab 2: Scapple Notes
+    with tab2:
+        # Search
+        search_scapple = st.text_input("🔍", placeholder="Filter...", key="search_scapple", label_visibility="collapsed")
+
+        # Filter Scapple notes
+        filtered_scapple = st.session_state.scapple_notes
+        if search_scapple:
+            search_lower = search_scapple.lower()
+            filtered_scapple = [
+                n for n in st.session_state.scapple_notes
+                if search_lower in n.title.lower()
+                or search_lower in n.body.lower()
+            ]
+
+        st.caption(f"{len(filtered_scapple)}/{len(st.session_state.scapple_notes)} notes")
+
+        # Scrollable Scapple note list
+        for i, note in enumerate(filtered_scapple):
+            is_printed = st.session_state.print_history.is_printed(note)
+
+            # Find actual index in full list
+            actual_index = st.session_state.scapple_notes.index(note)
+            is_selected = st.session_state.current_scapple_note_index == actual_index
+
+            # Status indicator
+            if is_printed:
+                style = "🔖"
+            else:
+                style = "🆕"
+
+            # Button for each note
+            button_label = f"{style} {note.title[:35]}..."
+
+            if st.button(
+                button_label,
+                key=f"scapple_{actual_index}",
+                use_container_width=True,
+                type="primary" if is_selected else "secondary"
+            ):
+                st.session_state.current_scapple_note_index = actual_index
+                st.session_state.current_note_index = None  # Deselect regular notes
+                st.session_state.edit_mode = False
+                st.rerun()
 
 
 def save_note_to_file(note: Note, note_data: dict):
@@ -333,11 +405,17 @@ def save_note_to_file(note: Note, note_data: dict):
 
 def render_main_preview():
     """Render main preview and print area."""
-    if st.session_state.current_note_index is None:
+    # Determine which note to show (regular or Scapple)
+    note = None
+    if st.session_state.current_note_index is not None:
+        note = st.session_state.notes[st.session_state.current_note_index]
+    elif st.session_state.current_scapple_note_index is not None:
+        note = st.session_state.scapple_notes[st.session_state.current_scapple_note_index]
+
+    if note is None:
         st.info("👈 Select a note to preview")
         return
 
-    note = st.session_state.notes[st.session_state.current_note_index]
     is_printed = st.session_state.print_history.is_printed(note)
 
     # Compact header with status
