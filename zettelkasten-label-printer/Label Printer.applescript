@@ -4,7 +4,7 @@
 on run
 	-- Path to the zettelkasten-label-printer folder
 	-- Update this path if you moved the folder to a different location
-	set projectFolder to (path to home folder as text) & "Philosophy:zettelkasten-label-printer"
+	set projectFolder to (path to home folder as text) & "Documents:--- PHILOSOPHY---:Philosophy:zettelkasten-label-printer"
 	set projectPath to POSIX path of projectFolder
 
 	-- Open Terminal and run the launcher
