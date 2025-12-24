@@ -6,6 +6,10 @@ Interfaces with Brother QL-810W label printer using brother_ql library.
 from PIL import Image
 from typing import Optional, List
 import logging
+import warnings
+
+# Suppress deprecation warnings from brother_ql library
+warnings.filterwarnings('ignore', message='.*brother_ql.devicedependent.*')
 
 try:
     from brother_ql.conversion import convert
