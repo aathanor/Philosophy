@@ -417,9 +417,9 @@ def render_main_preview():
             # Rotate 90 degrees clockwise to match printer output
             from PIL import Image
             rotated_image = label_image.rotate(-90, expand=True)
-            st.image(rotated_image, width=None, caption="Preview (rotated 90°)")
+            st.image(rotated_image, use_container_width=True, caption="Preview (rotated 90°)")
         else:
-            st.image(label_image, width=None, caption="Label Preview")
+            st.image(label_image, use_container_width=True, caption="Label Preview")
 
         # Compact note details
         with st.expander("ℹ️ Details", expanded=False):
