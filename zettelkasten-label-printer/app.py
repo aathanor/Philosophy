@@ -30,28 +30,38 @@ st.set_page_config(
 # Custom CSS for more compact layout
 st.markdown("""
 <style>
-    /* Reduce padding and margins */
+    /* Reduce padding and margins - ensure content visible at top */
     .block-container {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+
+    /* Ensure main content starts at top */
+    .main .block-container {
+        margin-top: 0 !important;
     }
 
     /* Smaller headings */
     h1 {
         font-size: 1.5rem !important;
-        margin-bottom: 0.5rem !important;
+        margin-top: 0 !important;
+        margin-bottom: 0.3rem !important;
     }
 
     h2 {
         font-size: 1.2rem !important;
-        margin-bottom: 0.5rem !important;
+        margin-top: 0 !important;
+        margin-bottom: 0.3rem !important;
     }
 
     h3 {
         font-size: 1rem !important;
-        margin-bottom: 0.5rem !important;
+        margin-top: 0 !important;
+        margin-bottom: 0.3rem !important;
     }
 
     /* Compact metrics */
@@ -71,12 +81,12 @@ st.markdown("""
 
     /* Reduce divider margins */
     hr {
-        margin: 0.5rem 0 !important;
+        margin: 0.3rem 0 !important;
     }
 
     /* Compact sidebar */
     [data-testid="stSidebar"] {
-        padding-top: 1rem;
+        padding-top: 0.5rem;
     }
 
     /* Smaller expander headers */
@@ -98,6 +108,12 @@ st.markdown("""
     /* Reduce spacing in columns */
     [data-testid="column"] {
         padding: 0 0.5rem !important;
+    }
+
+    /* Ensure images fit in viewport */
+    img {
+        max-height: 70vh !important;
+        object-fit: contain !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -368,7 +384,7 @@ def render_main_preview():
         # Preview options
         col1, col2 = st.columns([1, 4])
         with col1:
-            rotate_preview = st.checkbox("Rotate 90°", value=True, help="Show as it will print")
+            rotate_preview = st.checkbox("Rotate 90°", value=False, help="Rotate to match print orientation")
         with col2:
             # Calculate actual size in mm
             width_mm = 62  # 62mm tape
@@ -380,9 +396,9 @@ def render_main_preview():
             # Rotate 90 degrees clockwise to match printer output
             from PIL import Image
             rotated_image = label_image.rotate(-90, expand=True)
-            st.image(rotated_image, use_column_width=True, caption="Preview (as it will print)")
+            st.image(rotated_image, width=None, caption="Preview (rotated 90°)")
         else:
-            st.image(label_image, use_column_width=True, caption="Preview (horizontal)")
+            st.image(label_image, width=None, caption="Label Preview")
 
         # Compact note details
         with st.expander("ℹ️ Details", expanded=False):
