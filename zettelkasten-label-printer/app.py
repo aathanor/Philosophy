@@ -27,6 +27,81 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# Custom CSS for more compact layout
+st.markdown("""
+<style>
+    /* Reduce padding and margins */
+    .block-container {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    /* Smaller headings */
+    h1 {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    h2 {
+        font-size: 1.2rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    h3 {
+        font-size: 1rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    /* Compact metrics */
+    [data-testid="stMetricValue"] {
+        font-size: 1.5rem !important;
+    }
+
+    [data-testid="stMetricLabel"] {
+        font-size: 0.9rem !important;
+    }
+
+    /* Tighter button spacing */
+    .stButton button {
+        padding: 0.25rem 0.75rem !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* Reduce divider margins */
+    hr {
+        margin: 0.5rem 0 !important;
+    }
+
+    /* Compact sidebar */
+    [data-testid="stSidebar"] {
+        padding-top: 1rem;
+    }
+
+    /* Smaller expander headers */
+    .streamlit-expanderHeader {
+        font-size: 0.9rem !important;
+    }
+
+    /* Compact forms */
+    .stTextInput label, .stTextArea label {
+        font-size: 0.85rem !important;
+        margin-bottom: 0.2rem !important;
+    }
+
+    .stTextInput input, .stTextArea textarea {
+        font-size: 0.9rem !important;
+        padding: 0.3rem 0.5rem !important;
+    }
+
+    /* Reduce spacing in columns */
+    [data-testid="column"] {
+        padding: 0 0.5rem !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 
 def init_session_state():
     """Initialize session state variables."""
@@ -95,15 +170,16 @@ def load_notes():
 def render_compact_sidebar():
     """Render compact sidebar with stats and controls."""
     with st.sidebar:
-        st.title("🏷️ Label Printer")
+        st.markdown("### 🏷️ Label Printer")
 
-        # Stats first
-        st.metric("Total Notes", len(st.session_state.notes))
-        unprinted = sum(1 for n in st.session_state.notes
-                       if not st.session_state.print_history.is_printed(n))
-        st.metric("Unprinted", unprinted)
-
-        st.divider()
+        # Stats in columns for compactness
+        col1, col2 = st.columns(2)
+        with col1:
+            st.metric("Total", len(st.session_state.notes))
+        with col2:
+            unprinted = sum(1 for n in st.session_state.notes
+                           if not st.session_state.print_history.is_printed(n))
+            st.metric("New", unprinted)
 
         # Reload button (prominent)
         if st.button("🔄 Reload Notes", type="primary", use_container_width=True):
@@ -157,10 +233,10 @@ def render_compact_sidebar():
 
 def render_note_list():
     """Render note list in right column."""
-    st.subheader("📝 Notes")
+    st.markdown("### 📝 Notes")
 
     # Search
-    search = st.text_input("🔍 Search", placeholder="Filter notes...", key="search")
+    search = st.text_input("🔍", placeholder="Filter...", key="search", label_visibility="collapsed")
 
     # Filter notes
     filtered_notes = st.session_state.notes
@@ -173,7 +249,7 @@ def render_note_list():
             or search_lower in n.body.lower()
         ]
 
-    st.caption(f"{len(filtered_notes)} of {len(st.session_state.notes)} notes")
+    st.caption(f"{len(filtered_notes)}/{len(st.session_state.notes)} notes")
 
     # Scrollable note list
     for i, note in enumerate(filtered_notes):
@@ -191,8 +267,8 @@ def render_note_list():
             status = "●"
             style = "🆕"
 
-        # Button for each note
-        button_label = f"{style} {status} {note.title[:40]}..."
+        # Button for each note - more compact
+        button_label = f"{style} {note.title[:35]}..."
 
         if st.button(
             button_label,
@@ -203,10 +279,6 @@ def render_note_list():
             st.session_state.current_note_index = actual_index
             st.session_state.edit_mode = False
             st.rerun()
-
-        # Show author under button if not printed
-        if not is_printed:
-            st.caption(f"   {note.author}")
 
 
 def save_note_to_file(note: Note, note_data: dict):
@@ -222,32 +294,28 @@ def save_note_to_file(note: Note, note_data: dict):
 def render_main_preview():
     """Render main preview and print area."""
     if st.session_state.current_note_index is None:
-        st.info("👈 Select a note from the list to preview and print")
+        st.info("👈 Select a note to preview")
         return
 
     note = st.session_state.notes[st.session_state.current_note_index]
     is_printed = st.session_state.print_history.is_printed(note)
 
-    # Header with status
-    col1, col2, col3 = st.columns([3, 1, 1])
+    # Compact header with status
+    col1, col2, col3 = st.columns([4, 1, 1])
 
     with col1:
         if is_printed:
-            st.subheader(f"✓ {note.title[:60]}")
-            print_time = st.session_state.print_history.get_print_time(note)
-            if print_time:
-                st.caption(f"Printed: {print_time[:16]}")
+            st.markdown(f"**✓ {note.title[:70]}**")
         else:
-            st.subheader(f"🆕 {note.title[:60]}")
-            st.caption("Not yet printed")
+            st.markdown(f"**🆕 {note.title[:70]}**")
 
     with col2:
-        if st.button("✏️ Edit", use_container_width=True):
+        if st.button("✏️", use_container_width=True, help="Edit note"):
             st.session_state.edit_mode = not st.session_state.edit_mode
             st.rerun()
 
     with col3:
-        if st.button("🖨️ Print", type="primary", use_container_width=True):
+        if st.button("🖨️", type="primary", use_container_width=True, help="Print label"):
             with st.spinner("Printing..."):
                 try:
                     label_image = st.session_state.renderer.create_label(note.to_dict())
@@ -258,21 +326,17 @@ def render_main_preview():
                         st.success("✅ Printed!")
                         st.rerun()
                     else:
-                        st.error("❌ Print failed")
+                        st.error("❌ Failed")
                 except Exception as e:
                     st.error(f"Error: {e}")
 
-    st.divider()
-
     # Edit mode or preview mode
     if st.session_state.edit_mode:
-        st.subheader("✏️ Edit Note")
-
         with st.form("edit_note_form"):
             title = st.text_input("Title", value=note.title)
             author = st.text_input("Author", value=note.author)
             source = st.text_input("Source", value=note.source)
-            body = st.text_area("Body", value=note.body, height=200)
+            body = st.text_area("Body", value=note.body, height=150)
             page = st.text_input("Page", value=note.page)
 
             col1, col2 = st.columns(2)
@@ -296,22 +360,19 @@ def render_main_preview():
                     st.session_state.edit_mode = False
                     st.rerun()
 
-        st.divider()
 
     # Preview
-    st.subheader("👁️ Label Preview")
-
     try:
         label_image = st.session_state.renderer.create_label(note.to_dict())
         st.image(label_image, use_column_width=True)
 
-        # Note details below preview
-        with st.expander("📄 Note Details", expanded=False):
-            st.write(f"**Author:** {note.author}")
-            st.write(f"**Source:** {note.source}")
-            st.write(f"**Page:** {note.page}")
-            st.write(f"**Body:**")
-            st.write(note.body)
+        # Compact note details
+        with st.expander("ℹ️ Details", expanded=False):
+            st.caption(f"**Author:** {note.author}")
+            st.caption(f"**Source:** {note.source}")
+            st.caption(f"**Page:** {note.page}")
+            st.caption("**Text:**")
+            st.caption(note.body)
 
     except Exception as e:
         st.error(f"Error generating preview: {e}")

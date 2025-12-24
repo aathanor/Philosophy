@@ -9,17 +9,17 @@ printer:
 
 # Font settings (H1 = title, H2 = author/source, body = quote text)
 fonts:
-  h1_size: 48  # Title font size
-  h2_size: 32  # Author/source font size
-  body_size: 24  # Body text font size
-  page_size: 20  # Page number font size
+  h1_size: 32  # Title font size
+  h2_size: 22  # Author/source font size
+  body_size: 18  # Body text font size
+  page_size: 16  # Page number font size
   font_family: "Arial"  # Can be: Arial, Helvetica, Times, Courier
 
 # Layout settings
 layout:
-  padding: 20  # Padding in pixels
-  line_spacing: 1.2  # Line spacing multiplier
-  max_label_height: 800  # Maximum label height in pixels (adjust based on needs)
+  padding: 12  # Padding in pixels
+  line_spacing: 1.15  # Line spacing multiplier
+  max_label_height: 600  # Maximum label height in pixels (adjust based on needs)
 
 # Data source paths
 data_sources:
