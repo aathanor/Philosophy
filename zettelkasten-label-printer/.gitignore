@@ -42,6 +42,7 @@ preview_images/
 *.png
 *.jpg
 test_exports/
+print_history.json
 
 # User config (optional - uncomment if you don't want to version control config)
 # config.yaml
