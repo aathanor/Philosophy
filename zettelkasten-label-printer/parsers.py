@@ -14,7 +14,8 @@ class Note:
     """Represents a single note/quote for printing."""
 
     def __init__(self, title: str, author: str = "", source: str = "",
-                 body: str = "", page: str = "", metadata: Dict = None):
+                 body: str = "", page: str = "", metadata: Dict = None,
+                 source_file: str = ""):
         """
         Initialize a note.
 
@@ -25,6 +26,7 @@ class Note:
             body: Main body text/quote
             page: Page number
             metadata: Additional metadata dictionary
+            source_file: Path to the markdown file this note came from
         """
         self.title = title
         self.author = author
@@ -32,6 +34,7 @@ class Note:
         self.body = body
         self.page = page
         self.metadata = metadata or {}
+        self.source_file = source_file
 
     def to_dict(self) -> Dict:
         """Convert note to dictionary for rendering."""
@@ -103,7 +106,8 @@ class ZoteroParser:
                     author=current_note.get('author', ''),
                     source=current_note.get('source', ''),
                     body=current_note.get('body', ''),
-                    page=current_note.get('page', '')
+                    page=current_note.get('page', ''),
+                    source_file=filepath
                 ))
 
             # Reset buffers
@@ -287,7 +291,8 @@ class HighlightedParser:
                         author=current_author,
                         source=doc_title,
                         body=' '.join(quote_buffer),
-                        page=page_match.group(1)
+                        page=page_match.group(1),
+                        source_file=filepath
                     )
                     notes.append(note)
                     quote_buffer = []
@@ -303,7 +308,8 @@ class HighlightedParser:
                     author=current_author,
                     source=doc_title,
                     body=' '.join(quote_buffer),
-                    page=""
+                    page="",
+                    source_file=filepath
                 )
                 notes.append(note)
                 quote_buffer = []
@@ -315,7 +321,8 @@ class HighlightedParser:
                 author=current_author,
                 source=doc_title,
                 body=' '.join(quote_buffer),
-                page=""
+                page="",
+                source_file=filepath
             )
             notes.append(note)
 
@@ -370,3 +377,61 @@ def get_all_notes(zotero_folder: str, highlighted_folder: str) -> List[Note]:
     notes.extend(highlighted_notes)
 
     return notes
+
+
+def save_notes_to_file(filepath: str, notes: List[Note]) -> bool:
+    """
+    Save a list of notes to a markdown file in a standardized format.
+
+    Format:
+    ## Note Title
+    **Author:** Author Name
+    **Source:** Source Title
+    **Page:** Page Number
+
+    > Body text of the note
+
+    Args:
+        filepath: Path to the markdown file to write
+        notes: List of Note objects to save
+
+    Returns:
+        True if successful, False otherwise
+    """
+    try:
+        with open(filepath, 'w', encoding='utf-8') as f:
+            for i, note in enumerate(notes):
+                # Write note header
+                f.write(f"## {note.title}\n\n")
+
+                # Write metadata
+                if note.author:
+                    f.write(f"**Author:** {note.author}\n")
+                if note.source:
+                    f.write(f"**Source:** {note.source}\n")
+                if note.page:
+                    f.write(f"**Page:** {note.page}\n")
+
+                # Add blank line before body
+                f.write("\n")
+
+                # Write body as blockquote
+                if note.body:
+                    # Split into lines and format as blockquote
+                    body_lines = note.body.split('\n')
+                    for line in body_lines:
+                        if line.strip():
+                            f.write(f"> {line}\n")
+                        else:
+                            f.write(">\n")
+
+                # Add separator between notes (except after last one)
+                if i < len(notes) - 1:
+                    f.write("\n---\n\n")
+                else:
+                    f.write("\n")
+
+        return True
+    except Exception as e:
+        print(f"Error saving notes to {filepath}: {e}")
+        return False

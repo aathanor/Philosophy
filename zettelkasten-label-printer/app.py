@@ -9,7 +9,7 @@ from pathlib import Path
 import json
 
 from config_loader import ConfigLoader
-from parsers import get_all_notes, Note, ZoteroParser, HighlightedParser
+from parsers import get_all_notes, Note, ZoteroParser, HighlightedParser, save_notes_to_file
 from label_renderer import LabelRenderer
 from printer import create_printer, BROTHER_QL_AVAILABLE
 from print_history import PrintHistory
@@ -306,6 +306,24 @@ def save_note_to_file(note: Note, note_data: dict):
     note.body = note_data['body']
     note.page = note_data['page']
 
+    # If note has a source file, save it back to disk
+    if note.source_file:
+        # Find all notes from the same source file
+        notes_from_file = [n for n in st.session_state.notes if n.source_file == note.source_file]
+
+        # Save all notes from this file back to disk
+        success = save_notes_to_file(note.source_file, notes_from_file)
+
+        if success:
+            logger.info(f"Saved {len(notes_from_file)} note(s) to {note.source_file}")
+        else:
+            logger.error(f"Failed to save notes to {note.source_file}")
+
+        return success
+    else:
+        logger.warning(f"Note has no source_file, cannot save to disk")
+        return False
+
 
 def render_main_preview():
     """Render main preview and print area."""
@@ -366,9 +384,12 @@ def render_main_preview():
                         'body': body,
                         'page': page
                     }
-                    save_note_to_file(note, note_data)
+                    success = save_note_to_file(note, note_data)
                     st.session_state.edit_mode = False
-                    st.success("Saved!")
+                    if success:
+                        st.success("Saved to file!")
+                    else:
+                        st.warning("Note updated in memory only (file not saved)")
                     st.rerun()
 
             with col2:
