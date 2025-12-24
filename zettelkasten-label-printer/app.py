@@ -30,9 +30,9 @@ st.set_page_config(
 # Custom CSS for more compact layout
 st.markdown("""
 <style>
-    /* Reduce padding and margins - keep minimal top padding for visibility */
+    /* Reduce padding and margins - add enough top padding to clear Streamlit toolbar */
     .block-container {
-        padding-top: 1rem !important;
+        padding-top: 3.5rem !important;
         padding-bottom: 0.5rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
@@ -120,6 +120,9 @@ def init_session_state():
     if 'notes' not in st.session_state:
         st.session_state.notes = []
 
+    if 'notes_loaded' not in st.session_state:
+        st.session_state.notes_loaded = False
+
     if 'current_note_index' not in st.session_state:
         st.session_state.current_note_index = None
 
@@ -173,6 +176,7 @@ def load_notes():
     ))
 
     st.session_state.notes = notes
+    st.session_state.notes_loaded = True
     return notes
 
 
@@ -429,6 +433,10 @@ def render_main_preview():
 def main():
     """Main application entry point."""
     init_session_state()
+
+    # Auto-load notes on first run
+    if not st.session_state.notes_loaded:
+        load_notes()
 
     # Layout: sidebar + two columns (preview + note list)
     render_compact_sidebar()
