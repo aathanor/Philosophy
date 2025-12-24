@@ -32,7 +32,7 @@ st.markdown("""
 <style>
     /* Reduce padding and margins - ensure content visible at top */
     .block-container {
-        padding-top: 0.5rem;
+        padding-top: 0rem !important;
         padding-bottom: 0.5rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
@@ -43,6 +43,18 @@ st.markdown("""
     /* Ensure main content starts at top */
     .main .block-container {
         margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* Remove all top spacing from main */
+    .main {
+        padding-top: 0 !important;
+    }
+
+    /* Remove spacing from first element */
+    .main > div:first-child {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
     }
 
     /* Smaller headings */
@@ -50,18 +62,26 @@ st.markdown("""
         font-size: 1.5rem !important;
         margin-top: 0 !important;
         margin-bottom: 0.3rem !important;
+        padding-top: 0 !important;
     }
 
     h2 {
         font-size: 1.2rem !important;
         margin-top: 0 !important;
         margin-bottom: 0.3rem !important;
+        padding-top: 0 !important;
     }
 
     h3 {
         font-size: 1rem !important;
         margin-top: 0 !important;
         margin-bottom: 0.3rem !important;
+        padding-top: 0 !important;
+    }
+
+    /* Remove top margin from paragraphs and divs */
+    p, div {
+        margin-top: 0 !important;
     }
 
     /* Compact metrics */
@@ -114,6 +134,12 @@ st.markdown("""
     img {
         max-height: 70vh !important;
         object-fit: contain !important;
+    }
+
+    /* Remove markdown top spacing */
+    .stMarkdown {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
     }
 </style>
 """, unsafe_allow_html=True)
