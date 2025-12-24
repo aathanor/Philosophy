@@ -243,6 +243,15 @@ def render_compact_sidebar():
                 st.success("History cleared!")
                 st.rerun()
 
+        st.divider()
+
+        # Shutdown button at bottom
+        if st.button("🛑 Stop App", use_container_width=True, type="secondary"):
+            st.warning("Shutting down...")
+            import os
+            import signal
+            os.kill(os.getpid(), signal.SIGTERM)
+
 
 def render_note_list():
     """Render note list in right column."""
