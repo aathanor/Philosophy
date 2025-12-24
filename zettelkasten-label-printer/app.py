@@ -68,8 +68,19 @@ def load_notes():
     zotero_path.mkdir(parents=True, exist_ok=True)
     highlighted_path.mkdir(parents=True, exist_ok=True)
 
+    # Log folder info
+    logger.info(f"Loading notes from:")
+    logger.info(f"  Zotero: {zotero_path}")
+    logger.info(f"  Highlighted: {highlighted_path}")
+
+    # Count files
+    zotero_files = list(zotero_path.glob('*.md'))
+    highlighted_files = list(highlighted_path.glob('*.md'))
+    logger.info(f"Found {len(zotero_files)} Zotero files, {len(highlighted_files)} Highlighted files")
+
     # Load notes
     notes = get_all_notes(str(zotero_path), str(highlighted_path))
+    logger.info(f"Parsed {len(notes)} total notes")
 
     # Sort: unprinted first, then by title
     notes.sort(key=lambda n: (

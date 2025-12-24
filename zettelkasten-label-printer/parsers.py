@@ -55,10 +55,10 @@ class ZoteroParser:
         """
         Parse a Zotero markdown export file.
 
-        Zotero markdown notes typically have format:
-        # Title (or item title)
-        Author (Year). Publication.
-        > Quote text (p. 123)
+        Zotero markdown notes can have various formats:
+        - "Add Note from Annotations" format
+        - Manual markdown notes
+        - Exported highlights with metadata
 
         Args:
             filepath: Path to markdown file
@@ -71,42 +71,74 @@ class ZoteroParser:
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
 
-        # Try to extract metadata from the top
+        # Split into sections by headers or empty lines
         lines = content.split('\n')
         current_note = {}
-        buffer = []
+        quote_buffer = []
+        text_buffer = []
 
-        for line in lines:
+        def save_current_note():
+            """Helper to save the current note if it has content."""
+            nonlocal current_note, quote_buffer, text_buffer
+
+            # Combine buffers
+            all_text = []
+            if quote_buffer:
+                all_text.extend(quote_buffer)
+            if text_buffer:
+                all_text.extend(text_buffer)
+
+            if all_text:
+                # Ensure we have at least a title
+                if not current_note.get('title'):
+                    # Use first line as title, rest as body
+                    current_note['title'] = all_text[0][:100] if all_text else "Untitled"
+                    current_note['body'] = ' '.join(all_text).strip()
+                else:
+                    current_note['body'] = ' '.join(all_text).strip()
+
+                # Create note with defaults for missing fields
+                notes.append(Note(
+                    title=current_note.get('title', 'Untitled'),
+                    author=current_note.get('author', ''),
+                    source=current_note.get('source', ''),
+                    body=current_note.get('body', ''),
+                    page=current_note.get('page', '')
+                ))
+
+            # Reset buffers
+            quote_buffer = []
+            text_buffer = []
+
+        for i, line in enumerate(lines):
+            original_line = line
             line = line.strip()
 
-            # Skip HTML comments and tags
-            if line.startswith('<!--') or line.startswith('<') or not line:
+            # Skip empty lines
+            if not line:
                 continue
 
-            # H1 heading - could be source title
-            if line.startswith('# '):
-                if current_note.get('body'):
-                    # Save previous note
-                    notes.append(Note(**current_note))
-                    current_note = {}
-                current_note['source'] = line[2:].strip()
+            # Skip HTML comments and some tags
+            if line.startswith('<!--') or line.startswith('<!'):
+                continue
 
-            # H2 heading - could be section or note title
+            # H1 heading - usually the document/source title
+            if line.startswith('# '):
+                save_current_note()
+                current_note = {}
+                title = line[2:].strip()
+                # H1 could be source or title depending on context
+                current_note['source'] = title
+
+            # H2 heading - usually section or annotation title
             elif line.startswith('## '):
-                if current_note.get('body'):
-                    notes.append(Note(**current_note))
-                    current_note = {}
+                save_current_note()
+                current_note = {}
                 current_note['title'] = line[3:].strip()
 
-            # Extract author/citation info
-            # Format: Author (YYYY). Title.
-            elif re.match(r'^[A-Z][^(]+\(\d{4}\)', line):
-                match = re.match(r'^([^(]+)\((\d{4})\)\.?\s*(.*)', line)
-                if match:
-                    current_note['author'] = match.group(1).strip()
-                    # Could use year in metadata
-                    if not current_note.get('source'):
-                        current_note['source'] = match.group(3).strip()
+            # H3 and lower - treat as part of content
+            elif line.startswith('#'):
+                text_buffer.append(line.lstrip('#').strip())
 
             # Blockquote - the actual annotation/highlight
             elif line.startswith('>'):
@@ -119,20 +151,50 @@ class ZoteroParser:
                     # Remove page number from quote
                     quote = re.sub(r'\s*\(pp?\.\s*\d+(?:-\d+)?\)', '', quote)
 
-                buffer.append(quote)
+                quote_buffer.append(quote)
 
-            # Regular text line
-            elif line and not line.startswith('#'):
-                # Could be continuation of a quote or citation
-                buffer.append(line)
+            # Check for author/citation format: Author (YYYY). Title.
+            elif re.match(r'^[A-Z][\w\s,.-]+\(\d{4}\)', line):
+                match = re.match(r'^([^(]+)\((\d{4})\)\.?\s*(.*)', line)
+                if match:
+                    current_note['author'] = match.group(1).strip()
+                    year = match.group(2)
+                    rest = match.group(3).strip()
+                    if rest and not current_note.get('source'):
+                        current_note['source'] = rest
 
-        # Flush remaining note
-        if buffer:
-            if not current_note.get('title'):
-                # Use first part of body as title if no title found
-                current_note['title'] = buffer[0][:50]
-            current_note['body'] = ' '.join(buffer).strip()
-            notes.append(Note(**current_note))
+            # Page references on separate line
+            elif re.match(r'^(?:p\.|pp\.|page:?)\s*\d+', line, re.IGNORECASE):
+                page_match = re.search(r'(\d+(?:-\d+)?)', line)
+                if page_match:
+                    current_note['page'] = page_match.group(1)
+
+            # Regular text line - add to buffer
+            else:
+                # Check if it looks like metadata
+                if ':' in line and len(line.split(':')[0]) < 20:
+                    # Might be metadata like "Author: Name" or "Page: 123"
+                    key, value = line.split(':', 1)
+                    key = key.strip().lower()
+                    value = value.strip()
+
+                    if 'author' in key:
+                        current_note['author'] = value
+                    elif 'page' in key:
+                        page_match = re.search(r'(\d+(?:-\d+)?)', value)
+                        if page_match:
+                            current_note['page'] = page_match.group(1)
+                    elif 'source' in key or 'title' in key:
+                        if not current_note.get('source'):
+                            current_note['source'] = value
+                    else:
+                        # Not recognized metadata, add as text
+                        text_buffer.append(line)
+                else:
+                    text_buffer.append(line)
+
+        # Save the final note
+        save_current_note()
 
         return notes
 
