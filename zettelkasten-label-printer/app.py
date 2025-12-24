@@ -364,7 +364,25 @@ def render_main_preview():
     # Preview
     try:
         label_image = st.session_state.renderer.create_label(note.to_dict())
-        st.image(label_image, use_column_width=True)
+
+        # Preview options
+        col1, col2 = st.columns([1, 4])
+        with col1:
+            rotate_preview = st.checkbox("Rotate 90°", value=True, help="Show as it will print")
+        with col2:
+            # Calculate actual size in mm
+            width_mm = 62  # 62mm tape
+            height_mm = int(label_image.height * 62 / label_image.width)
+            st.caption(f"📏 ~{width_mm}×{height_mm}mm")
+
+        # Rotate image if needed
+        if rotate_preview:
+            # Rotate 90 degrees clockwise to match printer output
+            from PIL import Image
+            rotated_image = label_image.rotate(-90, expand=True)
+            st.image(rotated_image, use_column_width=True, caption="Preview (as it will print)")
+        else:
+            st.image(label_image, use_column_width=True, caption="Preview (horizontal)")
 
         # Compact note details
         with st.expander("ℹ️ Details", expanded=False):
