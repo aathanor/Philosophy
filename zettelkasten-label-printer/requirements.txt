@@ -4,3 +4,4 @@ streamlit>=1.28.0
 pyyaml>=6.0
 watchdog>=3.0.0
 pyzotero>=1.5.0
+pyusb>=1.2.1

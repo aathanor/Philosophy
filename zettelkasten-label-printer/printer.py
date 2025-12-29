@@ -92,7 +92,14 @@ class BrotherQLPrinter:
             return True
 
         except Exception as e:
-            self.logger.error(f"Error printing label: {e}")
+            error_msg = str(e)
+            if "No backend available" in error_msg:
+                self.logger.warning(
+                    "Printer backend not available. Please install pyusb: pip install pyusb. "
+                    "Or connect the Brother QL printer via USB."
+                )
+            else:
+                self.logger.error(f"Error printing label: {e}")
             return False
 
     def print_labels(self, images: List[Image.Image], rotate: int = 90) -> int:
