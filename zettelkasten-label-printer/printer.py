@@ -61,6 +61,28 @@ class BrotherQLPrinter:
             True if successful, False otherwise
         """
         try:
+            # Debug: Check available backends
+            try:
+                from brother_ql.backends import available_backends
+                backends = available_backends()
+                self.logger.info(f"Available backends: {backends}")
+            except Exception as e:
+                self.logger.warning(f"Could not check available backends: {e}")
+
+            # Debug: Check pyusb availability
+            try:
+                import usb.core
+                devices = list(usb.core.find(find_all=True, idVendor=0x04f9))
+                self.logger.info(f"Found {len(devices)} Brother USB device(s)")
+                for dev in devices:
+                    self.logger.info(f"  Device: VID=0x04f9, PID=0x{dev.idProduct:04x}")
+            except ImportError:
+                self.logger.error("pyusb module not installed! Install with: pip install pyusb")
+            except Exception as e:
+                self.logger.warning(f"USB device detection failed: {e}")
+
+            self.logger.info(f"Attempting to print to: {self.connection}")
+
             # Create raster data
             qlr = BrotherQLRaster(self.model)
             qlr.exception_on_warning = True
@@ -80,11 +102,15 @@ class BrotherQLPrinter:
                 cut=True
             )
 
+            # Determine backend
+            backend = 'pyusb' if self.connection.startswith('usb') else 'network'
+            self.logger.info(f"Using backend: {backend}")
+
             # Send to printer
             send(
                 instructions=instructions,
                 printer_identifier=self.connection,
-                backend_identifier='pyusb' if self.connection.startswith('usb') else 'network',
+                backend_identifier=backend,
                 blocking=True
             )
 
@@ -93,13 +119,23 @@ class BrotherQLPrinter:
 
         except Exception as e:
             error_msg = str(e)
+            self.logger.error(f"Full error details: {type(e).__name__}: {error_msg}")
+
             if "No backend available" in error_msg:
-                self.logger.warning(
-                    "Printer backend not available. Please install pyusb: pip install pyusb. "
-                    "Or connect the Brother QL printer via USB."
+                self.logger.error(
+                    "Printer backend not available. Troubleshooting:\n"
+                    "1. Install pyusb: pip install pyusb\n"
+                    "2. Connect Brother QL printer via USB\n"
+                    "3. Check USB permissions (may need sudo on some systems)\n"
+                    f"4. Try running: brother_ql discover usb"
                 )
-            else:
-                self.logger.error(f"Error printing label: {e}")
+            elif "Access denied" in error_msg or "Permission denied" in error_msg:
+                self.logger.error(
+                    "USB permission denied. On macOS, you may need to:\n"
+                    "1. Disconnect and reconnect the printer\n"
+                    "2. Grant USB permissions in System Settings\n"
+                    "3. Try running with sudo (not recommended)"
+                )
             return False
 
     def print_labels(self, images: List[Image.Image], rotate: int = 90) -> int:
