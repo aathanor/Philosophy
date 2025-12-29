@@ -1,0 +1,598 @@
+"""
+Data Parsers Module
+Parses notes from Zotero and Highlighted app exports.
+"""
+
+import os
+import re
+from pathlib import Path
+from typing import List, Dict, Optional
+import glob
+
+
+class Note:
+    """Represents a single note/quote for printing."""
+
+    def __init__(self, title: str, author: str = "", source: str = "",
+                 body: str = "", page: str = "", metadata: Dict = None,
+                 source_file: str = ""):
+        """
+        Initialize a note.
+
+        Args:
+            title: Main title/heading of the note
+            author: Author name
+            source: Source publication/book title
+            body: Main body text/quote
+            page: Page number
+            metadata: Additional metadata dictionary
+            source_file: Path to the markdown file this note came from
+        """
+        self.title = title
+        self.author = author
+        self.source = source
+        self.body = body
+        self.page = page
+        self.metadata = metadata or {}
+        self.source_file = source_file
+
+    def to_dict(self) -> Dict:
+        """Convert note to dictionary for rendering."""
+        return {
+            'title': self.title,
+            'author': self.author,
+            'source': self.source,
+            'body': self.body,
+            'page': self.page
+        }
+
+    def __repr__(self) -> str:
+        return f"Note(title='{self.title[:30]}...', author='{self.author}')"
+
+
+class ZoteroParser:
+    """Parser for Zotero markdown note exports."""
+
+    @staticmethod
+    def parse_file(filepath: str) -> List[Note]:
+        """
+        Parse a Zotero markdown export file.
+
+        Zotero markdown notes can have various formats:
+        - "Add Note from Annotations" format
+        - Manual markdown notes
+        - Exported highlights with metadata
+
+        Args:
+            filepath: Path to markdown file
+
+        Returns:
+            List of Note objects
+        """
+        notes = []
+
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+
+        # Split into sections by headers or empty lines
+        lines = content.split('\n')
+        current_note = {}
+        quote_buffer = []
+        text_buffer = []
+
+        def save_current_note():
+            """Helper to save the current note if it has content."""
+            nonlocal current_note, quote_buffer, text_buffer
+
+            # Combine buffers
+            all_text = []
+            if quote_buffer:
+                all_text.extend(quote_buffer)
+            if text_buffer:
+                all_text.extend(text_buffer)
+
+            if all_text:
+                # Ensure we have at least a title
+                if not current_note.get('title'):
+                    # Use first line as title, rest as body
+                    current_note['title'] = all_text[0][:100] if all_text else "Untitled"
+                    current_note['body'] = ' '.join(all_text).strip()
+                else:
+                    current_note['body'] = ' '.join(all_text).strip()
+
+                # Create note with defaults for missing fields
+                notes.append(Note(
+                    title=current_note.get('title', 'Untitled'),
+                    author=current_note.get('author', ''),
+                    source=current_note.get('source', ''),
+                    body=current_note.get('body', ''),
+                    page=current_note.get('page', ''),
+                    source_file=filepath
+                ))
+
+            # Reset buffers
+            quote_buffer = []
+            text_buffer = []
+
+        for i, line in enumerate(lines):
+            original_line = line
+            line = line.strip()
+
+            # Skip empty lines
+            if not line:
+                continue
+
+            # Skip HTML comments and some tags
+            if line.startswith('<!--') or line.startswith('<!'):
+                continue
+
+            # H1 heading - usually the document/source title
+            if line.startswith('# '):
+                save_current_note()
+                current_note = {}
+                title = line[2:].strip()
+                # H1 could be source or title depending on context
+                current_note['source'] = title
+
+            # H2 heading - usually section or annotation title
+            elif line.startswith('## '):
+                save_current_note()
+                current_note = {}
+                current_note['title'] = line[3:].strip()
+
+            # H3 and lower - treat as part of content
+            elif line.startswith('#'):
+                text_buffer.append(line.lstrip('#').strip())
+
+            # Blockquote - the actual annotation/highlight
+            elif line.startswith('>'):
+                quote = line[1:].strip()
+
+                # Extract page number if present: (p. 123) or (pp. 123-125)
+                page_match = re.search(r'\(pp?\.\s*(\d+(?:-\d+)?)\)', quote)
+                if page_match:
+                    current_note['page'] = page_match.group(1)
+                    # Remove page number from quote
+                    quote = re.sub(r'\s*\(pp?\.\s*\d+(?:-\d+)?\)', '', quote)
+
+                quote_buffer.append(quote)
+
+            # Check for author/citation format: Author (YYYY). Title.
+            elif re.match(r'^[A-Z][\w\s,.-]+\(\d{4}\)', line):
+                match = re.match(r'^([^(]+)\((\d{4})\)\.?\s*(.*)', line)
+                if match:
+                    current_note['author'] = match.group(1).strip()
+                    year = match.group(2)
+                    rest = match.group(3).strip()
+                    if rest and not current_note.get('source'):
+                        current_note['source'] = rest
+
+            # Page references on separate line
+            elif re.match(r'^(?:p\.|pp\.|page:?)\s*\d+', line, re.IGNORECASE):
+                page_match = re.search(r'(\d+(?:-\d+)?)', line)
+                if page_match:
+                    current_note['page'] = page_match.group(1)
+
+            # Regular text line - add to buffer
+            else:
+                # Check if it looks like metadata
+                if ':' in line and len(line.split(':')[0]) < 20:
+                    # Might be metadata like "Author: Name" or "Page: 123"
+                    key, value = line.split(':', 1)
+                    key = key.strip().lower()
+                    value = value.strip()
+
+                    if 'author' in key:
+                        current_note['author'] = value
+                    elif 'page' in key:
+                        page_match = re.search(r'(\d+(?:-\d+)?)', value)
+                        if page_match:
+                            current_note['page'] = page_match.group(1)
+                    elif 'source' in key or 'title' in key:
+                        if not current_note.get('source'):
+                            current_note['source'] = value
+                    else:
+                        # Not recognized metadata, add as text
+                        text_buffer.append(line)
+                else:
+                    text_buffer.append(line)
+
+        # Save the final note
+        save_current_note()
+
+        return notes
+
+    @staticmethod
+    def scan_folder(folder_path: str) -> List[Note]:
+        """
+        Scan a folder for Zotero markdown exports and parse all notes.
+
+        Args:
+            folder_path: Path to folder containing markdown files
+
+        Returns:
+            List of all Note objects found
+        """
+        all_notes = []
+        folder = Path(folder_path).expanduser()
+
+        if not folder.exists():
+            return all_notes
+
+        for filepath in folder.glob('*.md'):
+            try:
+                notes = ZoteroParser.parse_file(str(filepath))
+                all_notes.extend(notes)
+            except Exception as e:
+                print(f"Error parsing {filepath}: {e}")
+
+        return all_notes
+
+
+class HighlightedParser:
+    """Parser for Highlighted app markdown exports."""
+
+    @staticmethod
+    def parse_file(filepath: str) -> List[Note]:
+        """
+        Parse a Highlighted app markdown export file.
+
+        Highlighted markdown exports can have formats:
+        Format 1:
+        ## Note Title
+        **Author:** Author Name
+        **Source:** Source Title
+        > Quote text
+
+        Format 2:
+        # Document Title
+        ## Author Name
+        > Quote text
+        Page: 123
+
+        Args:
+            filepath: Path to markdown file
+
+        Returns:
+            List of Note objects
+        """
+        notes = []
+
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+
+        lines = content.split('\n')
+        doc_title = ""  # H1 (if present)
+        current_title = ""  # H2
+        current_author = ""
+        current_source = ""
+        current_page = ""
+        quote_buffer = []
+
+        def save_note():
+            """Helper to save current note."""
+            nonlocal quote_buffer, current_title, current_author, current_source, current_page, doc_title
+
+            if quote_buffer:
+                # Determine title: use H2 if present, otherwise first line of quote
+                title = current_title if current_title else quote_buffer[0][:50]
+
+                # Determine source: explicit source metadata, or H1 doc title
+                source = current_source if current_source else doc_title
+
+                note = Note(
+                    title=title,
+                    author=current_author,
+                    source=source,
+                    body=' '.join(quote_buffer),
+                    page=current_page,
+                    source_file=filepath
+                )
+                notes.append(note)
+
+                # Reset for next note
+                quote_buffer = []
+                current_title = ""
+                current_author = ""
+                current_source = ""
+                current_page = ""
+
+        for i, line in enumerate(lines):
+            line_stripped = line.strip()
+
+            # Skip empty lines and HTML
+            if not line_stripped or line_stripped.startswith('<'):
+                continue
+
+            # H1 - Document title (source)
+            if line_stripped.startswith('# ') and not line_stripped.startswith('## '):
+                # Save previous note if exists
+                save_note()
+                doc_title = line_stripped[2:].strip()
+
+            # H2 - Note title or section
+            elif line_stripped.startswith('## '):
+                # Save previous note if exists
+                save_note()
+                current_title = line_stripped[3:].strip()
+
+            # Metadata: **Author:**
+            elif line_stripped.startswith('**Author:**'):
+                current_author = line_stripped.replace('**Author:**', '').strip()
+
+            # Metadata: **Source:**
+            elif line_stripped.startswith('**Source:**'):
+                current_source = line_stripped.replace('**Source:**', '').strip()
+
+            # Metadata: **Page:**
+            elif line_stripped.startswith('**Page:**'):
+                page_match = re.search(r'(\d+)', line_stripped)
+                if page_match:
+                    current_page = page_match.group(1)
+
+            # Blockquote - the highlight/annotation
+            elif line_stripped.startswith('>'):
+                quote = line_stripped[1:].strip()
+                quote_buffer.append(quote)
+
+            # Standalone page number
+            elif line_stripped.lower().startswith('page:') or line_stripped.lower().startswith('p.'):
+                page_match = re.search(r'(\d+)', line_stripped)
+                if page_match:
+                    current_page = page_match.group(1)
+                # Page number often signals end of note
+                if quote_buffer:
+                    save_note()
+
+            # Other text might be continuation of quote
+            elif quote_buffer and line_stripped and not line_stripped.startswith('#'):
+                quote_buffer.append(line_stripped)
+
+        # Save any remaining note
+        save_note()
+
+        return notes
+
+    @staticmethod
+    def scan_folder(folder_path: str) -> List[Note]:
+        """
+        Scan a folder for Highlighted app markdown exports and parse all notes.
+
+        Args:
+            folder_path: Path to folder containing markdown files
+
+        Returns:
+            List of all Note objects found
+        """
+        all_notes = []
+        folder = Path(folder_path).expanduser()
+
+        if not folder.exists():
+            return all_notes
+
+        for filepath in folder.glob('*.md'):
+            try:
+                notes = HighlightedParser.parse_file(str(filepath))
+                all_notes.extend(notes)
+            except Exception as e:
+                print(f"Error parsing {filepath}: {e}")
+
+        return all_notes
+
+
+class ScappleParser:
+    """Parser for Scapple plain text exports."""
+
+    @staticmethod
+    def parse_file(filepath: str) -> List[Note]:
+        """
+        Parse a Scapple plain text export file.
+
+        Scapple exports have a simple format:
+        - First line: Title
+        - Blank line
+        - Remaining lines: Body text
+
+        Args:
+            filepath: Path to text file
+
+        Returns:
+            List of Note objects (typically one per file)
+        """
+        notes = []
+
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read().strip()
+
+        if not content:
+            return notes
+
+        lines = content.split('\n')
+
+        # First non-empty line is the title
+        title = ""
+        body_start = 0
+
+        for i, line in enumerate(lines):
+            if line.strip():
+                title = line.strip()
+                body_start = i + 1
+                break
+
+        if not title:
+            return notes
+
+        # Skip blank lines after title, then gather body
+        body_lines = []
+        started_body = False
+
+        for i in range(body_start, len(lines)):
+            line = lines[i]
+            if line.strip():
+                started_body = True
+                body_lines.append(line)
+            elif started_body:
+                # Include blank lines in the body once we've started
+                body_lines.append(line)
+
+        body = '\n'.join(body_lines).strip()
+
+        if title or body:
+            note = Note(
+                title=title if title else "Untitled",
+                author="",  # Scapple exports don't have author
+                source="Scapple",  # Mark as from Scapple
+                body=body,
+                page="",  # No page numbers
+                source_file=filepath
+            )
+            notes.append(note)
+
+        return notes
+
+    @staticmethod
+    def scan_folder(folder_path: str) -> List[Note]:
+        """
+        Scan a folder for Scapple text exports and parse all notes.
+
+        Args:
+            folder_path: Path to folder containing text files
+
+        Returns:
+            List of all Note objects found
+        """
+        all_notes = []
+        folder = Path(folder_path).expanduser()
+
+        if not folder.exists():
+            return all_notes
+
+        # Scapple can export as .txt
+        for filepath in folder.glob('*.txt'):
+            try:
+                notes = ScappleParser.parse_file(str(filepath))
+                all_notes.extend(notes)
+            except Exception as e:
+                print(f"Error parsing {filepath}: {e}")
+
+        return all_notes
+
+
+def get_all_notes(zotero_folder: str, highlighted_folder: str, scapple_folder: str = None) -> List[Note]:
+    """
+    Get all notes from Zotero, Highlighted, and optionally Scapple export folders.
+
+    Args:
+        zotero_folder: Path to Zotero exports folder
+        highlighted_folder: Path to Highlighted exports folder
+        scapple_folder: Path to Scapple exports folder (optional)
+
+    Returns:
+        Combined list of all Note objects
+    """
+    notes = []
+
+    # Get Zotero notes
+    zotero_notes = ZoteroParser.scan_folder(zotero_folder)
+    notes.extend(zotero_notes)
+
+    # Get Highlighted notes
+    highlighted_notes = HighlightedParser.scan_folder(highlighted_folder)
+    notes.extend(highlighted_notes)
+
+    # Get Scapple notes if folder provided
+    if scapple_folder:
+        scapple_notes = ScappleParser.scan_folder(scapple_folder)
+        notes.extend(scapple_notes)
+
+    return notes
+
+
+def get_scapple_notes(scapple_folder: str) -> List[Note]:
+    """
+    Get only Scapple notes.
+
+    Args:
+        scapple_folder: Path to Scapple exports folder
+
+    Returns:
+        List of Scapple Note objects
+    """
+    return ScappleParser.scan_folder(scapple_folder)
+
+
+def save_notes_to_file(filepath: str, notes: List[Note]) -> bool:
+    """
+    Save a list of notes to a file in the appropriate format.
+
+    For .txt files (Scapple):
+        Title
+
+        Body text
+
+    For .md files (Zotero/Highlighted):
+        ## Note Title
+        **Author:** Author Name
+        **Source:** Source Title
+        **Page:** Page Number
+
+        > Body text of the note
+
+    Args:
+        filepath: Path to the file to write
+        notes: List of Note objects to save
+
+    Returns:
+        True if successful, False otherwise
+    """
+    try:
+        is_scapple = filepath.endswith('.txt')
+
+        with open(filepath, 'w', encoding='utf-8') as f:
+            if is_scapple:
+                # Scapple format: plain text, title on first line, body after blank line
+                for i, note in enumerate(notes):
+                    f.write(f"{note.title}\n\n")
+                    if note.body:
+                        f.write(f"{note.body}\n")
+
+                    # Add separator between notes (except after last one)
+                    if i < len(notes) - 1:
+                        f.write("\n---\n\n")
+            else:
+                # Markdown format for Zotero/Highlighted
+                for i, note in enumerate(notes):
+                    # Write note header
+                    f.write(f"## {note.title}\n\n")
+
+                    # Write metadata
+                    if note.author:
+                        f.write(f"**Author:** {note.author}\n")
+                    if note.source:
+                        f.write(f"**Source:** {note.source}\n")
+                    if note.page:
+                        f.write(f"**Page:** {note.page}\n")
+
+                    # Add blank line before body
+                    f.write("\n")
+
+                    # Write body as blockquote
+                    if note.body:
+                        # Split into lines and format as blockquote
+                        body_lines = note.body.split('\n')
+                        for line in body_lines:
+                            if line.strip():
+                                f.write(f"> {line}\n")
+                            else:
+                                f.write(">\n")
+
+                    # Add separator between notes (except after last one)
+                    if i < len(notes) - 1:
+                        f.write("\n---\n\n")
+                    else:
+                        f.write("\n")
+
+        return True
+    except Exception as e:
+        print(f"Error saving notes to {filepath}: {e}")
+        return False
