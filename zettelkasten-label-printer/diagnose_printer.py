@@ -57,6 +57,10 @@ try:
                 product = usb.util.get_string(dev, dev.iProduct)
                 print(f"        Manufacturer: {manufacturer}")
                 print(f"        Product: {product}")
+            except usb.core.USBError as ue:
+                print(f"        ⚠ Cannot read device info: {ue}")
+                if "Access denied" in str(ue) or "Permission denied" in str(ue):
+                    print(f"        ⚠ USB PERMISSION ISSUE DETECTED")
             except:
                 pass
     else:
@@ -107,6 +111,33 @@ except FileNotFoundError:
 except Exception as e:
     print(f"   ✗ Error: {e}")
 
+# 7. Check for network connectivity (QL-810W has WiFi)
+print("\n7. Checking for network printer...")
+print("   ℹ Your QL-810W supports WiFi. You can use network instead of USB!")
+print("   To find your printer's IP address:")
+print("   - Check your printer's display/settings menu")
+print("   - Check your router's connected devices list")
+print("   - Try: brother_ql discover network")
+try:
+    import subprocess
+    result = subprocess.run(['brother_ql', 'discover', 'network'],
+                          capture_output=True, text=True, timeout=10)
+    if result.stdout and result.stdout.strip():
+        print(f"   ✓ Network discovery result:")
+        print(f"      {result.stdout}")
+    else:
+        print("   ℹ No network printers found (or discovery timed out)")
+except subprocess.TimeoutExpired:
+    print("   ℹ Network discovery timed out (this is normal)")
+except Exception as e:
+    print(f"   ℹ Network discovery not available: {e}")
+
 print("\n" + "=" * 60)
 print("Diagnosis complete!")
+print("=" * 60)
+print("\n💡 RECOMMENDATIONS:")
+print("   If USB has permission issues, use network connection instead:")
+print("   1. Get your printer's IP address from printer settings or router")
+print("   2. Update config.yaml connection to: tcp://192.168.x.x")
+print("   3. This bypasses all USB permission issues!")
 print("=" * 60)
