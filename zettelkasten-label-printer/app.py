@@ -219,7 +219,7 @@ def render_compact_sidebar():
             st.metric("New", unprinted_regular + unprinted_scapple)
 
         # Reload button (prominent)
-        if st.button("🔄 Reload Notes", type="primary", use_container_width=True):
+        if st.button("🔄 Reload Notes", type="primary", width='stretch'):
             with st.spinner("Loading notes..."):
                 load_notes()
                 st.rerun()
@@ -235,7 +235,7 @@ def render_compact_sidebar():
                 printer_model = st.session_state.config.get('printer.model', 'QL-810W')
                 st.success(f"✅ {printer_model}")
 
-            if st.button("🔍 Test Connection", use_container_width=True):
+            if st.button("🔍 Test Connection", width='stretch'):
                 if st.session_state.printer.test_connection():
                     st.success("✅ Connected!")
                 else:
@@ -254,7 +254,7 @@ def render_compact_sidebar():
                 key="highlighted_input"
             )
 
-            if st.button("💾 Save", use_container_width=True):
+            if st.button("💾 Save", width='stretch'):
                 st.session_state.config.set('data_sources.zotero_export_folder', zotero_folder)
                 st.session_state.config.set('data_sources.highlighted_export_folder', highlighted_folder)
                 st.session_state.config.save()
@@ -262,7 +262,7 @@ def render_compact_sidebar():
 
         with st.expander("🗑️ Clear History", expanded=False):
             st.caption("Clear print tracking")
-            if st.button("Clear Print History", use_container_width=True):
+            if st.button("Clear Print History", width='stretch'):
                 st.session_state.print_history.clear_history()
                 st.success("History cleared!")
                 st.rerun()
@@ -270,7 +270,7 @@ def render_compact_sidebar():
         st.divider()
 
         # Shutdown button at bottom
-        if st.button("🛑 Stop App", use_container_width=True, type="secondary"):
+        if st.button("🛑 Stop App", width='stretch', type="secondary"):
             st.warning("Shutting down...")
             import os
             import signal
@@ -321,7 +321,7 @@ def render_note_list():
             if st.button(
                 button_label,
                 key=f"note_{actual_index}",
-                use_container_width=True,
+                width='stretch',
                 type="primary" if is_selected else "secondary"
             ):
                 st.session_state.current_note_index = actual_index
@@ -366,7 +366,7 @@ def render_note_list():
             if st.button(
                 button_label,
                 key=f"scapple_{actual_index}",
-                use_container_width=True,
+                width='stretch',
                 type="primary" if is_selected else "secondary"
             ):
                 st.session_state.current_scapple_note_index = actual_index
@@ -428,12 +428,12 @@ def render_main_preview():
             st.markdown(f"**🆕 {note.title[:70]}**")
 
     with col2:
-        if st.button("✏️", use_container_width=True, help="Edit note"):
+        if st.button("✏️", width='stretch', help="Edit note"):
             st.session_state.edit_mode = not st.session_state.edit_mode
             st.rerun()
 
     with col3:
-        if st.button("🖨️", type="primary", use_container_width=True, help="Print label"):
+        if st.button("🖨️", type="primary", width='stretch', help="Print label"):
             with st.spinner("Printing..."):
                 try:
                     label_image = st.session_state.renderer.create_label(note.to_dict())
@@ -460,7 +460,7 @@ def render_main_preview():
             col1, col2 = st.columns(2)
 
             with col1:
-                if st.form_submit_button("💾 Save Changes", use_container_width=True):
+                if st.form_submit_button("💾 Save Changes", width='stretch'):
                     note_data = {
                         'title': title,
                         'author': author,
@@ -477,7 +477,7 @@ def render_main_preview():
                     st.rerun()
 
             with col2:
-                if st.form_submit_button("❌ Cancel", use_container_width=True):
+                if st.form_submit_button("❌ Cancel", width='stretch'):
                     st.session_state.edit_mode = False
                     st.rerun()
 
@@ -501,9 +501,9 @@ def render_main_preview():
             # Rotate 90 degrees clockwise to match printer output
             from PIL import Image
             rotated_image = label_image.rotate(-90, expand=True)
-            st.image(rotated_image, use_container_width=True, caption="Preview (rotated 90°)")
+            st.image(rotated_image, width='stretch', caption="Preview (rotated 90°)")
         else:
-            st.image(label_image, use_container_width=True, caption="Label Preview")
+            st.image(label_image, width='stretch', caption="Label Preview")
 
         # Compact note details
         with st.expander("ℹ️ Details", expanded=False):
