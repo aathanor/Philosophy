@@ -237,10 +237,16 @@ class HighlightedParser:
         """
         Parse a Highlighted app markdown export file.
 
-        Highlighted markdown exports typically have format:
+        Highlighted markdown exports can have formats:
+        Format 1:
+        ## Note Title
+        **Author:** Author Name
+        **Source:** Source Title
+        > Quote text
+
+        Format 2:
         # Document Title
         ## Author Name
-
         > Quote text
         Page: 123
 
@@ -256,75 +262,94 @@ class HighlightedParser:
             content = f.read()
 
         lines = content.split('\n')
-        doc_title = ""
+        doc_title = ""  # H1 (if present)
+        current_title = ""  # H2
         current_author = ""
-        current_note = {}
+        current_source = ""
+        current_page = ""
         quote_buffer = []
 
-        for i, line in enumerate(lines):
-            line = line.strip()
+        def save_note():
+            """Helper to save current note."""
+            nonlocal quote_buffer, current_title, current_author, current_source, current_page, doc_title
 
-            # Skip empty lines and HTML
-            if not line or line.startswith('<'):
-                continue
+            if quote_buffer:
+                # Determine title: use H2 if present, otherwise first line of quote
+                title = current_title if current_title else quote_buffer[0][:50]
 
-            # H1 - Document title (source)
-            if line.startswith('# '):
-                doc_title = line[2:].strip()
+                # Determine source: explicit source metadata, or H1 doc title
+                source = current_source if current_source else doc_title
 
-            # H2 - Usually author or section
-            elif line.startswith('## '):
-                current_author = line[3:].strip()
-
-            # Blockquote - the highlight/annotation
-            elif line.startswith('>'):
-                quote = line[1:].strip()
-                quote_buffer.append(quote)
-
-            # Page number (often separate line after quote)
-            elif line.lower().startswith('page:') or line.lower().startswith('p.'):
-                page_match = re.search(r'(\d+)', line)
-                if page_match and quote_buffer:
-                    # Create note from buffered quote
-                    note = Note(
-                        title=quote_buffer[0][:50],  # First line as title
-                        author=current_author,
-                        source=doc_title,
-                        body=' '.join(quote_buffer),
-                        page=page_match.group(1),
-                        source_file=filepath
-                    )
-                    notes.append(note)
-                    quote_buffer = []
-
-            # Other text might be continuation
-            elif quote_buffer and line and not line.startswith('#'):
-                quote_buffer.append(line)
-
-            # If we hit a new section and have buffered quotes, flush them
-            elif quote_buffer and (line.startswith('#') or i == len(lines) - 1):
                 note = Note(
-                    title=quote_buffer[0][:50],
+                    title=title,
                     author=current_author,
-                    source=doc_title,
+                    source=source,
                     body=' '.join(quote_buffer),
-                    page="",
+                    page=current_page,
                     source_file=filepath
                 )
                 notes.append(note)
-                quote_buffer = []
 
-        # Flush any remaining quote
-        if quote_buffer:
-            note = Note(
-                title=quote_buffer[0][:50],
-                author=current_author,
-                source=doc_title,
-                body=' '.join(quote_buffer),
-                page="",
-                source_file=filepath
-            )
-            notes.append(note)
+                # Reset for next note
+                quote_buffer = []
+                current_title = ""
+                current_author = ""
+                current_source = ""
+                current_page = ""
+
+        for i, line in enumerate(lines):
+            line_stripped = line.strip()
+
+            # Skip empty lines and HTML
+            if not line_stripped or line_stripped.startswith('<'):
+                continue
+
+            # H1 - Document title (source)
+            if line_stripped.startswith('# ') and not line_stripped.startswith('## '):
+                # Save previous note if exists
+                save_note()
+                doc_title = line_stripped[2:].strip()
+
+            # H2 - Note title or section
+            elif line_stripped.startswith('## '):
+                # Save previous note if exists
+                save_note()
+                current_title = line_stripped[3:].strip()
+
+            # Metadata: **Author:**
+            elif line_stripped.startswith('**Author:**'):
+                current_author = line_stripped.replace('**Author:**', '').strip()
+
+            # Metadata: **Source:**
+            elif line_stripped.startswith('**Source:**'):
+                current_source = line_stripped.replace('**Source:**', '').strip()
+
+            # Metadata: **Page:**
+            elif line_stripped.startswith('**Page:**'):
+                page_match = re.search(r'(\d+)', line_stripped)
+                if page_match:
+                    current_page = page_match.group(1)
+
+            # Blockquote - the highlight/annotation
+            elif line_stripped.startswith('>'):
+                quote = line_stripped[1:].strip()
+                quote_buffer.append(quote)
+
+            # Standalone page number
+            elif line_stripped.lower().startswith('page:') or line_stripped.lower().startswith('p.'):
+                page_match = re.search(r'(\d+)', line_stripped)
+                if page_match:
+                    current_page = page_match.group(1)
+                # Page number often signals end of note
+                if quote_buffer:
+                    save_note()
+
+            # Other text might be continuation of quote
+            elif quote_buffer and line_stripped and not line_stripped.startswith('#'):
+                quote_buffer.append(line_stripped)
+
+        # Save any remaining note
+        save_note()
 
         return notes
 
