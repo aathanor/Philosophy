@@ -386,8 +386,9 @@ def save_note_to_file(note: Note, note_data: dict):
 
     # If note has a source file, save it back to disk
     if note.source_file:
-        # Find all notes from the same source file
-        notes_from_file = [n for n in st.session_state.notes if n.source_file == note.source_file]
+        # Find all notes from the same source file (check both regular and Scapple notes)
+        all_notes = st.session_state.notes + st.session_state.scapple_notes
+        notes_from_file = [n for n in all_notes if n.source_file == note.source_file]
 
         # Save all notes from this file back to disk
         success = save_notes_to_file(note.source_file, notes_from_file)

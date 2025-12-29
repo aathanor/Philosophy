@@ -498,55 +498,74 @@ def get_scapple_notes(scapple_folder: str) -> List[Note]:
 
 def save_notes_to_file(filepath: str, notes: List[Note]) -> bool:
     """
-    Save a list of notes to a markdown file in a standardized format.
+    Save a list of notes to a file in the appropriate format.
 
-    Format:
-    ## Note Title
-    **Author:** Author Name
-    **Source:** Source Title
-    **Page:** Page Number
+    For .txt files (Scapple):
+        Title
 
-    > Body text of the note
+        Body text
+
+    For .md files (Zotero/Highlighted):
+        ## Note Title
+        **Author:** Author Name
+        **Source:** Source Title
+        **Page:** Page Number
+
+        > Body text of the note
 
     Args:
-        filepath: Path to the markdown file to write
+        filepath: Path to the file to write
         notes: List of Note objects to save
 
     Returns:
         True if successful, False otherwise
     """
     try:
+        is_scapple = filepath.endswith('.txt')
+
         with open(filepath, 'w', encoding='utf-8') as f:
-            for i, note in enumerate(notes):
-                # Write note header
-                f.write(f"## {note.title}\n\n")
+            if is_scapple:
+                # Scapple format: plain text, title on first line, body after blank line
+                for i, note in enumerate(notes):
+                    f.write(f"{note.title}\n\n")
+                    if note.body:
+                        f.write(f"{note.body}\n")
 
-                # Write metadata
-                if note.author:
-                    f.write(f"**Author:** {note.author}\n")
-                if note.source:
-                    f.write(f"**Source:** {note.source}\n")
-                if note.page:
-                    f.write(f"**Page:** {note.page}\n")
+                    # Add separator between notes (except after last one)
+                    if i < len(notes) - 1:
+                        f.write("\n---\n\n")
+            else:
+                # Markdown format for Zotero/Highlighted
+                for i, note in enumerate(notes):
+                    # Write note header
+                    f.write(f"## {note.title}\n\n")
 
-                # Add blank line before body
-                f.write("\n")
+                    # Write metadata
+                    if note.author:
+                        f.write(f"**Author:** {note.author}\n")
+                    if note.source:
+                        f.write(f"**Source:** {note.source}\n")
+                    if note.page:
+                        f.write(f"**Page:** {note.page}\n")
 
-                # Write body as blockquote
-                if note.body:
-                    # Split into lines and format as blockquote
-                    body_lines = note.body.split('\n')
-                    for line in body_lines:
-                        if line.strip():
-                            f.write(f"> {line}\n")
-                        else:
-                            f.write(">\n")
-
-                # Add separator between notes (except after last one)
-                if i < len(notes) - 1:
-                    f.write("\n---\n\n")
-                else:
+                    # Add blank line before body
                     f.write("\n")
+
+                    # Write body as blockquote
+                    if note.body:
+                        # Split into lines and format as blockquote
+                        body_lines = note.body.split('\n')
+                        for line in body_lines:
+                            if line.strip():
+                                f.write(f"> {line}\n")
+                            else:
+                                f.write(">\n")
+
+                    # Add separator between notes (except after last one)
+                    if i < len(notes) - 1:
+                        f.write("\n---\n\n")
+                    else:
+                        f.write("\n")
 
         return True
     except Exception as e:
