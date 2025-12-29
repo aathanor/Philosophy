@@ -4,7 +4,7 @@
 printer:
   model: "QL-810W"
   # Connection can be: usb://0x04f9:0x209b or tcp://192.168.1.100
-  connection: "usb://0x04f9:0x209b"
+  connection: "usb://0x04f9:0x209c"
   label_size: "62"  # Label width in mm (62mm continuous tape recommended)
 
 # Font settings (H1 = title, H2 = author/source, body = quote text)
