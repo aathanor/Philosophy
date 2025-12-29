@@ -8,6 +8,10 @@ from typing import Optional, List
 import logging
 import warnings
 
+# Add compatibility shim for Pillow 10+ (brother_ql uses deprecated ANTIALIAS)
+if not hasattr(Image, 'ANTIALIAS'):
+    Image.ANTIALIAS = Image.LANCZOS
+
 # Suppress deprecation warnings from brother_ql library
 warnings.filterwarnings('ignore', message='.*brother_ql.devicedependent.*')
 
