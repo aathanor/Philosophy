@@ -11,5 +11,3 @@ listing:
 ---
 
 Past and future talks.
-
-At PaMoSA 2026 (University of Oulu, Finland) I gave a talk on the frame problem, "Why Relevance Is NotComputable"
