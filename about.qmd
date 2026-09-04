@@ -2,4 +2,4 @@
 title: "About"
 ---
 
-I have a Bachelor's degree in Physics and am a PhD student in Philosophy at the University of Bucharest (Department of Theoretical Philosophy and Logic). My research is in the philosophy of language, philosophy of mind, and philosophy of AI. I can be reached at florin.cojocariu at s.unibuc.ro
+I have a Bachelor's degree in Physics and an MA in Philosophy. Currently I am a PhD student in Philosophy at the University of Bucharest (Department of Theoretical Philosophy and Logic). My research is in the philosophy of language, philosophy of mind, and philosophy of AI. I can be reached at florin at antimaterie.ro
