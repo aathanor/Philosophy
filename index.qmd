@@ -3,14 +3,15 @@ title: "Florin Cojocariu"
 listing:
   id: recent
   contents:
-    - "research"
-    - "publications"
-    - "talks"
+    - "talks/*/index.md"
+    - "talks/*/index.qmd"
+    - "publications/*/index.md"
+    - "publications/*/index.qmd"
   type: default
   sort: "date desc"
   max-items: 5
-  exclude:
-    id: index
+  fields: [date, title, subtitle, description]
+  date-format: "MMM D, YYYY"
 ---
 
 ### Welcome

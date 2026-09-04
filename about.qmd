@@ -1,5 +1,14 @@
 ---
 title: "About"
+about:
+  template: jolla
+  image-width: 12em 
+  image-shape: round
+  image: photo.jpg
+  links: 
+     - icon: twitter 
+       text: x.com 
+       href: https://x.com/FlorinCojoX
 ---
 
 I have a Bachelor's degree in Physics and an MA in Philosophy. Currently I am a PhD student in Philosophy at the University of Bucharest (Department of Theoretical Philosophy and Logic). My research is in the philosophy of language, philosophy of mind, and philosophy of AI. I can be reached at florin at antimaterie.ro

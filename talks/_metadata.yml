@@ -1,0 +1,5 @@
+format: html
+language:
+  title-block-published: " "
+  title-block-author-single: " "
+  title-block-style: plain

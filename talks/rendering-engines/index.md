@@ -2,7 +2,7 @@
 title: "Rendering Engines of a Textual World"
 subtitle: "What LLMs Reconstruct"
 date: 2026-05-10
-venue: "Beyond the Imitation Game, Bucharest"
+venue: "Beyond the Imitation Game, University of Bucharest"
 description: "An LLM works like a virtual-reality rendering engine: a stored geometry with no camera of its own, rendering only when a prompt supplies the viewpoint."
 categories: [LLMs, PRU]
 ---

@@ -1,9 +1,49 @@
 ---
 title: "Publications"
 listing:
-  contents: "."
-  type: default
-  sort: "date desc"
-  exclude:
-    id: index
+  - id: published
+    contents: "*/index.md"
+    include:
+      status: "published"
+    type: default
+    sort: "date desc"
+    fields: [date, title, venue, description]
+    field-display-names:
+      venue: "Venue"
+    date-format: "YYYY"
+  - id: forthcoming
+    contents: "*/index.md"
+    include:
+      status: "forthcoming"
+    type: default
+    sort: "date desc"
+    fields: [date, title, venue, description]
+    field-display-names:
+      venue: "Venue"
+    date-format: "YYYY"
+  - id: preprints
+    contents: "*/index.md"
+    include:
+      status: "preprint"
+    type: default
+    sort: "date desc"
+    fields: [date, title, venue, description]
+    field-display-names:
+      venue: "Repository"
+    date-format: "YYYY"
 ---
+
+## Published
+
+::: {#published}
+:::
+
+## Forthcoming
+
+::: {#forthcoming}
+:::
+
+## Preprints
+
+::: {#preprints}
+:::
