@@ -1,0 +1,51 @@
+---
+title: "Experiments"
+author: Florin Cojocariu
+date: 2026-09-04
+---
+
+The programme tests two claims: that next-token prediction is computed over a prompt-induced structure rather than selected over the model's whole learned content, and that there are portable viewpoint directions — operators that change how a subject is rendered while leaving what is rendered intact.
+
+## Status
+
+**Established.** A single direction can control descriptive scope (broad ↔ fine-grained) for a subject, replicated against norm-matched control operators.
+
+**Open.** [fill in — what's currently running or planned next]
+
+**Failed.** An absolute-threshold gate with no control null; a persona-decay readout that failed once piloted against data already on disk; an anisotropy-null check. Details below.
+
+## Experiments
+
+::: {.experiment-card}
+### Does a single direction control descriptive scope?
+
+**Question.** Does a single direction control descriptive scope?
+
+**Setup.** Qwen2.5-1.5B, layer 16, magnitude 0.5. Operator estimated as the shared component across three wordings, tested on 16 held-out topics with held-out wording, fresh seed.
+
+**Result.** Gap closure 0.511 broad→fine and 0.703 fine→broad; 16/16 fluent in both directions; topic preserved 16/16; monotone in magnitude 16/16 and 15/16. Sixteen norm-matched control operators: median closure 0.00000, z = +75.6.
+
+::: {.column-margin}
+![Zoom-length curve vs. flat random controls.](figures/consolidation-run-zoom-curve.png)
+:::
+
+**Status.** Confirmed, replicating the earlier run. The compressive asymmetry reported previously was a layer/magnitude artifact and does not survive.
+
+**Code and outputs.** [repo link] · [raw renders]
+:::
+
+## Negatives
+
+Given equal prominence, on purpose — a null with its diagnosis is the part that's checkable.
+
+**Anisotropy null.** [fill in — what broke, and what rule came out of it]
+
+**Persona-decay readout.** Failed once piloted against data already on disk, before any new run was built on it. Rule: no experiment gets built until its readout has been piloted on existing data.
+
+**v1 gate.** Used an absolute threshold with no control null, so it couldn't distinguish a real effect from noise. Rule: gate on a control-referenced z-score, never an absolute threshold.
+
+## Methods {#methods}
+
+Standing rules for everything on this page: a pre-registered dev gate before a run counts; held-out topics and held-out wordings, never reused from estimation; effects reported against a control-referenced z-score rather than an absolute threshold; no experiment built until its readout has been piloted on data already on disk.
+
+All scripts live in one public repo, fixed seeds, one script per experiment: [repo link]. Every card above links to its own script and saved outputs.

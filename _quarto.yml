@@ -12,6 +12,8 @@ website:
         text: Home
       - href: research/index.qmd
         text: Research
+      - href: experiments/index.qmd
+        text: Experiments
       - href: publications/index.qmd
         text: Publications
       - href: talks/index.qmd
