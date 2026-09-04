@@ -14,4 +14,3 @@ about:
 Philosopher of language, mind, and AI. I argue that grounding is first an achievement of organisms rather than a property representations acquire. Building a new framework for cognition and language in the past two years. I often test my ideas in experiments on open-weight models. Physics before philosophy; PhD in progress at the University of Bucharest (Theoretical Philosophy and Logic). 
 
 florin at antimaterie.ro
-
