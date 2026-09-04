@@ -1,0 +1,11 @@
+---
+title: "Early Work"
+listing:
+  contents: "."
+  type: default
+  sort: "date desc"
+  exclude:
+    id: index
+---
+
+Essays and talks from before my PhD — mostly coursework from my MA in Analytical Philosophy at the University of Bucharest.
