@@ -7,6 +7,16 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: research/index.qmd
+        text: Research
+      - href: publications/index.qmd
+        text: Publications
+      - href: talks/index.qmd
+        text: Talks
+      - href: early-work/index.qmd
+        text: Early Work
+      - href: about.qmd
+        text: About
   sidebar:                          # ← Add this website-level sidebar
     style: "floating"
     search: false
@@ -16,7 +26,7 @@ website:
       repo-id: "R_kgDOOvbpNQ"
       category: "General"
       category-id: "DIC_kwDOOvbpNc4CqifF"
-      mapping: "pathname"
+      mapping: "og:title"
       reactions-enabled: true
       input-position: "bottom"
       theme: "light"

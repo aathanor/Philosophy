@@ -1,0 +1,9 @@
+---
+title: "Publications"
+listing:
+  contents: "."
+  type: default
+  sort: "date desc"
+  exclude:
+    id: index
+---
