@@ -8,7 +8,7 @@ The programme tests two claims: that next-token prediction is computed over a pr
 
 ## Status
 
-**Established.** A single direction can control descriptive scope (broad ↔ fine-grained) for a subject, replicated against norm-matched control operators.
+**Established.** [fill in — what's actually confirmed so far]
 
 **Open.** [fill in — what's currently running or planned next]
 
@@ -16,20 +16,22 @@ The programme tests two claims: that next-token prediction is computed over a pr
 
 ## Experiments
 
+<!-- One card per experiment. Copy the block below and fill in the five fields for each real experiment; delete the bracketed instructions. -->
+
 ::: {.experiment-card}
-### Does a single direction control descriptive scope?
+### [Question, as a short title]
 
-**Question.** Does a single direction control descriptive scope?
+**Question.** [One sentence.]
 
-**Setup.** Qwen2.5-1.5B, layer 16, magnitude 0.5. Operator estimated as the shared component across three wordings, tested on 16 held-out topics with held-out wording, fresh seed.
+**Setup.** [Model, layer, how the direction was estimated, what was held out.]
 
-**Result.** Gap closure 0.511 broad→fine and 0.703 fine→broad; 16/16 fluent in both directions; topic preserved 16/16; monotone in magnitude 16/16 and 15/16. Sixteen norm-matched control operators: median closure 0.00000, z = +75.6.
+**Result.** [The number, always next to its control null.]
 
 ::: {.column-margin}
-![Zoom-length curve vs. flat random controls.](figures/consolidation-run-zoom-curve.png)
+![[Caption.]](figures/[experiment-slug].png)
 :::
 
-**Status.** Confirmed, replicating the earlier run. The compressive asymmetry reported previously was a layer/magnitude artifact and does not survive.
+**Status.** [Confirmed / null / instrument failure / superseded.]
 
 **Code and outputs.** [repo link] · [raw renders]
 :::
