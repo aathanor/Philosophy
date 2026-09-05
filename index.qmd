@@ -10,7 +10,9 @@ listing:
   type: default
   sort: "date desc"
   max-items: 5
-  fields: [date, title, subtitle, description]
+  fields: [date, title, venue, description]
+  field-display-names:
+    venue: "Venue"
   date-format: "MMM D, YYYY"
 ---
 
