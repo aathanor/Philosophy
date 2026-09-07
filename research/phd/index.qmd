@@ -1,0 +1,10 @@
+---
+title: "PhD"
+listing:
+  contents: "*/index.qmd"
+  type: default
+  sort: "date desc"
+  fields: [date, title, description]
+---
+
+PhD research overview and specific related research I choose to publish here.

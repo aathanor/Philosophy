@@ -1,16 +1,36 @@
 ---
-title: "Research" 
-author: Florin Cojocariu 
-date: 2026-09-04
+title: "Research"
+listing:
+  - id: phd
+    contents: "phd/*/index.qmd"
+    type: default
+    sort: "date desc"
+    max-items: 3
+    fields: [date, title, description]
+  - id: experiments
+    contents: "llm-experiments/*/index.qmd"
+    type: default
+    sort: "date desc"
+    max-items: 3
+    fields: [date, title, description]
+  - id: thoughts
+    contents: "thoughts/*.md"
+    type: default
+    sort: "date desc"
+    max-items: 3
+    fields: [date, title, description]
 ---
-My research is currently organized around my PhD thesis which defends one claim: epistemic grounding is a property of a formation history, not of language, and it does not close under composition. In a nutshell, it goes like this:
 
-The instrument is the PRU framework (Pattern-Recognition Unity), a framework I developed during the past couple of years. PRU rests on a principle (that gives it its name) and an analytic tool modeled on neural networks functioning: Pattern-Constellation (PC), noted with capitals in curly brackets: ${X}$. The fundamental idea is that we learn things as complex structures of coherent sensing, feeling and motor patterns, that link together sensing and reaction. A child who has handled fire — felt its heat, been pulled back from it — has something no description gave her, the Pattern-Constellation ${FIRE}$: a multimodal, attractor-like organization sculpted by serial, locus-bound, concern-laden encounter, not a representation. The principle of Pattern and Recognition Unity states that there is no serial cognitive process of sensing followed by some sort of recognition of the sensum based on a template, that generates in turn a specific motor action. Instead sensing and reaction are learned together and activated together. ${X}$ realizes in basic minds what I call _basic grounding_, the fundamental connection between mind and world.
+## PhD Research
 
-Language is treated similarly, but with some notable differences: words are learned initially as motor patterns (ways to produce sounds) that are part of the corresponding Pattern-Constellation; I call this mode of using a word, word-object, $x^o$ (infant pointing to the burning matchstick and saying "fire" is $<fire^o>$). With time, we learn to use them abstractly, as concept-words, $x^c$. Abstract use is developing what I call $\langle x \rangle$, Linguistic Pattern-Constellation (LPC). The process gives a more analytical form to the Wittgensteinian language games in a practice, $<fire>$ denotes the totality of acceptable ways that "fire" can enter into a sentence). Different LPCs tend to group together in distinct ways, and we introduce $\mathcal{R}$, which names linking, the fundamental relation of the linguistic register. Epistemic grounding, $\mathcal{G}_E$, is basic grounding together with word coordination: $\mathcal{G}_E(FIRE) \equiv \{FIRE\} + \mathcal\{R\}(fire^c, fire^o)$.  
+::: {#phd}
+:::
 
-The diagnostic follows. $\mathcal{G}_E(A) \wedge \mathcal{G}_E(B) \nRightarrow \mathcal{G}_E(A,B)$: grounded parts do not deliver a grounded composite, which requires a formation history of its own. The assumption that grounding propagates through composition is the **inheritance fallacy**. Encounter presupposes a locus of organization for which differences make a difference. With language it becomes a center, the standpoint from which relevance, memory, belief, and value are possible. (this is what my thesis proposes to investigate)
+[All PhD Research →](phd/index.qmd)
 
-Four domains test the claim. In artificial intelligence, text-trained models operate inside a detached linguistic register and hold no such center, against teleosemantic accounts of referential grounding (Mollo and Millière 2026) and enactivist claims about machine sense-making (Froese 2026). In rule-following, Carroll's regress and Kripke's paradox are the same closure failure, with _Abrichtung_ as its resolution (Wittgenstein 1953, §198). In metaphysics, formative grounding is distinguished from metaphysical dependence (Fine 2012). In enactivism, Pattern-Constellations supply the structural units radical enactivism leaves unspecified (Hutto and Myin 2013).
+## LLM Experiments
 
-The method is conceptual analysis with minimal formalism, supported by limited embedding experiments on the inherited-geometry hypothesis.
+::: {#experiments}
+:::
+
+[All LLM Experiments →](llm-experiments/index.qmd)

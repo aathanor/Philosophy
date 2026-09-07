@@ -7,6 +7,9 @@ listing:
     - "talks/*/index.qmd"
     - "publications/*/index.md"
     - "publications/*/index.qmd"
+    - "research/phd/*/index.md"
+    - "research/llm-experiments/*/index.md"
+    - "research/thoughts/*/index.md"
   type: default
   sort: "date desc"
   max-items: 5

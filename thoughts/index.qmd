@@ -1,0 +1,10 @@
+---
+title: "Thoughts"
+listing:
+  contents: "*.md"
+  type: default
+  sort: "date desc"
+  fields: [date, title, description]
+---
+
+Ideas and short notes, dated. May ring a bell to other people.

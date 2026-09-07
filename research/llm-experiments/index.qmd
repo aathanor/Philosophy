@@ -1,0 +1,10 @@
+---
+title: "LLM Experiments"
+listing:
+  contents: "*/index.qmd"
+  type: default
+  sort: "date desc"
+  fields: [date, title, description]
+---
+
+LLM experiments, mostly regarding the structure of the embedding space, relevant to my research.

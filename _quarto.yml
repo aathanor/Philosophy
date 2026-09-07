@@ -12,12 +12,12 @@ website:
         text: Home
       - href: research/index.qmd
         text: Research
-      - href: experiments/index.qmd
-        text: Experiments
       - href: publications/index.qmd
         text: Publications
       - href: talks/index.qmd
         text: Talks
+      - href: thoughts/index.qmd
+        text: Thoughts
       - href: early-work/index.qmd
         text: Early Work
       - href: about.qmd

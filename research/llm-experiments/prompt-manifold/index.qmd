@@ -1,0 +1,7 @@
+---
+title: "Sampling the Prompt Manifold"
+date: 2026-06-01
+description: "A hundred completions of one prompt, embedded and plotted, sit on a low-dimensional surface rather than scattering in the embeding space."
+---
+
+Forthcoming
