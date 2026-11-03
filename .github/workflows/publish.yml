@@ -11,6 +11,7 @@ on:
       - 'index.qmd'
       - '_quarto.yml'
       - 'custom.css'
+      - '.github/workflows/publish.yml'
 
 jobs:
   build-deploy:
@@ -39,9 +40,8 @@ jobs:
           ls -la _site/ || echo "_site does not exist"
       
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: philosophy
-          directory: _site
+          command: pages deploy _site --project-name=philosophy
