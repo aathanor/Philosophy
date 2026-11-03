@@ -11,4 +11,4 @@ The talk makes one claim: a large language model works more like a virtual-reali
 
 The selection is checkable. Sampling a hundred completions of a single prompt from a local model at high temperature and embedding each as a sentence vector, the points do not scatter through the space: they lie on a low-dimensional structured surface inside it. The prompt fixes a region, not an answer. The implications follow from the engine having no camera of its own. The geometry is fully present and fully perspectiveless; nothing renders until a viewpoint is supplied from outside. The model therefore has no default standpoint — no ego, a renderer without opinions — and it can render mutually contradictory views from the same store, since the geometry holds every position its training data licensed. Two further consequences close the talk: LLMs are instruments for studying language and mind, much as the telescope and the microscope were for Early Modern science; and our own answering may work the same way — we bring forward "the manifold" our answer lies on before we find the words on them.
 
-[Slides (PDF)](slides.pdf)
+[Slides (PDF)](Slides.pdf)
