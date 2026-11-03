@@ -2,7 +2,9 @@
 title: "Publications"
 listing:
   - id: published
-    contents: "*/index.md"
+    contents:
+      - "*/index.md"
+      - "/*.md"
     include:
       status: "published"
     type: default
@@ -12,7 +14,9 @@ listing:
       venue: "Venue"
     date-format: "YYYY"
   - id: forthcoming
-    contents: "*/index.md"
+    contents:
+      - "*/index.md"
+      - "/*.md"
     include:
       status: "forthcoming"
     type: default
@@ -22,7 +26,9 @@ listing:
       venue: "Venue"
     date-format: "YYYY"
   - id: preprints
-    contents: "*/index.md"
+    contents:
+      - "*/index.md"
+      - "/*.md"
     include:
       status: "preprint"
     type: default
