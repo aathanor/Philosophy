@@ -8,7 +8,11 @@ date: 2026-11-03
 status: preprint
 description: "An answer to Ryan Simonelli's 'Sapience without Sentience'. Version submitted for review, changes may occur"
 header-includes:
-  - '\setlength{\parindent}{0pt}\setlength{\parskip}{3pt}'
+  - |
+    ```{=latex}
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{3pt}
+    ```
 affiliation: '\orgdiv{Department of Theoretical Philosophy and Logic}, \orgname{University of Bucharest}, \orgaddress{\city{Bucharest}, \country{Romania}}'
 abstract: |
   Simonelli's "Sapience without sentience: An inferentialist approach to LLMs" argues that mastery of the inferential role suffices for concept possession, so that large language models trained only on text can in principle possess all concepts. This reply accepts his semantics as a theory of meaning and denies it is a theory of concepts. Meanings tie words to words; concepts tie words to things. Simonelli passes from meanings to concepts in two steps: a rule describing seeing replaces seeing, and having the conceptual content of "red" is taken for having the concept red. In a variant of Jackson's experiment, an ordinary Mary with working color vision and partial mastery of "red" leaves her black-and-white room and cannot tell which tomatoes are red, although every premise of that rule is true of her. Frege and Wittgenstein kept concept and meaning apart but later on Sellars, Brandom and Simonelli brought them together. In the framework proposed here a word has two modes: one used of present things, part of pre-verbal patterns without content, and one used of absent things, placed among other words. A concept can be understood then as a link of the two modes. Mary lacks this link: its absence shows in her failed applications of "red", and others can correct them, so it is neither ineffable nor a matter of sentience. Language models are in Mary's position: they hold meanings more fully than any speaker and lack concepts that allow for words application. ()
