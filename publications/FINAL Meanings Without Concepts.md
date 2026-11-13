@@ -7,6 +7,8 @@ author-email: florin.cojocariu@s.unibuc.ro
 date: 2026-11-03
 status: preprint
 description: "An answer to Ryan Simonelli's 'Sapience without Sentience'. Version submitted for review, changes may occur"
+bibliography: meanings-without-concepts.bib
+reference-section-title: References
 header-includes:
   - |
     ```{=latex}
