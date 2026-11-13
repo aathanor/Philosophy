@@ -9,6 +9,7 @@ status: preprint
 description: "An answer to Ryan Simonelli's 'Sapience without Sentience'. Version submitted for review, changes may occur"
 bibliography: meanings-without-concepts.bib
 reference-section-title: References
+number-sections: true
 header-includes:
   - |
     ```{=latex}
